@@ -9,7 +9,6 @@ import { v4 as uuid } from "uuid";
 
 function App() {
 
-    
     const [icon, setIcon] = useState('');
     const [location, setLocation] = useState('');
     const [locationTemperature, setLocationTemperature] = useState('');
@@ -29,6 +28,8 @@ function App() {
 
 
 
+    const API_KEY = process.env.REACT_APP_API_KEY
+    
 
 
 
@@ -78,7 +79,7 @@ function App() {
           (position) => {
             const { latitude, longitude } = position.coords;
 
-            let url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=your API_KEY goes here`;
+            let url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
 
             fetch(url)
               .then((response) => response.json())
