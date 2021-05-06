@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import "./App.css"
+import "./App.css";
 import Weather from "./momentumComponents/weather";
-import Time from "./momentumComponents/time";
+import Time from "./momentumComponents/Time/Time";
 import Greeting from "./momentumComponents/greeting";
 import TodoList from "./momentumComponents/TodoList";
 import Input from "./momentumComponents/Input";
@@ -14,6 +14,7 @@ function App() {
     const [locationTemperature, setLocationTemperature] = useState('');
     const [getAmPm, setAmPm] = useState("");
     const [getHour, setHour] = useState("");
+    const [getTwentyFourHour, setTwentyFourHour] = useState("")
     const [getMinute, setMinute] = useState("");
     const [greeting, setGreeting] = useState("");
     const [name, setName] = useState("Dele");
@@ -25,13 +26,14 @@ function App() {
     const [nameCondition, setNameCondition] = useState(true); 
     const [todo, setTodo] = useState([]);
     const [inputValue, setInputValue] = useState("");
+    const [id, setId] = useState("");
 
 
 
-    const API_KEY = process.env.REACT_APP_API_KEY
+    // const API_KEY = process.env.REACT_APP_API_KEY
+    const API_KEY = "P0BEZ1EdgkfLR5R4chm5ChWLQyJMkHtJ";
+    // const API_KEY = "ab726d7c7530e07f9e68e4756723249d";
     
-
-
 
     // get name from local storage
     useEffect(() => {
@@ -40,9 +42,6 @@ function App() {
         setName(storageName)
       }
     }, [])
-
-
-
 
 
     // set name to local storage
@@ -72,89 +71,135 @@ function App() {
 
 
 
-    // get user location and give weather update
+    //get user location and give weather update
+    // const getUserLocation = async () => {
+    //     navigator.geolocation.getCurrentPosition(
+    //       async (position) => {
+    //         const { latitude, longitude } = position.coords;
 
-    const getUserLocation = () => {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            const { latitude, longitude } = position.coords;
+    //         let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
 
-            let url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
+    //         const response = await fetch(url);
+    //         const data = await response.json();
+    //         console.log(data);
+    //         const { LocalizedName, key } = data;
+    //         // setLocation(`${LocalizedName}`);
+    //         setId(key);
 
-            fetch(url)
-              .then((response) => response.json())
-              .then((data) => {
-                console.log(data);
-                const { name, clouds, sys, weather } = data;
-                setIcon(
-                  `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`
-                );
-                setLocation(`${name}, ${sys.country}`);
-                setLocationTemperature(`${clouds.all}`);
-              })
-              .catch(() => {
-                console.log("Something went wrong");
-              });
-          },
-          () => {
-            console.log("your browser does not support it");
-          }
-        );
+    //       //   fetch(url)
+    //       //     .then((response) => response.json())
+    //       //     .then((data) => {
+    //       //       console.log(data);
+    //       //       const { LocalizedName, key } = data;
+    //             // setIcon(
+    //             //   `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`
+    //             // );
+    //       //       setLocation(`${LocalizedName}`);
+    //       //       setId(key);
+    //       //       // setLocationTemperature(`${clouds.all}`);
+    //       //     })
+    //       //     .catch((error) => {
+    //       //       console.log("Something went wrong", error);
+    //       //     });
+    //       },
+    //       () => {
+    //         console.log("your browser does not support it");
+    //       }
+    //     );
         
-    }
+    // }
 
-    useEffect(() => {
-      getUserLocation();
-    }, []);
-
-
+    // useEffect(() => {
+    //   getUserLocation();
+    // }, []);
 
 
 
-    //give user time 
+
+    // const getUserLocation = () => {
+    //     navigator.geolocation.getCurrentPosition(
+    //       (position) => {
+    //         const { latitude, longitude } = position.coords;
+
+    //         let url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
+
+    //         fetch(url)
+    //           .then((response) => response.json())
+    //           .then((data) => {
+    //             console.log(data);
+    //             const { name, clouds, sys, weather } = data;
+    //             setIcon(
+    //               `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`
+    //             );
+    //             setLocation(`${name}, ${sys.country}`);
+    //             setLocationTemperature(`${clouds.all}`);
+    //           })
+    //           .catch((error) => {
+    //             console.log("Something went wrong", error);
+    //           });
+    //       },
+    //       () => {
+    //         console.log("your browser does not support it");
+    //       }
+    //     );
+        
+    // }
+
+    // useEffect(() => {
+    //   getUserLocation();
+    // }, []);
+
+
+
+    // give user time 
     useEffect(() => {
       const interval = setInterval(() => {
         const getDay = new Date();
-
         const getHour = getDay.getHours();
         const getMinute = getDay.getMinutes();
+
+
+        let twentyFourHours = getHour <= 9 ? `0${getHour}`: `${getHour}`;
+
+        setTwentyFourHour(twentyFourHours);
+
 
         const amPm = getHour >= 12 ? "PM" : "AM";
         setAmPm(amPm);
 
+
         const hour = getHour % 12 || 12;
         setHour(hour);
 
-        setMinute(getMinute);
+        let addzero = getMinute <= 9 ? `0${getMinute}`: `${getMinute}`;
+
+
+        setMinute(addzero);
+        // setMinute(getMinute);
       }, 1000);
       return () => clearInterval(interval)
     }, [])
 
 
 
-
-
-
-
-
     // tell what time of the day if it is morning afternoon or evening
-    const greetings = () => {
-      let todayGreeting = new Date();
+    // const greetings = () => {
+    //   let todayGreeting = new Date();
 
-      let hour = todayGreeting.getHours();
+    //   let hour = todayGreeting.getHours();
 
-      if (hour < 12) {
-        setGreeting("Good morning,");
-      } else if (hour < 15) {
-        setGreeting("Good afternoon,");
-      } else {
-        setGreeting("Good evening,");
-      }
-    };
+    //   if (hour < 12) {
+    //     setGreeting("Good morning,");
+    //   } else if (hour < 15) {
+    //     setGreeting("Good afternoon,");
+    //   } else {
+    //     setGreeting("Good evening,");
+    //   }
+    // };
     
-    useEffect(() => {
-      greetings();
-    }, [])
+    // useEffect(() => {
+    //   greetings();
+    // }, [])
 
 
 
@@ -243,23 +288,24 @@ function App() {
           getAmPm={getAmPm} 
           getMinute={getMinute} 
           getHour={getHour} 
+          getTwentyFourHour={getTwentyFourHour}
         />
 
-        <Input
+        {/* <Input
           inputValue={inputValue}
           handleTodoInput={handleTodoInput}
           handleTodoSubmit={handleTodoSubmit}
           todo={todo}
-        />
+        /> */}
 
-        <Greeting
+        {/* <Greeting
           greeting={greeting}
           nameCondition={nameCondition}
           // handleNameValue={handleNameValue}
           name={name}
           handleBlur={handleBlur}
           handleDoubleClick={handleDoubleClick}
-        />
+        /> */}
 
         <TodoList
           todo={todo}

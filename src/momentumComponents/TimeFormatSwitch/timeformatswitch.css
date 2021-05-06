@@ -1,0 +1,40 @@
+.time-format-checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-format-checkbox-container .time-format-checkbox {
+  appearance: none;
+  height: 1.1em;
+  width: 2.1em;
+  background: #6d5f5f;
+  border-radius: 100vh;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.time-format-checkbox-container .time-format-checkbox:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #bfb0b0;
+  height: 12px;
+  width: 12px;
+  left: 2.2px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: 0.6s;
+}
+
+.time-format-checkbox-container .time-format-checkbox:checked {
+  background: #13e713;
+}
+
+.time-format-checkbox-container .time-format-checkbox:checked:before {
+  background: #ffffff;
+  left: 15px;
+}
+/*# sourceMappingURL=timeformatswitch.css.map */
