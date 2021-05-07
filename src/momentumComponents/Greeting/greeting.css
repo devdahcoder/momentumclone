@@ -1,0 +1,154 @@
+.greeting-section {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+  width: 100%;
+}
+
+.greeting-section .greeting-display {
+  color: white;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: opacity 0.5s ease;
+  display: flex;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.greeting-section .greeting-display .greeting-text-container {
+  color: white;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: inherit;
+  display: inline-flex;
+}
+
+.greeting-section .greeting-display .greeting-text-container .greeting-text-content {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: inherit;
+  transition: opacity 0.5s ease;
+  font-size: 337.5%;
+  display: inline;
+}
+
+.greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-message {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: inherit;
+  transition: opacity 0.5s ease;
+  margin-right: 0.3em;
+}
+
+.greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-name-container {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: inherit;
+  white-space: nowrap;
+}
+
+.greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-name-container .greeting-name-wrapper {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-name-container .greeting-name-wrapper .greeting-user-name {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  vertical-align: top;
+  max-width: 12em;
+  display: inline-block;
+  border-radius: 3px;
+  outline: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.greeting-section .greeting-display .greeting-menu-container {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: inherit;
+  flex: 1 0 50px;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: inherit;
+  position: relative;
+  padding-left: 4px;
+  transition: opacity 0.5s ease;
+}
+
+.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper {
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: inherit;
+  cursor: pointer;
+  padding: 5px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9px;
+  padding-left: 14px;
+  padding-right: 14px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper svg {
+  transition: opacity 0.5s ease;
+  height: 25px;
+}
+
+.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper svg path {
+  fill: white;
+}
+
+.greeting-section:hover .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+/*# sourceMappingURL=greeting.css.map */

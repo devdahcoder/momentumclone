@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import Weather from "./momentumComponents/weather";
 import Time from "./momentumComponents/Time/Time";
-import Greeting from "./momentumComponents/greeting";
+import Greeting from "./momentumComponents/Greeting/Greeting";
 import TodoList from "./momentumComponents/TodoList";
 import Input from "./momentumComponents/Input";
 import { v4 as uuid } from "uuid";
@@ -182,24 +182,24 @@ function App() {
 
 
 
-    // tell what time of the day if it is morning afternoon or evening
-    // const greetings = () => {
-    //   let todayGreeting = new Date();
+    //tell what time of the day if it is morning afternoon or evening
+    const greetings = () => {
+      let todayGreeting = new Date();
 
-    //   let hour = todayGreeting.getHours();
+      let hour = todayGreeting.getHours();
 
-    //   if (hour < 12) {
-    //     setGreeting("Good morning,");
-    //   } else if (hour < 15) {
-    //     setGreeting("Good afternoon,");
-    //   } else {
-    //     setGreeting("Good evening,");
-    //   }
-    // };
+      if (hour < 12) {
+        setGreeting("Good morning,");
+      } else if (hour < 17) {
+        setGreeting("Good afternoon,");
+      } else {
+        setGreeting("Good evening,");
+      }
+    };
     
-    // useEffect(() => {
-    //   greetings();
-    // }, [])
+    useEffect(() => {
+      greetings();
+    }, [])
 
 
 
@@ -298,14 +298,14 @@ function App() {
           todo={todo}
         /> */}
 
-        {/* <Greeting
+        <Greeting
           greeting={greeting}
           nameCondition={nameCondition}
           // handleNameValue={handleNameValue}
           name={name}
           handleBlur={handleBlur}
           handleDoubleClick={handleDoubleClick}
-        /> */}
+        />
 
         <TodoList
           todo={todo}

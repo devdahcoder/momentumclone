@@ -23,7 +23,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg");
+  /* background: url("https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg"); */
+  /* background: url("https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg"); */
+  /* background: url("https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg"); */
+  background: url("https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   color: hsl(0, 0%, 100%);

@@ -153,6 +153,7 @@
   display: flex;
   background: rgba(15, 15, 15, 0.925);
   border-radius: 100px;
+  display: none;
 }
 
 .time-section-container .side-col .more-dash nav .nav-item {
