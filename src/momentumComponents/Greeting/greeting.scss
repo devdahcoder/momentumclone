@@ -60,7 +60,7 @@
 
                 .greeting-name-container {
                     color: #fff;
-                    text-shadow: 0 1px 5px rgba(0,0,0,.1);
+                    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
                     // user-select: none;
                     text-align: center;
                     font-weight: 500;
@@ -71,7 +71,7 @@
 
                     .greeting-name-wrapper {
                         color: #fff;
-                        text-shadow: 0 1px 5px rgba(0,0,0,.1);
+                        text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
                         user-select: none;
                         text-align: center;
                         font-weight: 500;

@@ -5,6 +5,7 @@ import Time from "./momentumComponents/Time/Time";
 import Greeting from "./momentumComponents/Greeting/Greeting";
 import TodoList from "./momentumComponents/TodoList";
 import Input from "./momentumComponents/Input";
+import Footer from "./momentumComponents/Footer/Footer";
 import { v4 as uuid } from "uuid";
 
 function App() {
@@ -315,6 +316,7 @@ function App() {
           handleDeleteTodo={handleDeleteTodo}
           markTodo={markTodo}
         />
+        <Footer />
       </div>
     );
 }

@@ -1,0 +1,13 @@
+footer {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer svg {
+  height: 25px;
+}
+/*# sourceMappingURL=footer.css.map */
