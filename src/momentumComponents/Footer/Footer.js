@@ -337,31 +337,28 @@ const Footer = () => {
             </div>
 
 
-            <div class="region bottom">
-                <div data-v-f7053094="" data-test="quote" class="app-container app-dash quote">
-                    <p data-v-f7053094="" class="body">
-                        <span data-v-f7053094="" data-test="body-text" class="body-text">“Nothing can dim the light which shines from within.”</span>
-                        <span data-v-f7053094="" data-test="below" class="below">
-                            <span data-v-f7053094="" data-test="source" class="source">Maya Angelou</span>
-                            <span data-v-f7053094="" data-test="control-fav" class="control control-heart">
-                                <img data-v-f7053094="" src="img/icon-heart-empty.svg" class="icon-dash-heart-empty icon" alt="heart" />
+            <div className="footer-center-container">
+                <div className="footer-center-display">
+                    <p className="footer-center-text-container">
+                        <span className="footer-center-body-text">“Nothing can dim the light which <br /> shines from within.”</span>
+                        <span className="footer-center-text-below">
+                            <span className="footer-center-text-below-name">Maya Angelou</span>
+                            <span title="like" data-test="like" className="control control-heart">
+                                <svg className="love-icon" height="25" viewBox="0 -20 480 480" width="480pt" xmlns="http://www.w3.org/2000/svg"><path d="m348 0c-43 .0664062-83.28125 21.039062-108 56.222656-24.71875-35.183594-65-56.1562498-108-56.222656-70.320312 0-132 65.425781-132 140 0 72.679688 41.039062 147.535156 118.6875 216.480469 35.976562 31.882812 75.441406 59.597656 117.640625 82.625 2.304687 1.1875 5.039063 1.1875 7.34375 0 42.183594-23.027344 81.636719-50.746094 117.601563-82.625 77.6875-68.945313 118.726562-143.800781 118.726562-216.480469 0-74.574219-61.679688-140-132-140zm-108 422.902344c-29.382812-16.214844-224-129.496094-224-282.902344 0-66.054688 54.199219-124 116-124 41.867188.074219 80.460938 22.660156 101.03125 59.128906 1.539062 2.351563 4.160156 3.765625 6.96875 3.765625s5.429688-1.414062 6.96875-3.765625c20.570312-36.46875 59.164062-59.054687 101.03125-59.128906 61.800781 0 116 57.945312 116 124 0 153.40625-194.617188 266.6875-224 282.902344zm0 0"/></svg>
                             </span>
-                            <span data-v-f7053094="" data-test="skip" title="Skip Quote" class="control control-skip">
-                                <span data-v-f7053094="" class="icon-container">
-                                    <svg data-v-f7053094="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.05 132.12" class="icon icon-skip">
-                                        <circle data-v-f7053094="" cx="115.5" cy="108.62" r="23"></circle>
-                                        <path data-v-f7053094="" d="M291.5,281A22.5,22.5,0,1,1,269,303.5,22.52,22.52,0,0,1,291.5,281m0-1A23.5,23.5,0,1,0,315,303.5,23.5,23.5,0,0,0,291.5,280Z" transform="translate(-176 -194.88)"></path>
-                                        <path data-v-f7053094="" d="M399,257.5a135.18,135.18,0,0,0-41.16-42.17c-22.7-14.74-49.38-21.92-75.15-20.2a108.71,108.71,0,0,0-65.16,27c-19.91,17.5-33.76,41.79-41.18,72.19a13.52,13.52,0,0,0,9.92,16.32,13.66,13.66,0,0,0,3.21.38,13.51,13.51,0,0,0,13.11-10.3c6.07-24.92,17.1-44.54,32.76-58.31a82,82,0,0,1,49.13-20.32c20-1.33,40.81,4.32,58.65,15.9A108.07,108.07,0,0,1,374,268.51l-30,13.2,72.43,40.36,8.6-76Z" transform="translate(-176 -194.88)" class="arrow"></path>
-                                    </svg>
+                            <span data-v-f7053094="" data-test="skip" title="Skip Quote" className="control control-skip">
+                                <span data-v-f7053094="" className="icon-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 512 512" width="512"><path d="m505.7 183.8-212-150c-4.6-3.2-10.6-3.7-15.6-1.1-5 2.6-8.1 7.7-8.1 13.3v75.4c-70.5 3.6-136.2 32.8-186.5 83.1-53.8 53.8-83.5 125.4-83.5 201.5v60c0 8.3 6.8 15 15 15 6.6 0 12.6-4.4 14.4-10.9l2.3-8.1c30.8-107.6 127.5-184.2 238.3-190.6v74.6c0 5.6 3.1 10.7 8.1 13.3 5 2.6 11 2.2 15.6-1.1l212-150c4-2.8 6.3-7.4 6.3-12.2s-2.4-9.4-6.3-12.2zm-205.7 133.3v-61c0-8.3-6.7-15-15-15-32.2 0-63.9 5.2-94.3 15.5-68.6 23.3-125.1 70.8-160.1 131.6 9.2-132.3 119.8-237.1 254.4-237.1 8.3 0 15-6.7 15-15v-61l171 121z" fill="hsl(0, 0%, 100%)"/></svg>
                                 </span>
                             </span>
-                            <span data-v-f7053094="" title="share" data-test="share" class="control control-twitter">
-                                <i data-v-f7053094="" class="icon icon-twitter"></i>
+                            <span data-v-f7053094="" title="share" data-test="share" className="control control-twitter">
+                                <svg className="icon-twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.9 52.9"><path d="M52.4 9.7c-0.4-0.2-0.8-0.2-1.2 0 -0.4 0.3-1.2 0.6-2 0.8 2-2.3 2.1-3.8 2.1-4.2 0-0.4-0.2-0.7-0.6-0.8 -0.3-0.2-0.7-0.1-1 0.1 -2.3 1.7-4.6 2-6 2.1 -2.1-2-4.8-3.1-7.7-3.1 -6.2 0-11.2 5.1-11.2 11.4 0 0.5 0 1.1 0.1 1.6C14.2 17.4 5.5 7.1 5.4 7c-0.2-0.2-0.5-0.4-0.9-0.4 -0.3 0-0.6 0.2-0.8 0.5C0.7 12.5 2.8 17.2 4.7 19.9c-0.3-0.2-0.6-0.4-0.8-0.5 -0.3-0.2-0.7-0.3-1-0.1 -0.3 0.2-0.6 0.5-0.6 0.9 -0.1 5.1 2.4 8 4.7 9.7 -0.3 0-0.6 0.1-0.8 0.3 -0.2 0.3-0.3 0.6-0.2 1 1.6 5.2 5.5 7 8 7.6 -5.1 4-12.7 2.7-12.8 2.7 -0.5-0.1-0.9 0.2-1.1 0.6 -0.2 0.4-0.1 0.9 0.3 1.2 5.4 4.1 11.9 5 16.6 5 3.5 0 6.1-0.5 6.3-0.6 23.7-5.6 24.4-27.3 24.3-30.9 4.4-4.1 5.1-5.7 5.3-6.1C52.9 10.3 52.8 9.9 52.4 9.7zM45.9 15.7c-0.2 0.2-0.3 0.5-0.3 0.8 0.1 1 1.3 23.6-22.7 29.3 -0.1 0-9.7 2-17.9-2.1 3.5-0.1 8.5-1 12-4.9 0.3-0.3 0.3-0.7 0.2-1.1 -0.2-0.4-0.5-0.6-0.9-0.6 0 0 0 0 0 0 0 0-5.3 0-7.7-5 1 0.1 2.2 0 3.1-0.4 0.4-0.2 0.6-0.6 0.6-1 0-0.4-0.4-0.8-0.8-0.9 -0.3-0.1-6.1-1.4-6.9-7.7 0.9 0.4 2 0.7 3.1 0.5 0.4-0.1 0.7-0.3 0.8-0.7s0-0.8-0.3-1c-0.2-0.2-5.7-5.1-3.1-11.4 2.8 3 11.2 10.7 21.3 10.1 0.3 0 0.6-0.2 0.7-0.4 0.2-0.2 0.2-0.5 0.2-0.8 -0.2-0.8-0.3-1.6-0.3-2.3 0-5.2 4.1-9.4 9.2-9.4 2.5 0 4.8 1 6.6 2.8 0.2 0.2 0.4 0.3 0.7 0.3 1.1 0 2.8-0.1 4.8-0.9 -0.6 0.7-1.4 1.6-2.6 2.5 -0.3 0.3-0.5 0.7-0.3 1.2 0.2 0.4 0.6 0.7 1 0.6 0.2 0 1.4-0.1 2.8-0.4C48.2 13.4 47.2 14.4 45.9 15.7z"/></svg>
                             </span>
                         </span>
                     </p>
                 </div>
             </div>
+            
             <div class="region bottom-right">
                 <div id="todo" class="app-container todo show show-fade-in" data-test="todo" style={{}} data-justboundclickoutsidehandler="false" data-clickoutsidemouseuphandlerid="sb4gnm" data-clickoutsidemousedownhandlerid="6rh19o">
                     <div class="app-wrapper nipple nipple-bottom-right">
