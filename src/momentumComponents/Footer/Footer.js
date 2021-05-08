@@ -338,7 +338,7 @@ const Footer = () => {
             <div className="footer-center-container">
                 <div className="footer-center-display">
                     <p className="footer-center-text-container">
-                        <span className="footer-center-body-text">“Nothing can dim the light which <br /> shines from within.”</span>
+                        <span className="footer-center-body-text">“Nothing can dim the light which shines from within.”</span>
                         <span className="footer-center-text-below">
                             <span className="footer-center-text-below-name">Maya Angelou</span>
                             <span title="like" data-test="like" className="control control-heart">

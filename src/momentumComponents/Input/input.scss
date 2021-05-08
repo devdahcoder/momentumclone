@@ -1,0 +1,89 @@
+.todo-input-container {
+    color: #fff;
+    font-size: 100%;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+    user-select: none;
+    box-sizing: inherit;
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .todo-input-wrapper {
+        color: #fff;
+        font-size: 100%;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+        user-select: none;
+        text-align: center;
+        box-sizing: inherit;
+        width: 100%;
+
+        .todo-input-focus {
+            color: #fff;
+            font-size: 100%;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+            user-select: none;
+            text-align: center;
+            box-sizing: inherit;
+            display: inline-block;
+            transition: opacity 0.5s ease;
+            width: 100%;
+            position: relative;
+            vertical-align: top;
+
+            .todo-input-focus-wrapper {
+                color: #fff;
+                font-size: 100%;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+                user-select: none;
+                text-align: center;
+                box-sizing: inherit;
+                display: flex;
+                justify-content: center;
+
+                form {
+                    .input-form-display {
+                        color: #fff;
+                        font-size: 100%;
+                        text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+                        user-select: none;
+                        text-align: center;
+                        box-sizing: inherit;
+                        padding-bottom: 0.5em;
+
+                        label {
+                            color: #fff;
+                            text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+                            user-select: none;
+                            text-align: center;
+                            padding: 0;
+                            font-size: 2.1875em;
+                            font-weight: 400;
+                            margin: 0;
+                            line-height: normal;
+                        }
+
+                        input {
+                            user-select: none;
+                            font-family: Inter, sans-serif;
+                            width: 100%;
+                            padding-top: 4px;
+                            display: block;
+                            background: 0;
+                            border: 0;
+                            border-bottom: 2px solid hsl(0, 0%, 100%);
+                            color: hsl(0, 0%, 100%);
+                            font-size: 2.25em;
+                            line-height: 1.2;
+                            font-weight: 500;
+                            outline: none;
+                            text-align: center;
+                            transition: border-color .2s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

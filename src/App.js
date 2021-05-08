@@ -4,7 +4,7 @@ import Weather from "./momentumComponents/weather";
 import Time from "./momentumComponents/Time/Time";
 import Greeting from "./momentumComponents/Greeting/Greeting";
 import TodoList from "./momentumComponents/TodoList";
-import Input from "./momentumComponents/Input";
+import Input from "./momentumComponents/Input/Input";
 import Footer from "./momentumComponents/Footer/Footer";
 import { v4 as uuid } from "uuid";
 
@@ -18,7 +18,7 @@ function App() {
     const [getTwentyFourHour, setTwentyFourHour] = useState("")
     const [getMinute, setMinute] = useState("");
     const [greeting, setGreeting] = useState("");
-    const [name, setName] = useState("Dele");
+    const [name, setName] = useState("Olamide");
 
     // please contribute if you have an idea how to get value 
     // of an editable content and YES i tried using String.fromCharCode
@@ -279,11 +279,11 @@ function App() {
     // main return area
     return (
       <div>
-        <Weather
+        {/* <Weather
           icon={icon}
           location={location}
           locationTemperature={locationTemperature}
-        />
+        /> */}
 
         <Time 
           getAmPm={getAmPm} 
@@ -292,13 +292,6 @@ function App() {
           getTwentyFourHour={getTwentyFourHour}
         />
 
-        {/* <Input
-          inputValue={inputValue}
-          handleTodoInput={handleTodoInput}
-          handleTodoSubmit={handleTodoSubmit}
-          todo={todo}
-        /> */}
-
         <Greeting
           greeting={greeting}
           nameCondition={nameCondition}
@@ -306,6 +299,13 @@ function App() {
           name={name}
           handleBlur={handleBlur}
           handleDoubleClick={handleDoubleClick}
+        />
+
+        <Input
+          inputValue={inputValue}
+          handleTodoInput={handleTodoInput}
+          handleTodoSubmit={handleTodoSubmit}
+          todo={todo}
         />
 
         <TodoList
