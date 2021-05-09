@@ -9,6 +9,7 @@
     justify-content: center;
     font-size: 120%;
     line-height: 120%;
+
     // text-decoration: line-through;
     // opacity: 0.85;
 
@@ -17,7 +18,7 @@
         text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
         user-select: none;
         text-align: center;
-        --app-container-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease;
         font-size: 120%;
         line-height: 120%;
         box-sizing: inherit;
@@ -29,7 +30,6 @@
         .todo-checkbox {
             color: #fff;
             user-select: none;
-            --app-container-transition: opacity 0.5s ease;
             box-sizing: inherit;
             display: inline-flex;
             border-radius: 100px;
@@ -45,69 +45,63 @@
             line-height: 1;
             text-align: left;
             text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-            opacity: 0.8;
-            
-            .icon {
-                height: 13px;
-                fill: #fff;
-            }
+            opacity: 0;
+            // transition: opacity 0.5s ease;
 
-            .focus-open {
-                color: #fff;
-                user-select: none;
+
+            input[type='checkbox'] {
                 cursor: pointer;
-                font-size: 80%;
-                line-height: 1;
-                text-align: left;
-                text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-                box-sizing: inherit;
-                font-style: normal;
-                display: block;
-                margin-left: -1.7px;
-
-                &::before {
-                    content: '\e810';
-                    width: 1em;
-                    display: inline-block;
-                    font-family: icons;
-                    font-weight: 400;
-                    font-variant: normal;
-                    speak: none;
-                    text-align: center;
-                    text-decoration: inherit;
-                    text-transform: none;
-                }
-            }
-
-            .focus-done {
-                color: #fff;
-                user-select: none;
-                cursor: pointer;
-                font-size: 80%;
-                line-height: 1;
-                text-align: left;
-                text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-                box-sizing: inherit;
-                font-style: normal;
-                display: block;
-                opacity: 0.85;
+                opacity: 0;
                 position: absolute;
+                width: 100%;
+                height: 100%;
 
-                &::before {
-                    content: '\e809';
-                    width: 1em;
-                    display: inline-block;
-                    font-family: icons;
-                    font-weight: 400;
-                    font-variant: normal;
-                    speak: none;
-                    text-align: center;
-                    text-decoration: inherit;
-                    text-transform: none;
+                &:focus {
+                    + label {
+                        &::before {
+                            box-shadow: 0 0 20px black;
+                        }
+                    }
+                }
+
+                &:checked {
+                    + label {
+                        &::before {
+                            content: '\002714';
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+                            // font-weight: 500;
+                        }
+                    }
                 }
             }
+
+
+            label {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0.8;
+                transition: opacity 0.5s ease;
+
+                &::before {
+                    content: '';
+                    width: 0.8em;
+                    height: 0.8em;
+                    font-size: 18px;
+                    font-weight: 500;
+                    border-radius: .15em;
+                    border: 0.2em solid hsl(0, 0%, 100%);
+                }
+            }
+
         }
     }
+
+    
 
     .today-todo {
         color: #fff;
@@ -206,11 +200,20 @@
     }
 
     &:hover {
+        .todo-checkbox {
+            opacity: 0.8;
+
+            label {
+                opacity: 1;
+            }
+        }
+
+
         .todo-delete {
             opacity: 0.8;
 
             svg {
-                    opacity: 1;
+                opacity: 1;
             }
         }
     }

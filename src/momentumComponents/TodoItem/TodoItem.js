@@ -12,8 +12,8 @@ const TodoItem = ({ item, handleDeleteTodo, markTodo }) => {
 
       <span data-v-20431cdb="" class="side-col todo-checkbox-container">
         <span data-v-20431cdb="" data-test="complete" class="control todo-checkbox">
-          <i data-v-20431cdb="" class="icon icon-checkbox-empty focus-open"></i> 
-          <i data-v-20431cdb="" class="icon icon-checkbox focus-done"></i>
+          <input type="checkbox" name="" id="" />
+          <label htmlFor=""></label>
         </span>
       </span>
 
