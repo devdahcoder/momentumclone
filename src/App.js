@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
+import TimeGreet from "./momentumComponents/TimeGreet/TimeGreet";
 import Weather from "./momentumComponents/weather";
-import Time from "./momentumComponents/Time/Time";
-import Greeting from "./momentumComponents/Greeting/Greeting";
-import TodoList from "./momentumComponents/TodoList";
+// import TodoList from "./momentumComponents/TodoList/TodoList";
+import TodoList from "./momentumComponents/TodoList/TodoList"
 import Input from "./momentumComponents/Input/Input";
 import Footer from "./momentumComponents/Footer/Footer";
 import { v4 as uuid } from "uuid";
@@ -285,14 +285,13 @@ function App() {
           locationTemperature={locationTemperature}
         /> */}
 
-        <Time 
+        <TimeGreet 
+          //time props
           getAmPm={getAmPm} 
           getMinute={getMinute} 
           getHour={getHour} 
           getTwentyFourHour={getTwentyFourHour}
-        />
-
-        <Greeting
+          //greeting props
           greeting={greeting}
           nameCondition={nameCondition}
           // handleNameValue={handleNameValue}
@@ -316,6 +315,7 @@ function App() {
           handleDeleteTodo={handleDeleteTodo}
           markTodo={markTodo}
         />
+
         <Footer />
       </div>
     );

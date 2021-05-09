@@ -37,7 +37,7 @@ const Greeting = ({
 
             <span className="greeting-name-container">
               <span className="greeting-name-wrapper">
-                <span className="greeting-user-name" data-test="name"> {name}</span>
+                <span className="greeting-user-name" data-test="name"> Olamide</span>
               </span>
               <span data-test="punctuation">.</span>
             </span>

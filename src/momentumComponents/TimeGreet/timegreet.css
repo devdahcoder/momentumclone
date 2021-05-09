@@ -1,0 +1,18 @@
+.time-greet-container {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+.time-greet-container .time-greet-display {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+/*# sourceMappingURL=timegreet.css.map */

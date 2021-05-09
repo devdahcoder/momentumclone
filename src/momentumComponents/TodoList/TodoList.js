@@ -1,5 +1,8 @@
 import React from 'react';
-import TodoItem from "./TodoItem";
+import "./todolist.css";
+
+//imported components
+import TodoItem from "../TodoItem/TodoItem";
 
 const TodoList = ({
   todo,
@@ -8,8 +11,8 @@ const TodoList = ({
   todoComplete
 }) => {
   return (
-    <div>
-      <div style={{ display: todo.length === 0 ? "none" : "block" }}>Today</div>
+    <div className="todo-focus-container">
+      <div className="todo-title" style={{ display: todo.length === 0 ? "none" : "block" }}>Today</div>
       {todo.map((item) => (
         <TodoItem
           key={item.id}

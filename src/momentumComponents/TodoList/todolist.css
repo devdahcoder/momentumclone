@@ -1,0 +1,22 @@
+.todo-focus-container {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  box-sizing: inherit;
+  width: 100%;
+  font-size: 1.875em;
+}
+
+.todo-focus-container .todo-title {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  box-sizing: inherit;
+  margin: 17px 0 3px;
+  font-size: 70%;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=todolist.css.map */

@@ -1,4 +1,22 @@
 .time-section-container {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  transition: height 500ms ease;
+  height: auto;
+}
+
+.time-section-container .time-section-wrapper {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  box-sizing: inherit;
+  position: relative;
+}
+
+.time-section-container .time-section-wrapper .time-section-display {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,19 +24,19 @@
   transition: opacity 0.5s ease;
 }
 
-.time-section-container .side-col {
+.time-section-container .time-section-wrapper .time-section-display .side-col {
   transition: opacity 0.5s ease;
   position: relative;
 }
 
-.time-section-container .side-col .more-dash {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash {
   transition: opacity 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.time-section-container .side-col .more-dash .icon-wrapper {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .icon-wrapper {
   transition: opacity 0.5s ease;
   opacity: 0;
   cursor: pointer;
@@ -27,12 +45,12 @@
   justify-content: center;
 }
 
-.time-section-container .side-col .more-dash .icon-wrapper svg {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .icon-wrapper svg {
   height: 25px;
   fill: white;
 }
 
-.time-section-container .side-col .more-dash .icon-wrapper:hover::after {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .icon-wrapper:hover::after {
   content: "";
   height: 35px;
   width: 35px;
@@ -47,7 +65,7 @@
   transform: translate(-50%, -50%);
 }
 
-.time-section-container .side-col .more-dash .dropdown-container {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .dropdown-container {
   background: #333333;
   user-select: none;
   max-height: 100vh;
@@ -70,7 +88,7 @@
   display: block;
 }
 
-.time-section-container .side-col .more-dash .dropdown-container .time-ul {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .dropdown-container .time-ul {
   user-select: none;
   text-shadow: none;
   text-align: left;
@@ -84,7 +102,7 @@
   transition: transform .25s ease, height .25s ease;
 }
 
-.time-section-container .side-col .more-dash .dropdown-container .time-ul .time-li {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .dropdown-container .time-ul .time-li {
   user-select: none;
   color: white;
   list-style: none;
@@ -101,7 +119,7 @@
   justify-content: space-between;
 }
 
-.time-section-container .side-col .more-dash .dropdown-container .time-ul .time-li .dropdown-list-label {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .dropdown-container .time-ul .time-li .dropdown-list-label {
   user-select: none;
   text-shadow: none;
   color: white;
@@ -113,12 +131,12 @@
   box-sizing: inherit;
 }
 
-.time-section-container .side-col .more-dash .dropdown-container .time-ul .time-li .toggle-slider {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .dropdown-container .time-ul .time-li .toggle-slider {
   margin-left: 15px;
   position: relative;
 }
 
-.time-section-container .side-col .more-dash .dropdown-container .time-ul::before {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .dropdown-container .time-ul::before {
   position: absolute;
   top: -7px;
   left: 15px;
@@ -130,7 +148,7 @@
   content: '';
 }
 
-.time-section-container .side-col .more-dash .dropdown-container .time-ul::after {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .dropdown-container .time-ul::after {
   position: absolute;
   top: -6px;
   left: 15px;
@@ -141,7 +159,7 @@
   content: '';
 }
 
-.time-section-container .side-col .more-dash nav {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash nav {
   transition: opacity 0.5s ease;
   color: #fff;
   font-size: 100%;
@@ -156,7 +174,7 @@
   display: none;
 }
 
-.time-section-container .side-col .more-dash nav .nav-item {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash nav .nav-item {
   transition: opacity 0.5s ease;
   color: white;
   font-size: 100%;
@@ -167,7 +185,7 @@
   padding: 5px 7px;
 }
 
-.time-section-container .side-col .more-dash nav .nav-item svg {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash nav .nav-item svg {
   transition: opacity 0.5s ease;
   height: 25px;
   padding: 10px calc(10px)-4px;
@@ -175,21 +193,21 @@
   cursor: pointer;
 }
 
-.time-section-container .side-col .more-dash nav .nav-item:hover {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash nav .nav-item:hover {
   transition: opacity 0.5s ease;
 }
 
-.time-section-container .side-col .more-dash nav .nav-item:hover svg {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash nav .nav-item:hover svg {
   opacity: 1;
   transition: opacity 0.5s ease;
   fill: white;
 }
 
-.time-section-container .side-col .more-dash nav .nav-item:hover .tooltip {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash nav .nav-item:hover .tooltip {
   display: block;
 }
 
-.time-section-container .side-col .more-dash nav .nav-item .tooltip {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash nav .nav-item .tooltip {
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   user-select: none;
   box-sizing: inherit;
@@ -206,15 +224,15 @@
   white-space: nowrap;
 }
 
-.time-section-container .side-col .more-dash nav .active svg {
+.time-section-container .time-section-wrapper .time-section-display .side-col .more-dash nav .active svg {
   fill: white;
 }
 
-.time-section-container:hover .side-col .more-dash .icon-wrapper {
+.time-section-container .time-section-wrapper .time-section-display:hover .side-col .more-dash .icon-wrapper {
   opacity: 1;
 }
 
-.time-section-container .main-time-container .main-time-display {
+.time-section-container .time-section-wrapper .time-section-display .main-time-container .main-time-display {
   font-size: 10rem;
   cursor: default;
   letter-spacing: -5px;

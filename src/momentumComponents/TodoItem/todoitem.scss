@@ -1,0 +1,217 @@
+.todo-list-item-container {
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+    user-select: none;
+    text-align: center;
+    box-sizing: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 120%;
+    line-height: 120%;
+    // text-decoration: line-through;
+    // opacity: 0.85;
+
+    .todo-checkbox-container {
+        color: #fff;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+        user-select: none;
+        text-align: center;
+        --app-container-transition: opacity 0.5s ease;
+        font-size: 120%;
+        line-height: 120%;
+        box-sizing: inherit;
+        flex: 1 0 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .todo-checkbox {
+            color: #fff;
+            user-select: none;
+            --app-container-transition: opacity 0.5s ease;
+            box-sizing: inherit;
+            display: inline-flex;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.1s ease;
+            transform-origin: 50% 50%;
+            vertical-align: top;
+            margin-right: 0.15em;
+            padding: 10px;
+            position: relative;
+            border: none;
+            font-size: 80%;
+            line-height: 1;
+            text-align: left;
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            opacity: 0.8;
+            
+            .icon {
+                height: 13px;
+                fill: #fff;
+            }
+
+            .focus-open {
+                color: #fff;
+                user-select: none;
+                cursor: pointer;
+                font-size: 80%;
+                line-height: 1;
+                text-align: left;
+                text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+                box-sizing: inherit;
+                font-style: normal;
+                display: block;
+                margin-left: -1.7px;
+
+                &::before {
+                    content: '\e810';
+                    width: 1em;
+                    display: inline-block;
+                    font-family: icons;
+                    font-weight: 400;
+                    font-variant: normal;
+                    speak: none;
+                    text-align: center;
+                    text-decoration: inherit;
+                    text-transform: none;
+                }
+            }
+
+            .focus-done {
+                color: #fff;
+                user-select: none;
+                cursor: pointer;
+                font-size: 80%;
+                line-height: 1;
+                text-align: left;
+                text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+                box-sizing: inherit;
+                font-style: normal;
+                display: block;
+                opacity: 0.85;
+                position: absolute;
+
+                &::before {
+                    content: '\e809';
+                    width: 1em;
+                    display: inline-block;
+                    font-family: icons;
+                    font-weight: 400;
+                    font-variant: normal;
+                    speak: none;
+                    text-align: center;
+                    text-decoration: inherit;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+
+    .today-todo {
+        color: #fff;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+        user-select: none;
+        text-align: center;
+        font-size: 120%;
+        line-height: 120%;
+        box-sizing: inherit;
+        max-width: 87%;
+        margin: 3px 0;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .todo-delete-container {
+        color: #fff;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+        user-select: none;
+        text-align: center;
+        font-size: 120%;
+        line-height: 120%;
+        box-sizing: inherit;
+        flex: 1 0 50px;
+        display: inline-flex;
+        align-items: center;
+        padding-top: 3px;
+        align-self: center;
+
+        .todo-delete {
+            color: #fff;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+            user-select: none;
+            text-align: center;
+            line-height: 120%;
+            box-sizing: inherit;
+            display: inline-flex;
+            opacity: 0;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.1s ease;
+            transform-origin: 50% 50%;
+            vertical-align: top;
+            height: 30px;
+            width: 30px;
+            margin-left: 14px;
+            align-self: center;
+            font-size: 70%;
+
+            .icon-wrapper {
+                color: #fff;
+                text-shadow: 0 1px 5px rgba(0,0,0,.1);
+                user-select: none;
+                text-align: center;
+                line-height: 120%;
+                font-size: 70%;
+                box-sizing: inherit;
+                cursor: pointer;
+                padding: 5px;
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                vertical-align: top;
+
+                svg {
+                    height: 10px;
+                    width: 10px;
+                    transition: transform 0.1s ease;
+                    opacity: 0.8;
+                    path {
+                        fill: white;
+                    }
+                    
+                }
+
+                &:hover {
+                    &::after {
+                        content: "";
+                        height: 30px;
+                        width: 30px;
+                        background: rgba(255, 255, 255, 0.2);
+                        position: absolute;
+                        z-index: 0;
+                        display: block;
+                        border-radius: 50px;
+                    }
+                }
+
+                
+            }
+
+        }
+    }
+
+    &:hover {
+        .todo-delete {
+            opacity: 0.8;
+
+            svg {
+                    opacity: 1;
+            }
+        }
+    }
+}
