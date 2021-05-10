@@ -1,0 +1,12 @@
+.date-weather-header {
+    color: hsl(0, 0%, 100%);
+    font-size: 100%;
+    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 60px;
+    display: flex;
+    align-items: flex-start;
+    flex: 0 0 auto;
+}

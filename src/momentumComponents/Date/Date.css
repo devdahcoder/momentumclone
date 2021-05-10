@@ -1,0 +1,36 @@
+.date-top-left {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  flex: 1 1 auto;
+  position: relative;
+  display: flex;
+  height: 150px;
+  align-items: stretch;
+}
+
+.date-top-left .header-date-container {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.5s ease;
+  vertical-align: top;
+}
+
+.date-top-left .header-date-container span {
+  position: relative;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 106.25%;
+  font-weight: 500;
+  line-height: 60px;
+  transition: color .1s ease, text-shadow .1s ease, opacity 0.5s ease;
+  cursor: pointer;
+  padding: 0 38px;
+  padding-left: 20px;
+}
+/*# sourceMappingURL=Date.css.map */

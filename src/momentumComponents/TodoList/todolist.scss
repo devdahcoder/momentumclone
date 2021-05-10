@@ -1,24 +1,87 @@
-.todo-focus-container {
-
-    color: #fff;
-    text-shadow: 0 1px 5px rgba(0,0,0,.1);
+.todo-list-section {
+    font-size: 100%;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
     user-select: none;
     text-align: center;
     box-sizing: inherit;
     width: 100%;
-    // position: absolute;
-    // top: 0;
-    font-size: 1.875em;
-
-    .todo-title {
-        color: #fff;
+    .todo-list-section-display {
+        font-size: 100%;
         text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
         user-select: none;
         text-align: center;
         box-sizing: inherit;
-        margin: 17px 0 3px;
-        font-size: 70%;
-        line-height: 120%;
-        text-transform: uppercase;
+        width: 100%;
+        position: relative;
+        display: inline-block !important;
+        overflow: visible;
+
+        .todo-list-fake-input-prompt {
+            color: #fff;
+            font-size: 100%;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+            user-select: none;
+            text-align: center;
+            box-sizing: inherit;
+            padding-bottom: 0.5em;
+            visibility: hidden;
+
+            h3 {
+                color: #fff;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+                user-select: none;
+                text-align: center;
+                visibility: hidden;
+                box-sizing: inherit;
+                font-size: 2.1875em;
+                font-weight: 400;
+                margin: 0;
+                line-height: normal;
+            }
+
+            input {
+                user-select: none;
+                visibility: hidden;
+                box-sizing: inherit;
+                margin: 0;
+                width: 100%;
+                padding-top: 4px;
+                display: block;
+                background: 0;
+                border: 0;
+                border-bottom: 2px solid #fff;
+                color: #fff;
+                font-size: 2.25em;
+                line-height: 1.2;
+                font-weight: 500;
+                outline: none;
+                text-align: center;
+                transition: border-color .2s ease;
+            }
+        }
+        .todo-focus-container {
+
+            color: #fff;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+            user-select: none;
+            text-align: center;
+            box-sizing: inherit;
+            width: 100%;
+            // position: absolute;
+            // top: 0;
+            font-size: 1.875em;
+
+            .todo-title {
+                color: #fff;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+                user-select: none;
+                text-align: center;
+                box-sizing: inherit;
+                margin: 17px 0 3px;
+                font-size: 70%;
+                line-height: 120%;
+                text-transform: uppercase;
+            }
+        }
     }
 }

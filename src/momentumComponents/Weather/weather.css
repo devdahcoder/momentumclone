@@ -1,0 +1,145 @@
+.weather-top-right {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  display: flex;
+  min-height: 150px;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: right;
+}
+
+.weather-top-right .weather {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: right;
+  box-sizing: inherit;
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.5s ease;
+  order: 0;
+}
+
+.weather-top-right .weather .metric-item {
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  box-sizing: inherit;
+  vertical-align: top;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  text-align: right;
+  padding: 11px 10px 10px;
+  cursor: pointer;
+  order: 1;
+  padding-right: 20px;
+}
+
+.weather-top-right .weather .metric-item .metric-stat {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: right;
+  cursor: pointer;
+  box-sizing: inherit;
+  position: relative;
+  font-size: 1.625rem;
+  font-weight: 400;
+  margin-right: -1px;
+  white-space: nowrap;
+  height: 30px;
+}
+
+.weather-top-right .weather .metric-item .metric-stat .icon-weather {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: right;
+  cursor: pointer;
+  font-size: 1.625rem;
+  font-weight: 400;
+  white-space: nowrap;
+  box-sizing: inherit;
+  height: 13px;
+  fill: #fff;
+  margin-right: 6px;
+}
+
+.weather-top-right .weather .metric-item .metric-stat .metric-stat-number {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: right;
+  cursor: pointer;
+  font-size: 1.625rem;
+  font-weight: 400;
+  white-space: nowrap;
+  box-sizing: inherit;
+}
+
+.weather-top-right .weather .metric-item .metric-stat .weather-degree {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: right;
+  cursor: pointer;
+  font-size: 1.625rem;
+  font-weight: 400;
+  white-space: nowrap;
+  box-sizing: inherit;
+}
+
+.weather-top-right .weather .metric-item .metric-stat .hide {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: right;
+  cursor: pointer;
+  font-weight: 400;
+  white-space: nowrap;
+  box-sizing: inherit;
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 5px;
+  animation: fadeout 4s ease 4s 1 normal;
+  animation-fill-mode: forwards;
+  font-size: 55%;
+  text-transform: uppercase;
+}
+
+.weather-top-right .weather .metric-item .metric-label {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: right;
+  cursor: pointer;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0 0 3px;
+  overflow-wrap: break-word;
+  transition: opacity .5s ease;
+  word-break: break-word;
+  vertical-align: top;
+  display: inline-block;
+  font-size: .8125rem;
+  outline: 0;
+}
+
+.weather-top-right .weather .metric-item .metric-label .metric-label-name {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: right;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-size: .8125rem;
+  box-sizing: inherit;
+  opacity: .85;
+}
+/*# sourceMappingURL=weather.css.map */

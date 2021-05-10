@@ -1,0 +1,48 @@
+.todo-input-container {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  box-sizing: inherit;
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.todo-input-container .todo-input-wrapper {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  box-sizing: inherit;
+  width: 100%;
+}
+
+.todo-input-container .todo-input-wrapper .todo-input-focus {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  box-sizing: inherit;
+  display: inline-block;
+  transition: opacity 0.5s ease;
+  width: 100%;
+  position: relative;
+  vertical-align: top;
+}
+
+.todo-input-container .todo-input-wrapper .todo-input-focus .todo-input-focus-wrapper {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  box-sizing: inherit;
+  display: flex;
+  justify-content: center;
+}
+/*# sourceMappingURL=todoinput.css.map */

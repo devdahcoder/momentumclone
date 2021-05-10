@@ -2,10 +2,14 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import TimeGreet from "./momentumComponents/TimeGreet/TimeGreet";
 import Weather from "./momentumComponents/weather";
-// import TodoList from "./momentumComponents/TodoList/TodoList";
+import TodoInput from "./momentumComponents/TodoInput/TodoInput";
 import TodoList from "./momentumComponents/TodoList/TodoList"
 import Input from "./momentumComponents/Input/Input";
+import DateWeather from "./momentumComponents/DateWeather/DateWeather"
 import Footer from "./momentumComponents/Footer/Footer";
+
+
+//imported packages
 import { v4 as uuid } from "uuid";
 
 function App() {
@@ -285,6 +289,8 @@ function App() {
           locationTemperature={locationTemperature}
         /> */}
 
+        <DateWeather />
+
         <TimeGreet 
           //time props
           getAmPm={getAmPm} 
@@ -300,21 +306,24 @@ function App() {
           handleDoubleClick={handleDoubleClick}
         />
 
-        <Input
+        <TodoInput 
           inputValue={inputValue}
           handleTodoInput={handleTodoInput}
           handleTodoSubmit={handleTodoSubmit}
           todo={todo}
+          handleDeleteTodo={handleDeleteTodo}
+          markTodo={markTodo}
         />
 
-        <TodoList
+
+        {/* <TodoList
           todo={todo}
           inputValue={inputValue}
           handleTodoInput={handleTodoInput}
           handleTodoSubmit={handleTodoSubmit}
           handleDeleteTodo={handleDeleteTodo}
           markTodo={markTodo}
-        />
+        /> */}
 
         <Footer />
       </div>

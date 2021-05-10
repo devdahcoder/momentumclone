@@ -1,0 +1,30 @@
+.todo-greet-message-wrapper {
+  color: #fff;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  box-sizing: inherit;
+  position: relative;
+}
+
+.todo-greet-message-wrapper .todo-greet-focus-message {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  box-sizing: inherit;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.todo-greet-message-wrapper .todo-greet-focus-message span {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  box-sizing: inherit;
+}
+/*# sourceMappingURL=todogreetmessage.css.map */

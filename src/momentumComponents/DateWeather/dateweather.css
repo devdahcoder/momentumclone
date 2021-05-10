@@ -1,0 +1,11 @@
+.date-weather-header {
+  color: white;
+  font-size: 100%;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  height: 60px;
+  display: flex;
+  align-items: flex-start;
+  flex: 0 0 auto;
+}
+/*# sourceMappingURL=dateweather.css.map */
