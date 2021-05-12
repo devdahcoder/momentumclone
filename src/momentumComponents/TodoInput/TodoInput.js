@@ -22,21 +22,21 @@ const TodoInput = ({
 
                     {/* this div houses todo list or todo form input */}
                     <div className="todo-input-focus-wrapper">
-                        <Input
+                        {/* <Input
                             inputValue={inputValue}
                             handleTodoInput={handleTodoInput}
                             handleTodoSubmit={handleTodoSubmit}
                             todo={todo}
-                        />
+                        /> */}
 
-                        {/* <TodoList
+                        <TodoList
                             todo={todo}
                             inputValue={inputValue}
                             handleTodoInput={handleTodoInput}
                             handleTodoSubmit={handleTodoSubmit}
                             handleDeleteTodo={handleDeleteTodo}
                             markTodo={markTodo}
-                        /> */}
+                        />
                     </div>
                     
 
