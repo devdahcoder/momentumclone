@@ -282,7 +282,7 @@ function App() {
     
     // main return area
     return (
-      <div>
+      <div className="main-app">
         {/* <Weather
           icon={icon}
           location={location}

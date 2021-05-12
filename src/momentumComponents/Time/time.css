@@ -52,17 +52,13 @@
 
 .time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .icon-wrapper:hover::after {
   content: "";
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
+  background: rgba(255, 255, 255, 0.2);
   position: absolute;
   z-index: 0;
   display: block;
-  border-radius: 100vh;
-  background-color: white;
-  top: 50%;
-  left: 50%;
-  opacity: 0.5;
-  transform: translate(-50%, -50%);
+  border-radius: 50px;
 }
 
 .time-section-container .time-section-wrapper .time-section-display .side-col .more-dash .dropdown-container {
