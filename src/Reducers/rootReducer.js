@@ -1,13 +1,13 @@
 import { combineReducers } from "redux";
 import timeReducer from "./timeReducer";
 import timeDropDownReducer from "./timeDropDownReducer";
-import todoCheckBoxReducer from "./todoCheckBoxReducer"
+import todoReducer from "./todoReducer";
 
 
 const rootReducer = combineReducers({
     time : timeReducer,
     timeDropDown : timeDropDownReducer,
-    todoCheckBox : todoCheckBoxReducer,
+    todo : todoReducer,
 });
 
 

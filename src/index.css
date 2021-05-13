@@ -13,12 +13,12 @@
       Helvetica,
       Arial,
       sans-serif; */
-      /* -webkit-user-select: none; */
+      -webkit-user-select: none; 
       /* Safari */
-      /* -ms-user-select: none; */
+      -ms-user-select: none; 
       /* IE 10 and IE 11 */
-      /* user-select: none; */
-      /* Standard syntax */
+      user-select: none;
+      /* Standard syntax*/
 }
 
 
@@ -29,7 +29,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg");
+  background: url("https://images.pexels.com/photos/4201659/pexels-photo-4201659.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   color: hsl(0, 0%, 100%);

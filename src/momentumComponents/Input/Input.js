@@ -1,8 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./input.css";
 
+//imported packages
+import {v4 as uuid} from "uuid";
+import { useDispatch, useSelector } from 'react-redux';
 
-const Input = ({ inputValue, handleTodoInput, handleTodoSubmit, todo }) => {
+//imported utils
+import {addTodo} from "../../Actions/todoAction";
+
+
+const Input = () => {
+
+  const dispatch = useDispatch();
+  const [inputValue, setInputValue] = useState("")
+
+
+  // handle submit for todo
+  const handleTodoSubmit = (e) => {
+    e.preventDefault();
+    if (inputValue !== "") {
+      const newTodo = {id: uuid(), value: inputValue, completed: false};
+      dispatch(addTodo(newTodo));
+    } else {
+      alert("cant happen");
+    }
+    setInputValue("");
+  }
+
+  //handle todo input
+  const handleTodoInput = (e) => {
+    setInputValue(e.target.value);
+  }
+
   return (
     <section>
       <form action="" onSubmit={handleTodoSubmit}>

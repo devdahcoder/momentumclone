@@ -1,16 +1,16 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import TimeGreet from "./momentumComponents/TimeGreet/TimeGreet";
-import Weather from "./momentumComponents/weather";
+// import Weather from "./momentumComponents/weather";
 import TodoInput from "./momentumComponents/TodoInput/TodoInput";
-import TodoList from "./momentumComponents/TodoList/TodoList"
-import Input from "./momentumComponents/Input/Input";
+// import TodoList from "./momentumComponents/TodoList/TodoList"
+// import Input from "./momentumComponents/Input/Input";
 import DateWeather from "./momentumComponents/DateWeather/DateWeather"
 import Footer from "./momentumComponents/Footer/Footer";
 
 
-//imported packages
-import { v4 as uuid } from "uuid";
+// //imported packages
+// import { v4 as uuid } from "uuid";
 
 function App() {
 
@@ -55,8 +55,6 @@ function App() {
     }, [name]);
 
 
-
-
     // get Todo from local storage
     useEffect(() => {
       const storageTodo = JSON.parse(localStorage.getItem("todo"))
@@ -64,7 +62,6 @@ function App() {
         setTodo(storageTodo)
       }
     }, [])
-
 
 
 
@@ -208,56 +205,6 @@ function App() {
 
 
 
-
-    //handle todo input
-    const handleTodoInput = (e) => {
-      setInputValue(e.target.value);
-    }
-
-
-
-
-    // handle submit for todo
-    const handleTodoSubmit = (e) => {
-      e.preventDefault();
-      if (inputValue !== "") {
-        const newTodo = {id: uuid(), value: inputValue, completed: false};
-        setTodo([newTodo, ...todo]);
-      } else {
-        alert("cant happen")
-      }
-
-      setInputValue("");
-      
-    }
-
-
-
-
-    // handle deleting todo
-    const handleDeleteTodo = (id) => {
-      const newTodo = todo.filter((todo) => id !== todo.id);
-      setTodo(newTodo)
-    }
-
-
-
-
-    // handle condition if todo is checked
-    const markTodo = (id) => {
-      setTodo(
-        todo.map((items) => {
-          if (items.id === id) {
-            return {
-              ...items, completed: !items.completed
-            }
-          }
-          return items;
-        })
-      );
-    }
-
-
     // const handleNameValue = (e) => {
     //   setNameValue(String.fromCharCode(e.keyCode));
     //   console.log(String.fromCharCode(e.keyCode));
@@ -306,24 +253,8 @@ function App() {
           handleDoubleClick={handleDoubleClick}
         />
 
-        <TodoInput 
-          inputValue={inputValue}
-          handleTodoInput={handleTodoInput}
-          handleTodoSubmit={handleTodoSubmit}
-          todo={todo}
-          handleDeleteTodo={handleDeleteTodo}
-          markTodo={markTodo}
-        />
+        <TodoInput />
 
-
-        {/* <TodoList
-          todo={todo}
-          inputValue={inputValue}
-          handleTodoInput={handleTodoInput}
-          handleTodoSubmit={handleTodoSubmit}
-          handleDeleteTodo={handleDeleteTodo}
-          markTodo={markTodo}
-        /> */}
 
         <Footer />
       </div>
