@@ -72,48 +72,72 @@ function App() {
 
 
 
+    //get user location and give weather update
+    const getUserCity = async (id) => {
+      let url = `http://dataservice.accuweather.com/currentconditions/v1/${id}?apikey=${API_KEY}`
+
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log(data[0]);
+
+      // let WeatherUi = data[0];
+
+      // let {WeatherIcon} = WeatherUi;
+
+      setIcon(data[0].WeatherIcon);
+    }
+
+    // useEffect(() => {
+    //   getUserCity(id);
+    // }, [id]);
+
 
     //get user location and give weather update
-    // const getUserLocation = async () => {
-    //     navigator.geolocation.getCurrentPosition(
-    //       async (position) => {
-    //         const { latitude, longitude } = position.coords;
+    const getUserLocation = () => {
+        navigator.geolocation.getCurrentPosition(
+          async (position) => {
+            const { latitude, longitude } = position.coords;
 
-    //         let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
+            let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
 
-    //         const response = await fetch(url);
-    //         const data = await response.json();
-    //         console.log(data);
-    //         const { LocalizedName, key } = data;
-    //         // setLocation(`${LocalizedName}`);
-    //         setId(key);
-
-    //       //   fetch(url)
-    //       //     .then((response) => response.json())
-    //       //     .then((data) => {
-    //       //       console.log(data);
-    //       //       const { LocalizedName, key } = data;
-    //             // setIcon(
-    //             //   `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`
-    //             // );
-    //       //       setLocation(`${LocalizedName}`);
-    //       //       setId(key);
-    //       //       // setLocationTemperature(`${clouds.all}`);
-    //       //     })
-    //       //     .catch((error) => {
-    //       //       console.log("Something went wrong", error);
-    //       //     });
-    //       },
-    //       () => {
-    //         console.log("your browser does not support it");
-    //       }
-    //     );
+            const response = await fetch(url);
+            const data = await response.json();
+            setId(data.Key)
+            console.log(data);
+            getUserCity(data.Key)
+          },
+          () => {
+            console.log("your browser does not support it");
+          }
+        );
         
+    }
+
+    useEffect(() => {
+      getUserLocation();
+    }, []);
+
+
+    // //get user location and give weather update
+    // const getUserCity = async (id) => {
+    //   let url = `http://dataservice.accuweather.com/currentconditions/v1/${id}?apikey=${API_KEY}`
+
+    //   const response = await fetch(url);
+    //   const data = await response.json();
+    //   console.log(data[0]);
+
+    //   // let WeatherUi = data[0];
+
+    //   // let {WeatherIcon} = WeatherUi;
+
+    //   // setIcon(data[0].WeatherIcon)
+
+
     // }
 
     // useEffect(() => {
-    //   getUserLocation();
-    // }, []);
+    //   getUserCity(id);
+    // }, [id]);
 
 
 
@@ -236,7 +260,7 @@ function App() {
           locationTemperature={locationTemperature}
         /> */}
 
-        <DateWeather />
+        <DateWeather icon={icon} />
 
         <TimeGreet 
           //time props
@@ -262,3 +286,29 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+            // const { LocalizedName, key } = data;
+            // setLocation(`${LocalizedName}`);
+            // setId(key);
+
+            // fetch(url)
+            //   .then((response) => response.json())
+            //   .then((data) => {
+            //     console.log(data);
+            //     const { LocalizedName, key } = data;
+            //     setIcon(
+            //       `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`
+            //     );
+            //     setLocation(`${LocalizedName}`);
+            //     setId(key);
+            //     // setLocationTemperature(`${clouds.all}`);
+            //   })
+            //   .catch((error) => {
+            //     console.log("Something went wrong", error);
+            //   });
