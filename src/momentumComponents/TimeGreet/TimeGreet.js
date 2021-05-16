@@ -7,7 +7,6 @@ import Greeting from "../Greeting/Greeting";
 
 const TimeGreet = ({
     getAmPm, getMinute, getHour, getTwentyFourHour, 
-    greeting, nameCondition, name, handleBlur, handleDoubleClick
     }) => {
     return (
         <section className="time-greet-container">
@@ -18,14 +17,7 @@ const TimeGreet = ({
                     getHour={getHour} 
                     getTwentyFourHour={getTwentyFourHour}
                 />
-                <Greeting
-                    greeting={greeting}
-                    nameCondition={nameCondition}
-                    // handleNameValue={handleNameValue}
-                    name={name}
-                    handleBlur={handleBlur}
-                    handleDoubleClick={handleDoubleClick}
-                />
+                <Greeting />
             </div>
         </section>
     )

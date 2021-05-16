@@ -1,16 +1,11 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import TimeGreet from "./momentumComponents/TimeGreet/TimeGreet";
-// import Weather from "./momentumComponents/weather";
 import TodoInput from "./momentumComponents/TodoInput/TodoInput";
-// import TodoList from "./momentumComponents/TodoList/TodoList"
-// import Input from "./momentumComponents/Input/Input";
 import DateWeather from "./momentumComponents/DateWeather/DateWeather"
 import Footer from "./momentumComponents/Footer/Footer";
-
-
-// //imported packages
-// import { v4 as uuid } from "uuid";
+import {getUserLocation} from "./Actions/locationAction";
+import {useDispatch} from "react-redux";
 
 function App() {
 
@@ -34,11 +29,9 @@ function App() {
     const [id, setId] = useState("");
 
 
-
-    // const API_KEY = process.env.REACT_APP_API_KEY
     const API_KEY = "P0BEZ1EdgkfLR5R4chm5ChWLQyJMkHtJ";
-    // const API_KEY = "ab726d7c7530e07f9e68e4756723249d";
-    
+
+    const dispatch = useDispatch()
 
     // get name from local storage
     useEffect(() => {
@@ -73,96 +66,32 @@ function App() {
 
 
     //get user location and give weather update
-    const getUserCity = async (id) => {
-      let url = `http://dataservice.accuweather.com/currentconditions/v1/${id}?apikey=${API_KEY}`
-
-      const response = await fetch(url);
-      const data = await response.json();
-      console.log(data[0]);
-
-      // let WeatherUi = data[0];
-
-      // let {WeatherIcon} = WeatherUi;
-
-      setIcon(data[0].WeatherIcon);
-    }
-
-    // useEffect(() => {
-    //   getUserCity(id);
-    // }, [id]);
-
-
-    //get user location and give weather update
-    const getUserLocation = () => {
-        navigator.geolocation.getCurrentPosition(
-          async (position) => {
-            const { latitude, longitude } = position.coords;
-
-            let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
-
-            const response = await fetch(url);
-            const data = await response.json();
-            setId(data.Key)
-            console.log(data);
-            getUserCity(data.Key)
-          },
-          () => {
-            console.log("your browser does not support it");
-          }
-        );
-        
-    }
-
-    useEffect(() => {
-      getUserLocation();
-    }, []);
-
-
-    // //get user location and give weather update
     // const getUserCity = async (id) => {
     //   let url = `http://dataservice.accuweather.com/currentconditions/v1/${id}?apikey=${API_KEY}`
+    //   const imageUrl = "https://developer.accuweather.com/sites/default/files/";
 
     //   const response = await fetch(url);
     //   const data = await response.json();
-    //   console.log(data[0]);
 
-    //   // let WeatherUi = data[0];
+    //   let weatherIcon = data[0].WeatherIcon <= 9 ? "0" + data[0].WeatherIcon : data[0].WeatherIcon;
 
-    //   // let {WeatherIcon} = WeatherUi;
-
-    //   // setIcon(data[0].WeatherIcon)
-
-
+    //   setIcon(imageUrl + weatherIcon + "-s.png");
     // }
 
-    // useEffect(() => {
-    //   getUserCity(id);
-    // }, [id]);
 
 
-
-
+    // //get user location and give weather update
     // const getUserLocation = () => {
     //     navigator.geolocation.getCurrentPosition(
-    //       (position) => {
+    //       async (position) => {
     //         const { latitude, longitude } = position.coords;
 
-    //         let url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
+    //         let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
 
-    //         fetch(url)
-    //           .then((response) => response.json())
-    //           .then((data) => {
-    //             console.log(data);
-    //             const { name, clouds, sys, weather } = data;
-    //             setIcon(
-    //               `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`
-    //             );
-    //             setLocation(`${name}, ${sys.country}`);
-    //             setLocationTemperature(`${clouds.all}`);
-    //           })
-    //           .catch((error) => {
-    //             console.log("Something went wrong", error);
-    //           });
+    //         const response = await fetch(url);
+    //         const data = await response.json();
+    //         setId(data.Key)
+    //         getUserCity(data.Key)
     //       },
     //       () => {
     //         console.log("your browser does not support it");
@@ -171,10 +100,9 @@ function App() {
         
     // }
 
-    // useEffect(() => {
-    //   getUserLocation();
-    // }, []);
-
+    useEffect(() => {
+      dispatch(getUserLocation(API_KEY));
+    }, []);
 
 
     // give user time 
@@ -207,28 +135,6 @@ function App() {
     }, [])
 
 
-
-    //tell what time of the day if it is morning afternoon or evening
-    const greetings = () => {
-      let todayGreeting = new Date();
-
-      let hour = todayGreeting.getHours();
-
-      if (hour < 12) {
-        setGreeting("Good morning,");
-      } else if (hour < 17) {
-        setGreeting("Good afternoon,");
-      } else {
-        setGreeting("Good evening,");
-      }
-    };
-    
-    useEffect(() => {
-      greetings();
-    }, [])
-
-
-
     // const handleNameValue = (e) => {
     //   setNameValue(String.fromCharCode(e.keyCode));
     //   console.log(String.fromCharCode(e.keyCode));
@@ -254,27 +160,14 @@ function App() {
     // main return area
     return (
       <div className="main-app">
-        {/* <Weather
-          icon={icon}
-          location={location}
-          locationTemperature={locationTemperature}
-        /> */}
-
         <DateWeather icon={icon} />
 
         <TimeGreet 
-          //time props
           getAmPm={getAmPm} 
           getMinute={getMinute} 
           getHour={getHour} 
           getTwentyFourHour={getTwentyFourHour}
-          //greeting props
-          greeting={greeting}
-          nameCondition={nameCondition}
-          // handleNameValue={handleNameValue}
-          name={name}
-          handleBlur={handleBlur}
-          handleDoubleClick={handleDoubleClick}
+
         />
 
         <TodoInput />
@@ -286,29 +179,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-            // const { LocalizedName, key } = data;
-            // setLocation(`${LocalizedName}`);
-            // setId(key);
-
-            // fetch(url)
-            //   .then((response) => response.json())
-            //   .then((data) => {
-            //     console.log(data);
-            //     const { LocalizedName, key } = data;
-            //     setIcon(
-            //       `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`
-            //     );
-            //     setLocation(`${LocalizedName}`);
-            //     setId(key);
-            //     // setLocationTemperature(`${clouds.all}`);
-            //   })
-            //   .catch((error) => {
-            //     console.log("Something went wrong", error);
-            //   });
