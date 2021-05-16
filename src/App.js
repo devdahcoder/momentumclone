@@ -9,9 +9,6 @@ import {useDispatch} from "react-redux";
 
 function App() {
 
-    const [icon, setIcon] = useState('');
-    const [location, setLocation] = useState('');
-    const [locationTemperature, setLocationTemperature] = useState('');
     const [getAmPm, setAmPm] = useState("");
     const [getHour, setHour] = useState("");
     const [getTwentyFourHour, setTwentyFourHour] = useState("")
@@ -25,8 +22,6 @@ function App() {
     // const [nameValue, setNameValue] = useState("");
     const [nameCondition, setNameCondition] = useState(true); 
     const [todo, setTodo] = useState([]);
-    const [inputValue, setInputValue] = useState("");
-    const [id, setId] = useState("");
 
 
     const API_KEY = "P0BEZ1EdgkfLR5R4chm5ChWLQyJMkHtJ";
@@ -65,40 +60,6 @@ function App() {
 
 
 
-    //get user location and give weather update
-    // const getUserCity = async (id) => {
-    //   let url = `http://dataservice.accuweather.com/currentconditions/v1/${id}?apikey=${API_KEY}`
-    //   const imageUrl = "https://developer.accuweather.com/sites/default/files/";
-
-    //   const response = await fetch(url);
-    //   const data = await response.json();
-
-    //   let weatherIcon = data[0].WeatherIcon <= 9 ? "0" + data[0].WeatherIcon : data[0].WeatherIcon;
-
-    //   setIcon(imageUrl + weatherIcon + "-s.png");
-    // }
-
-
-
-    // //get user location and give weather update
-    // const getUserLocation = () => {
-    //     navigator.geolocation.getCurrentPosition(
-    //       async (position) => {
-    //         const { latitude, longitude } = position.coords;
-
-    //         let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
-
-    //         const response = await fetch(url);
-    //         const data = await response.json();
-    //         setId(data.Key)
-    //         getUserCity(data.Key)
-    //       },
-    //       () => {
-    //         console.log("your browser does not support it");
-    //       }
-    //     );
-        
-    // }
 
     useEffect(() => {
       dispatch(getUserLocation(API_KEY));
@@ -160,7 +121,7 @@ function App() {
     // main return area
     return (
       <div className="main-app">
-        <DateWeather icon={icon} />
+        <DateWeather />
 
         <TimeGreet 
           getAmPm={getAmPm} 
@@ -171,7 +132,6 @@ function App() {
         />
 
         <TodoInput />
-
 
         <Footer />
       </div>

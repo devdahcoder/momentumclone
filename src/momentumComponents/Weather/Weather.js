@@ -11,7 +11,6 @@ const Weather = () => {
 
     const weatherUi = useSelector(state => state.location.locationDetails);
 
-    // const url = "https://developer.accuweather.com/sites/default/files/" + icon + "-s.png";
     return (
         <div className="region weather-top-right">
             <div id="weather" className="app-container weather show show-fade-in" data-test="weather">

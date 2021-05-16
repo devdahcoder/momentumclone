@@ -13,26 +13,12 @@ const Metric = () => {
         let weatherIcon = weatherUi && weatherUi.WeatherIcon;
 
         if (weatherIcon) {
-            console.log(weatherIcon)
             return <img src={process.env.PUBLIC_URL + "/img/"+ weatherIcon + ".png" } alt="weather-icon" />
-        }
-        else {
-            return (
-                <span 
-                    style={{
-                    display: "inline-block",
-                    textAlgn: "center",
-                    textTransform: "none",
-                    width: "1em",
-                    height: "1em"
-                    }}>
-                </span>
-            )
         }
     }
     return (
         <div className="metric-stat">
-            <span className="icon icon-weather" data-icon={renderIcon()} title={weatherUi && weatherUi.WeatherText}>
+            <span className="icon icon-weather" data-icon="H" title={weatherUi && weatherUi.WeatherText}>
                 {renderIcon()}
             </span>
             <div>

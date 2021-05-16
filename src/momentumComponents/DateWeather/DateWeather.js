@@ -5,7 +5,7 @@ import "./dateweather.css";
 import Date from "../Date/Date";
 import Weather from "../Weather/Weather";
 
-const DateWeather = ({icon}) => {
+const DateWeather = () => {
     return (
         <header class="date-weather-header">
             
@@ -13,7 +13,7 @@ const DateWeather = ({icon}) => {
 
             <div class="region top-center"></div>
 
-            <Weather icon={icon} />
+            <Weather />
         </header>
     )
 }
