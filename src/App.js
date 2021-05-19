@@ -43,6 +43,9 @@ function App() {
     }, [name]);
 
 
+
+
+    
     // get Todo from local storage
     useEffect(() => {
       const storageTodo = JSON.parse(localStorage.getItem("todo"))
@@ -95,28 +98,7 @@ function App() {
       return () => clearInterval(interval)
     }, [])
 
-
-    // const handleNameValue = (e) => {
-    //   setNameValue(String.fromCharCode(e.keyCode));
-    //   console.log(String.fromCharCode(e.keyCode));
-    // }
-
-
-
-
-    // set editable content (name) to false onBlur
-    const handleBlur = () => {
-      setNameCondition("false");
-    }
-
-
-
     
-    // set editable content (name) to true onDoubleClick
-    const handleDoubleClick = () => {
-      setNameCondition("true");
-    }
-
     
     // main return area
     return (

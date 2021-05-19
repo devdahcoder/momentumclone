@@ -3,6 +3,7 @@ import timeReducer from "./timeReducer";
 import timeDropDownReducer from "./timeDropDownReducer";
 import todoReducer from "./todoReducer";
 import locationReducer from "./locationReducer"
+import nameReducer from "./nameReducer"
 
 
 const rootReducer = combineReducers({
@@ -10,6 +11,7 @@ const rootReducer = combineReducers({
     timeDropDown : timeDropDownReducer,
     todo : todoReducer,
     location : locationReducer,
+    name: nameReducer,
 });
 
 

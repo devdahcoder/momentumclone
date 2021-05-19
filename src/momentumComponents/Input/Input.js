@@ -12,7 +12,7 @@ import {addTodo} from "../../Actions/todoAction";
 const Input = () => {
 
   const dispatch = useDispatch();
-  const [inputValue, setInputValue] = useState("")
+  const [inputValue, setInputValue] = useState("");
 
 
   // handle submit for todo
@@ -27,10 +27,12 @@ const Input = () => {
     setInputValue("");
   }
 
+
   //handle todo input
   const handleTodoInput = (e) => {
     setInputValue(e.target.value);
   }
+
 
   return (
     <section>

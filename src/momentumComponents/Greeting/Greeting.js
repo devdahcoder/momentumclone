@@ -2,16 +2,17 @@ import React, {useState, useEffect} from "react";
 import "./greeting.css";
 
 import NameInput from "../nameInput";
+import InputName from "../InputName/InputName"
 
 const Greeting = () => {
   
   const [greeting, setGreeting] = useState("");
   
-  //tell what time of the day if it is morning afternoon or evening
-  const greetings = () => {
-    let todayGreeting = new Date();
 
-    let hour = todayGreeting.getHours();
+  const greetings = () => {
+    let currentTime = new Date();
+
+    let hour = currentTime.getHours();
 
     if (hour < 12) {
       setGreeting("Good morning,");
@@ -49,7 +50,8 @@ const Greeting = () => {
 
             <span className="greeting-name-container">
               <span className="greeting-name-wrapper">
-                <span className="greeting-user-name" data-test="name"> Olamide</span>
+                <InputName />
+                {/* <span className="greeting-user-name" data-test="name"> Olamide</span> */}
               </span>
               <span data-test="punctuation">.</span>
             </span>

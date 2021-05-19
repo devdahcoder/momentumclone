@@ -1,0 +1,72 @@
+.input-name-container {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 337.5%;
+  white-space: nowrap;
+  box-sizing: inherit;
+  margin: -5px -2px -8px;
+  padding: 5px 2px 8px;
+  position: relative;
+}
+
+.input-name-container input {
+  color: #fff;
+  font-size: 100%;
+  background: 0 0;
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 3px;
+  outline: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: pulse 1s ease 0s 1 normal;
+  border: none;
+  font-weight: 500;
+  max-width: 12em;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 1.5ch;
+  border-bottom: 3px solid #fff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  cursor: auto;
+}
+
+@keyframes pulse {
+  0% {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+
+.input-name-container .name-hidden-span {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 337.5%;
+  box-sizing: inherit;
+  vertical-align: top;
+  max-width: 12em;
+  display: inline-block;
+  border-radius: 3px;
+  outline: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 1.5ch;
+  visibility: hidden;
+}
+/*# sourceMappingURL=inputname.css.map */
