@@ -2,11 +2,14 @@ import React, {useState, useEffect} from "react";
 import "./greeting.css";
 
 import NameInput from "../nameInput";
-import InputName from "../InputName/InputName"
+import InputName from "../InputName/InputName";
+
+import { useSelector } from 'react-redux';
 
 const Greeting = () => {
   
   const [greeting, setGreeting] = useState("");
+  const name = useSelector(state => state.name.name);
   
 
   const greetings = () => {
@@ -27,21 +30,9 @@ const Greeting = () => {
     greetings();
   }, [])
 
+
   return (
     <div className="greeting-section">
-      {/* <span> */}
-        {/* {greeting} */}
-          {/* <NameInput
-            name={name}
-            nameCondition={nameCondition}
-            // handleNameValue={handleNameValue}
-            handleBlur={handleBlur}
-            handleDoubleClick={handleDoubleClick}
-          /> */}
-      {/* </span> */}
-
-
-
       <div className="greeting-display">
         <div className="side-col"></div>
         <div className="greeting-text-container">
@@ -51,7 +42,7 @@ const Greeting = () => {
             <span className="greeting-name-container">
               <span className="greeting-name-wrapper">
                 <InputName />
-                {/* <span className="greeting-user-name" data-test="name"> Olamide</span> */}
+                <span style={{color: "red"}} className="greeting-user-name" data-test="name"> {name && name}</span>
               </span>
               <span data-test="punctuation">.</span>
             </span>
