@@ -25,7 +25,7 @@ const InputName = () => {
             e.preventDefault();
             if (inputName !== "") {
                 dispatch(addName(inputName));
-                localStorage.setItem("name", JSON.stringify(inputName));
+                localStorage.setItem("name", inputName);
                 // setState(inputName)
             } 
             else {

@@ -1,8 +1,12 @@
 import React from 'react'
 import "./footer.css"
+import { useSelector } from 'react-redux';
 
 
 const Footer = () => {
+
+    const backgroundImage = useSelector(state => state.background.backgroundImage);
+
     return (
         <footer>
             <div className="region footer-left-container" id="bottom-left">
@@ -316,9 +320,9 @@ const Footer = () => {
                     </span>
                 </div>
                 <div data-v-1040273e="" data-test="background-info-container" className="app-container app-dash photo-info-container show-hover">
-                    <div data-v-1040273e="" data-test="background-info-title" className="photo-info-name">Thinadhoo, Maldives</div>
+                    <div data-v-1040273e="" data-test="background-info-title" className="photo-info-name">{`${backgroundImage && backgroundImage.location.city}, ${ backgroundImage && backgroundImage.location.country}`}</div>
                     <div data-v-1040273e="" className="photo-source">
-                        <span data-v-1040273e="" data-test="background-info-source-link" data-url="https://unsplash.com/photos/qnjKufYqIIE" className="photo-source-link">Ibrahim Mushan</span>
+                        <span data-v-1040273e="" data-test="background-info-source-link" data-url="https://unsplash.com/photos/qnjKufYqIIE" className="photo-source-link">{`${backgroundImage && backgroundImage.user.name}`}</span>
                         <span data-v-1040273e="" data-test="control-fav" className="photo-source-control control-heart">
                             <svg height="464pt" viewBox="0 -20 464 464" width="464pt" xmlns="http://www.w3.org/2000/svg">
                                 <path d="m340 0c-44.773438.00390625-86.066406 24.164062-108 63.199219-21.933594-39.035157-63.226562-63.19531275-108-63.199219-68.480469 0-124 63.519531-124 132 0 172 232 292 232 292s232-120 232-292c0-68.480469-55.519531-132-124-132zm0 0" fill="red"/>
@@ -347,7 +351,6 @@ const Footer = () => {
                                     <path d="m340 0c-44.773438.00390625-86.066406 24.164062-108 63.199219-21.933594-39.035157-63.226562-63.19531275-108-63.199219-68.480469 0-124 63.519531-124 132 0 172 232 292 232 292s232-120 232-292c0-68.480469-55.519531-132-124-132zm0 0" fill="red"/>
                                     <path d="m32 132c0-63.359375 47.550781-122.359375 108.894531-130.847656-5.597656-.769532-11.242187-1.15625025-16.894531-1.152344-68.480469 0-124 63.519531-124 132 0 172 232 292 232 292s6-3.113281 16-8.992188c-52.414062-30.824218-216-138.558593-216-283.007812zm0 0" fill="red"/>
                                 </svg>
-                            
                             </span>
 
                             <span data-v-f7053094="" data-test="skip" title="Skip Quote" className="control control-skip">

@@ -5,47 +5,29 @@ import TodoInput from "./momentumComponents/TodoInput/TodoInput";
 import DateWeather from "./momentumComponents/DateWeather/DateWeather"
 import Footer from "./momentumComponents/Footer/Footer";
 import {getUserLocation} from "./Actions/locationAction";
-import {useDispatch} from "react-redux";
+import {getBackgroundImage} from "./Actions/backgroundImageAction";
+import {useDispatch, useSelector} from "react-redux";
+
+
 
 function App() {
-
     const [getAmPm, setAmPm] = useState("");
     const [getHour, setHour] = useState("");
     const [getTwentyFourHour, setTwentyFourHour] = useState("")
     const [getMinute, setMinute] = useState("");
     // const [greeting, setGreeting] = useState("");
 
-    // please contribute if you have an idea how to get value 
-    // of an editable content and YES i tried using String.fromCharCode
 
 
     const API_KEY = "P0BEZ1EdgkfLR5R4chm5ChWLQyJMkHtJ";
     const dispatch = useDispatch();
+    const backgroundImage = useSelector(state => state.background.backgroundImage);
     
+    console.log(backgroundImage);
 
-
-    
-    // // get Todo from local storage
-    // useEffect(() => {
-    //   const storageTodo = JSON.parse(localStorage.getItem("todo"))
-    //   if (storageTodo) {
-    //     setTodo(storageTodo)
-    //   }
-    // }, [])
-
-
-
-    // // set Todo to local Storage
-    // useEffect(() => {
-    //   localStorage.setItem("todo", JSON.stringify(todo));
-    // }, [todo]);
-
-
-
-
-    // useEffect(() => {
-    //   dispatch(getUserLocation(API_KEY));
-    // }, []);
+    useEffect(() => {
+      dispatch(getUserLocation(API_KEY));
+    }, []);
 
 
     // give user time 
@@ -77,11 +59,14 @@ function App() {
       return () => clearInterval(interval)
     }, [])
 
+    // useEffect(() => {
+    //   dispatch(getBackgroundImage());
+    // }, []);
+
     
     
-    // main return area
     return (
-      <div className="main-app">
+      <div style={{backgroundImage: backgroundImage ? `url(${backgroundImage.urls.full})` : ""}} className="main-app">
         <DateWeather />
 
         <TimeGreet 
@@ -93,7 +78,7 @@ function App() {
         />
         
 
-        {/* <TodoInput /> */}
+        <TodoInput />
 
         <Footer />
       </div>

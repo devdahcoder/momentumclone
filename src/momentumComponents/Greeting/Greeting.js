@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from "react";
 import "./greeting.css";
 
-import NameInput from "../nameInput";
+// import NameInput from "../nameInput";
 import InputName from "../InputName/InputName";
-
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import {getBackgroundImage} from "../../Actions/backgroundImageAction";
 
 const Greeting = () => {
   
   const [greeting, setGreeting] = useState("");
   const name = useSelector(state => state.name.name);
+  const dispatch = useDispatch();
   
 
   const greetings = () => {
@@ -19,16 +20,23 @@ const Greeting = () => {
 
     if (hour < 12) {
       setGreeting("Good morning,");
+      dispatch(getBackgroundImage());
     } else if (hour < 17) {
       setGreeting("Good afternoon,");
+      dispatch(getBackgroundImage());
     } else {
       setGreeting("Good evening,");
+      dispatch(getBackgroundImage());
     }
   };
 
   useEffect(() => {
     greetings();
   }, [])
+
+  // useEffect(() => {
+  //   dispatch(getBackgroundImage());
+  // }, [greeting]);
 
 
   return (

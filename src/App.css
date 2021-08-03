@@ -1,0 +1,16 @@
+.main-app {
+    margin: 0;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* background-color: grey; */
+    /* background: url("https://images.pexels.com/photos/4201659/pexels-photo-4201659.jpeg"); */
+    /* background: url("https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg"); */
+    /* background: url("https://images.pexels.com/photos/2834219/pexels-photo-2834219.jpeg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: hsl(0, 0%, 100%);
+    min-height: 100vh;
+}

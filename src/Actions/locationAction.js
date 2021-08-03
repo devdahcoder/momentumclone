@@ -14,12 +14,14 @@ export const requestLocation = () => {
         type: REQUEST_LOCATION
     }
 }
+
 export const requestLocationSuccess = (location) => {
     return {
         type: REQUEST_LOCATION_SUCCESS,
         payload: location
     }
 }
+
 export const requestLocationError = (error) => {
     return {
         type: REQUEST_LOCATION_ERROR,
@@ -33,12 +35,14 @@ export const requestKey = () => {
         type: REQUEST_KEY
     }
 }
+
 export const requestKeySuccess = (key) => {
     return {
         type: REQUEST_KEY_SUCCESS,
         payload: key
     }
 }
+
 export const requestKeyError = (error) => {
     return {
         type: REQUEST_KEY_ERROR,

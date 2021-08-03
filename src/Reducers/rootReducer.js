@@ -4,6 +4,7 @@ import timeDropDownReducer from "./timeDropDownReducer";
 import todoReducer from "./todoReducer";
 import locationReducer from "./locationReducer"
 import nameReducer from "./nameReducer"
+import backgroundReducer from "./backgroundImageReducer"
 
 
 const rootReducer = combineReducers({
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
     todo : todoReducer,
     location : locationReducer,
     name: nameReducer,
+    background: backgroundReducer,
 });
 
 

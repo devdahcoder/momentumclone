@@ -184,6 +184,7 @@ footer {
         min-width: 0;
         flex: 1 1 auto;
 
+
         .footer-center-display {
             color: hsl(0, 0%, 100%);
             font-size: 100%;
@@ -272,6 +273,7 @@ footer {
                         transition: opacity 0.5s ease;
                         vertical-align: middle;
 
+
                         svg {
                             text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
                             --app-container-transition: opacity 0.5s ease;
@@ -288,7 +290,7 @@ footer {
                             fill: #fff;
                             height: 16px;
                             position: absolute;
-                            top: 4px;
+                            top: 0px;
                             left: 3px;
                             width: 15px;
                             height: 15px;
