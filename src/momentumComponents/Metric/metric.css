@@ -1,7 +1,4 @@
-.metric-stat {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
+.weather-metric-stat-container {
   text-align: right;
   cursor: pointer;
   box-sizing: inherit;
@@ -15,7 +12,7 @@
   flex-direction: row;
 }
 
-.metric-stat .icon-weather {
+.weather-metric-stat-container .icon-weather {
   color: #fff;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   user-select: none;
@@ -30,7 +27,7 @@
   margin-right: 6px;
 }
 
-.metric-stat .metric-stat-number {
+.weather-metric-stat-container .metric-stat-number {
   color: #fff;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   user-select: none;
@@ -42,7 +39,7 @@
   box-sizing: inherit;
 }
 
-.metric-stat .weather-degree {
+.weather-metric-stat-container .weather-degree {
   color: #fff;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   user-select: none;
@@ -54,7 +51,7 @@
   box-sizing: inherit;
 }
 
-.metric-stat .hide {
+.weather-metric-stat-container .hide {
   color: #fff;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   user-select: none;

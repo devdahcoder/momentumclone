@@ -1,0 +1,37 @@
+.overlay {
+    text-shadow: 0 1px 5px rgba(0,0,0,.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .loading-logo {
+        fill: rgb(204, 204, 204);
+        box-sizing: inherit;
+        height: 4.5rem;
+        display: none;
+        opacity: 0;
+        animation: fadein 1s linear 1s forwards;
+
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+    
+}
+
+.loading-overlay {
+    //if page is loading overlay should be visible
+    z-index: 0;
+}

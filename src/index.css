@@ -29,11 +29,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: url("https://images.pexels.com/photos/4201659/pexels-photo-4201659.jpeg"); */
-  /* background: url("https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg"); */
-  /* background: url("https://images.pexels.com/photos/2834219/pexels-photo-2834219.jpeg"); */
+  background: hsl(0, 0%, 13%);
   background-repeat: no-repeat;
   background-size: cover;
   color: hsl(0, 0%, 100%);
-  min-height: 100vh;
+  height: 100vh;
+  font-size: 100%;
+  overflow: hidden;
+  display: block;
 }

@@ -1,7 +1,4 @@
-.metric-stat {
-    color: #fff;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-    user-select: none;
+.weather-metric-stat-container {
     text-align: right;
     cursor: pointer;
     box-sizing: inherit;
@@ -27,6 +24,21 @@
         height: 13px;
         fill: #fff;
         margin-right: 6px;
+
+        // &::before {
+        //     content: attr(data-icon);
+        //     font-family: inherit;
+        //     line-height: .5em;
+        //     width: 1em;
+        //     display: inline-block;
+        //     font-family: icons;
+        //     font-weight: 400;
+        //     font-variant: normal;
+        //     speak: none;
+        //     text-align: center;
+        //     text-decoration: inherit;
+        //     text-transform: none;
+        // }
 
 
     }

@@ -11,9 +11,10 @@ const DateWeather = () => {
             
             <Date />
 
-            <div class="region top-center"></div>
+            <div class="top-center"></div>
 
             <Weather />
+
         </header>
     )
 }

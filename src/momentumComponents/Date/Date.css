@@ -1,38 +1,82 @@
 .date-top-left {
-  color: #fff;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   flex: 1 1 auto;
   position: relative;
   display: flex;
-  height: 150px;
+  padding: 8px;
+  min-height: 150px;
   align-items: stretch;
-  display: flex;
-  flex-direction: column;
 }
 
-.date-top-left .header-date-container {
-  color: #fff;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
+.date-top-left .date {
+  text-align: right;
+  box-sizing: inherit;
   position: relative;
   display: inline-block;
   transition: opacity 0.5s ease;
-  vertical-align: top;
+  order: 0;
 }
 
-.date-top-left .header-date-container span {
+.date-top-left .date .date-metric-item {
+  vertical-align: top;
   position: relative;
   display: inline-block;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 106.25%;
-  font-weight: 500;
-  line-height: 60px;
-  transition: color .1s ease, text-shadow .1s ease, opacity 0.5s ease;
+  border-radius: 2px;
+  text-align: right;
+  padding: 11px 10px 10px;
   cursor: pointer;
-  padding: 0 38px;
-  padding-left: 20px;
+  order: 1;
+  padding-right: 20px;
+}
+
+.date-top-left .date .date-metric-item .date-metric-stat {
+  text-align: right;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.625rem;
+  font-weight: 400;
+  margin-right: -1px;
+  white-space: nowrap;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.date-top-left .date .date-metric-item .date-metric-stat .hide {
+  text-align: right;
+  cursor: pointer;
+  font-weight: 400;
+  white-space: nowrap;
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 5px;
+  animation: fadeout 4s ease 4s 1 normal;
+  animation-fill-mode: forwards;
+  font-size: 55%;
+  text-transform: uppercase;
+}
+
+.date-top-left .date .date-metric-item .metric-label {
+  text-align: right;
+  cursor: pointer;
+  margin: 0;
+  padding: 0 0 3px;
+  overflow-wrap: break-word;
+  transition: opacity .5s ease;
+  word-break: break-word;
+  vertical-align: top;
+  display: inline-block;
+  font-size: .8125rem;
+  outline: 0;
+}
+
+.date-top-left .date .date-metric-item .metric-label .metric-label-name {
+  text-align: right;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-size: .8125rem;
+  box-sizing: inherit;
+  opacity: .85;
 }
 /*# sourceMappingURL=date.css.map */

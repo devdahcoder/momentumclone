@@ -17,10 +17,11 @@ const Metric = () => {
         }
     }
     return (
-        <div className="metric-stat">
+        <div className="weather-metric-stat-container">
             <span className="icon icon-weather" data-icon="H" title={weatherUi && weatherUi.WeatherText}>
                 {renderIcon()}
             </span>
+
             <div>
                 <span className="metric-stat-number" data-test="temperature">{weatherUi && weatherUi.Temperature.Metric.Value.toFixed()}</span>
                 <span className="weather-degree">°</span>

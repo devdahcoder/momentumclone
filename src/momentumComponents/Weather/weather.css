@@ -1,8 +1,4 @@
 .weather-top-right {
-  color: #fff;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   display: flex;
   min-height: 150px;
   flex-direction: row-reverse;
@@ -12,10 +8,6 @@
 }
 
 .weather-top-right .weather {
-  color: #fff;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: right;
   box-sizing: inherit;
   position: relative;
@@ -25,8 +17,6 @@
 }
 
 .weather-top-right .weather .metric-item {
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   box-sizing: inherit;
   vertical-align: top;
   position: relative;
@@ -37,5 +27,26 @@
   cursor: pointer;
   order: 1;
   padding-right: 20px;
+}
+
+.weather-top-right .weather .metric-item .location-metric-label-name-container {
+  margin: 0;
+  padding: 0 0 3px;
+  overflow-wrap: break-word;
+  transition: opacity .5s ease;
+  word-break: break-word;
+  vertical-align: top;
+  display: inline-block;
+  font-size: .8125rem;
+}
+
+.weather-top-right .weather .metric-item .location-metric-label-name-container location-metric-label-name {
+  text-align: right;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-size: .8125rem;
+  box-sizing: inherit;
+  opacity: .85;
 }
 /*# sourceMappingURL=weather.css.map */

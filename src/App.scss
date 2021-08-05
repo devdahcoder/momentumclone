@@ -1,0 +1,111 @@
+.main-app {
+    display: block;
+
+    .backgrounds {
+        box-sizing: inherit;
+        display: block;
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: transparent;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            z-index: 1;
+            transition: transform 0.3s ease-out;
+
+            .background-item {
+                box-sizing: inherit;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: transparent;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                opacity: 1;
+                transition: transform 0.3s ease-out;
+            }
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            // background: url("/download.png");
+            background-size: 100% 100%;
+            opacity: 1;
+            transition: opacity 0.3s ease-out;
+        }
+    }
+
+    .show-app {
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        transition: opacity .3s ease;
+        opacity: 1;
+
+        .full {
+            position: absolute;
+            right: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+
+            .center-above {
+                flex: 1 1 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+
+    .drop-overlay {
+        z-index: 1000000;
+        display: none;
+        background: hsla(0, 0%, 0%, 0.5);
+        font-size: 240%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .badge {
+            text-transform: uppercase;
+            // background: rgba(255 255 255 / 20%);
+            border-radius: 2px;
+            color: #fff;
+            font-weight: 600;
+            margin-top: -3px;
+            margin-left: 2px;
+            padding: 2px 6px 1px;
+            font-size: 45%;
+            vertical-align: middle;
+        }
+    }
+}

@@ -1,11 +1,16 @@
 .date-weather-header {
-  color: white;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   height: 60px;
   display: flex;
   align-items: flex-start;
   flex: 0 0 auto;
+}
+
+.date-weather-header .top-center {
+  flex: 1 1 auto;
+  position: relative;
+  display: flex;
+  --icon-size: 32px;
+  justify-content: center;
+  flex-grow: 0;
 }
 /*# sourceMappingURL=dateweather.css.map */
