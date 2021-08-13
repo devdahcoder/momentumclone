@@ -52,20 +52,15 @@ export const requestKeyError = (error) => {
 
 
 //get user location and give weather update
-export const getUserCity = (locationData, API_KEY) => {
+export const getUserCity = (locationData) => {
     return async (dispatch) => {
         dispatch(requestLocation());
         try {
-            let url = `http://dataservice.accuweather.com/currentconditions/v1/${locationData.Key}?apikey=${API_KEY}`
-            // const imageUrl = "https://developer.accuweather.com/sites/default/files/";
+            let url = `http://dataservice.accuweather.com/currentconditions/v1/${locationData.Key}?apikey=${process.env.REACT_APP_WEATHER_API_KEY}`
 
             const response = await fetch(url);
             const data = await response.json();
             dispatch(requestLocationSuccess({...locationData, ...data[0]}));
-
-            // let weatherIcon = data[0].WeatherIcon <= 9 ? "0" + data[0].WeatherIcon : data[0].WeatherIcon;
-
-            // setIcon(imageUrl + weatherIcon + "-s.png");
         } catch (error) {
             dispatch(requestLocationError(error))
         }
@@ -74,18 +69,18 @@ export const getUserCity = (locationData, API_KEY) => {
 
 
 //get user location and collect location key
-export const getUserLocation = (API_KEY) => {
+export const getUserLocation = () => {
     return (dispatch) => {
         navigator.geolocation.getCurrentPosition(
             async (position) => {
                 const { latitude, longitude } = position.coords;
 
-                let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
+                let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
 
                 const response = await fetch(url);
                 const data = await response.json();
                 console.log(data.Key);
-                dispatch(getUserCity(data, API_KEY));
+                dispatch(getUserCity(data));
             },
             () => {
                 console.log("your browser does not support it");

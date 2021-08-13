@@ -1,42 +1,25 @@
 .todo-list-section {
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
-  box-sizing: inherit;
   width: 100%;
 }
 
 .todo-list-section .todo-list-section-display {
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
-  box-sizing: inherit;
   width: 100%;
   position: relative;
-  display: inline-block !important;
+  display: inline-block;
   overflow: visible;
 }
 
 .todo-list-section .todo-list-section-display .todo-list-fake-input-prompt {
-  color: #fff;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
-  box-sizing: inherit;
   padding-bottom: 0.5em;
   visibility: hidden;
 }
 
 .todo-list-section .todo-list-section-display .todo-list-fake-input-prompt h3 {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   visibility: hidden;
-  box-sizing: inherit;
   font-size: 2.1875em;
   font-weight: 400;
   margin: 0;
@@ -44,7 +27,6 @@
 }
 
 .todo-list-section .todo-list-section-display .todo-list-fake-input-prompt input {
-  user-select: none;
   visibility: hidden;
   box-sizing: inherit;
   margin: 0;

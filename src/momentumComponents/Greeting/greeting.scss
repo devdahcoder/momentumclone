@@ -1,10 +1,10 @@
 .greeting-section {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.5s ease;
-    width: 100%;
+    // text-align: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // transition: opacity 0.5s ease;
+    // width: 100%;
 
 
     .greeting-display {
@@ -14,7 +14,6 @@
         color: hsl(0, 0%, 100%);
         font-size: 100%;
         text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-        // user-select: none;
         position: relative;
         transition: opacity 0.5s ease;
         display: flex;
@@ -22,21 +21,24 @@
         font-weight: 500;
         line-height: normal;
 
-        .greeting-text-container {
-            color: hsl(0, 0%, 100%);
-            font-size: 100%;
-            text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-            // user-select: none;
-            transition: opacity 0.5s ease;
+        .greeting-side-col {
             text-align: center;
             font-weight: 500;
             line-height: normal;
             box-sizing: inherit;
+            flex: 1 0 50px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .greeting-text-container {
+            transition: opacity 0.5s ease;
+            text-align: center;
+            font-weight: 500;
+            line-height: normal;
             display: inline-flex;
 
             .greeting-text-content {
-                color: #fff;
-                text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
                 text-align: center;
                 font-weight: 500;
                 line-height: normal;
@@ -46,13 +48,9 @@
                 display: inline;
 
                 .greeting-message {
-                    color: #fff;
-                    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-                    user-select: none;
                     text-align: center;
                     font-weight: 500;
                     line-height: normal;
-                    // font-size: 337.5%;
                     box-sizing: inherit;
                     transition: opacity 0.5s ease;
                     margin-right: 0.3em;
@@ -94,6 +92,14 @@
                             overflow: hidden;
                             white-space: nowrap;
                         }
+                    }
+
+                    .punctuation {
+                        // text-align: center;
+                        // font-weight: 500;
+                        // line-height: normal;
+                        // font-size: 337.5%;
+                        white-space: nowrap;
                     }
                 }
 

@@ -42,17 +42,20 @@ const Greeting = () => {
   return (
     <div className="greeting-section">
       <div className="greeting-display">
-        <div className="side-col"></div>
+        <div className="greeting-side-col"></div>
+
         <div className="greeting-text-container">
           <span className="greeting-text-content">
+
             <span className="greeting-message">{greeting}</span>
 
             <span className="greeting-name-container">
               <span className="greeting-name-wrapper">
                 <InputName />
-                <span style={{color: "red"}} className="greeting-user-name" data-test="name"> {name && name}</span>
+                {/* <span className="greeting-user-name" data-test="name">{name && name}</span> */}
               </span>
-              <span data-test="punctuation">.</span>
+
+              <span data-test="punctuation" className="punctuation">.</span>
             </span>
           </span>
         </div>

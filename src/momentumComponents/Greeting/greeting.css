@@ -1,12 +1,3 @@
-.greeting-section {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease;
-  width: 100%;
-}
-
 .greeting-section .greeting-display {
   color: white;
   font-size: 100%;
@@ -19,21 +10,25 @@
   line-height: normal;
 }
 
-.greeting-section .greeting-display .greeting-text-container {
-  color: white;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.5s ease;
+.greeting-section .greeting-display .greeting-side-col {
   text-align: center;
   font-weight: 500;
   line-height: normal;
   box-sizing: inherit;
+  flex: 1 0 50px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.greeting-section .greeting-display .greeting-text-container {
+  transition: opacity 0.5s ease;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
   display: inline-flex;
 }
 
 .greeting-section .greeting-display .greeting-text-container .greeting-text-content {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-weight: 500;
   line-height: normal;
@@ -44,9 +39,6 @@
 }
 
 .greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-message {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   font-weight: 500;
   line-height: normal;
@@ -88,6 +80,10 @@
   border-radius: 3px;
   outline: 0;
   overflow: hidden;
+  white-space: nowrap;
+}
+
+.greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-name-container .punctuation {
   white-space: nowrap;
 }
 

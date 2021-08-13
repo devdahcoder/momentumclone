@@ -1,11 +1,8 @@
 .input-name-container {
-    color: #fff;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-    user-select: none;
     text-align: center;
     font-weight: 500;
     line-height: normal;
-    font-size: 337.5%;
+    // font-size: 50.5%;
     white-space: nowrap;
     box-sizing: inherit;
     margin: -5px -2px -8px;
@@ -51,9 +48,6 @@
     }
 
     .name-hidden-span {
-        color: #fff;
-        text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-        user-select: none;
         text-align: center;
         font-weight: 500;
         line-height: normal;

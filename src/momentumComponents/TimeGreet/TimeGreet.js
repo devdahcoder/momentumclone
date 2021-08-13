@@ -17,6 +17,8 @@ const TimeGreet = ({
                     getHour={getHour} 
                     getTwentyFourHour={getTwentyFourHour}
                 />
+
+                
                 <Greeting />
             </div>
         </section>

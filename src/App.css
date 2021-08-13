@@ -80,6 +80,14 @@
   text-align: center;
 }
 
+.main-app .show-app .center-above {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .main-app .drop-overlay {
   z-index: 1000000;
   display: none;

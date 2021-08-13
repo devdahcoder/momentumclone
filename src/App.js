@@ -20,13 +20,12 @@ function App() {
 
 
 
-    const API_KEY = "P0BEZ1EdgkfLR5R4chm5ChWLQyJMkHtJ";
     const dispatch = useDispatch();
     const backgroundImage = useSelector(state => state.background.backgroundImage);
     
 
     useEffect(() => {
-      dispatch(getUserLocation(API_KEY));
+      dispatch(getUserLocation());
     }, []);
 
 
@@ -82,7 +81,7 @@ function App() {
 
             <DateWeather />
 
-            <div className="region center-above"></div>
+            <div className="center-above"></div>
 
 
             <TimeGreet 

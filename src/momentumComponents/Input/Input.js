@@ -13,12 +13,13 @@ const Input = () => {
 
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState("");
+  const todos = useSelector(state => state.todo.todos);
 
 
   // handle submit for todo
   const handleTodoSubmit = (e) => {
     e.preventDefault();
-    if (inputValue !== "") {
+    if (inputValue.trim() !== "") {
       const newTodo = {id: uuid(), value: inputValue, completed: false};
       dispatch(addTodo(newTodo));
     } else {
@@ -35,7 +36,7 @@ const Input = () => {
 
 
   return (
-    <section>
+    <section style={{ display: todos.length === 0 ? "block" : "none" }}>
       <form action="" onSubmit={handleTodoSubmit}>
         <div className="input-form-display">
             <label htmlFor="">What is your main Focus today?</label>

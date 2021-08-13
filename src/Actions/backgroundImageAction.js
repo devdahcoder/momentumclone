@@ -28,7 +28,7 @@ export const getBackgroundImage = () => {
     return async (dispatch) => {
         dispatch(requestBackgroundImage());
         try {
-            let url = `https://api.unsplash.com/photos/random/?client_id=8mb5eGQc4973c_ChY-M_D1Zdynhimy4Ompb0Lam36Hw&query=technology`
+            let url = `https://api.unsplash.com/photos/random/?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}&query=dark`
             const response = await fetch(url);
             const data = await response.json();
             dispatch(requestBackgroundImageSuccess(data));

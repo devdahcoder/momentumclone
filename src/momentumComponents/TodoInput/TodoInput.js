@@ -10,6 +10,7 @@ const TodoInput = () => {
     return (
         <section className="todo-input-container">
             <div className="todo-input-wrapper">
+
                 <div className="todo-input-focus">
 
                     {/* this div houses todo list or todo form input */}

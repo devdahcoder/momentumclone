@@ -78,6 +78,14 @@
                 text-align: center;
             }
         }
+
+        .center-above {
+            flex: 1 1 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     .drop-overlay {
