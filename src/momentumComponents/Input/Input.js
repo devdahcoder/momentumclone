@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import "./input.css";
 
 //imported packages
 import {v4 as uuid} from "uuid";
 import { useDispatch, useSelector } from 'react-redux';
+import store from "store";
 
 //imported utils
 import {addTodo} from "../../Actions/todoAction";
@@ -21,12 +22,20 @@ const Input = () => {
     e.preventDefault();
     if (inputValue.trim() !== "") {
       const newTodo = {id: uuid(), value: inputValue, completed: false};
-      dispatch(addTodo(newTodo));
+      store.set("todo", newTodo);
     } else {
       alert("cant happen");
     }
     setInputValue("");
   }
+
+
+  // useEffect(() => {
+  //     const todos = store.get("todo");
+  //     if (todos) {
+  //         dispatch(addTodo(todos));
+  //     }
+  // }, [])
 
 
   //handle todo input

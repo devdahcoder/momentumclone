@@ -9,18 +9,19 @@ import TwelveHours from "../TwelveHours/TwelveHours";
 //imported utils
 import {useSelector, useDispatch} from "react-redux";
 import {timeDisplay24Hours, timeHide24Hours} from "../../Actions/timeAction";
-import {timeDisplayDropDown, timeHideDropDown} from "../../Actions/timeDropDownAction"
+import {timeDisplayDropDown, timeHideDropDown} from "../../Actions/timeDropDownAction";
+import {otherTimeDisplayDropDown, otherTimeHideDropDown} from "../../Actions/otherTimeDropDownAction";
 
 const Time = ({getHour, getMinute, getTwentyFourHour}) => {
 
 
   const time24HoursDisplay = useSelector(state => state.time.display24Hours);
   const timeDropDownDisplay =  useSelector(state => state.timeDropDown.timeDropDown);
+  const otherTimeDropDownDisplay = useSelector(state => state.otherTimeDropDownReducer.otherTimeDropDown);
 
   const dispatch = useDispatch();
 
 
-  //display 24hours function that dispatch redux action//
   const display24HoursTime = () => {
     if (time24HoursDisplay) {
       dispatch(timeHide24Hours())
@@ -38,6 +39,15 @@ const Time = ({getHour, getMinute, getTwentyFourHour}) => {
     }
   }
 
+
+  const displayOtherTimeDropDown = () => {
+    if (otherTimeDropDownDisplay) {
+      dispatch(otherTimeHideDropDown())
+    } else {
+      dispatch(otherTimeDisplayDropDown());
+    }
+  }
+
   const handleBlur = () => {
     dispatch(timeHideDropDown())
   }
@@ -48,13 +58,13 @@ const Time = ({getHour, getMinute, getTwentyFourHour}) => {
         <div className="time-section-display">
 
         <div className="side-col left">
-          <div className="more more-dash">
-            <div className="icon-wrapper dash-icon-wrapper more-toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.7 490.7"><path d="M245.3 0C110.1 0 0 110.1 0 245.3s110.1 245.3 245.3 245.3 245.3-110.1 245.3-245.3S380.6 0 245.3 0zM245.3 469.3c-123.5 0-224-100.5-224-224s100.5-224 224-224 224 100.5 224 224S368.9 469.3 245.3 469.3z"/><path d="M348.9 333.8L256 240.9V74.7C256 68.8 251.2 64 245.3 64s-10.7 4.8-10.7 10.7v170.7c0 2.8 1.1 5.5 3.1 7.6l96 96c2.1 2.1 4.8 3.1 7.6 3.1 2.7 0 5.5-1 7.6-3.1C353 344.7 353 338 348.9 333.8z"/></svg>
+          <div className="more more-dash" onClick={() => displayOtherTimeDropDown()}>
+            <div  className="icon-wrapper dash-icon-wrapper more-toggle">
+              <svg data-v-018521fc="" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="active-mode dash-icon icon"><path d="M346 366a19.94 19.94 0 01-14.14-5.86l-90-90a20 20 0 01-5.86-14.06l-.67-156.33a20 20 0 0119.91-20.09h.09a20 20 0 0120 19.91l.63 148.1 84.18 84.18A20 20 0 01346 366z"></path><path d="M256 512A256 256 0 0175 75a256 256 0 01362 362 254.33 254.33 0 01-181 75zm0-472a216 216 0 00-152.74 368.74 216 216 0 00305.48-305.48A214.59 214.59 0 00256 40z"></path></svg>
             </div>
 
 
-            <nav data-v-018521fc="" className="nav align-left">
+            <nav style={{visibility: otherTimeDropDownDisplay ? "visible" : "hidden"}} data-v-018521fc="" className="nav align-left">
               <div data-v-018521fc="" data-test="clock-opt" className="nav-item active">
                 <svg data-v-018521fc="" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="icon icon-clock">
                   <path d="M346 366a19.94 19.94 0 01-14.14-5.86l-90-90a20 20 0 01-5.86-14.06l-.67-156.33a20 20 0 0119.91-20.09h.09a20 20 0 0120 19.91l.63 148.1 84.18 84.18A20 20 0 01346 366z"></path>
@@ -62,6 +72,16 @@ const Time = ({getHour, getMinute, getTwentyFourHour}) => {
                 </svg>
                 <span data-v-018521fc="" className="tooltip">Clock</span>
               </div>
+
+
+              <div data-v-018521fc="" data-test="pomodoro-opt" class="nav-item">
+                <svg data-v-018521fc="" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="icon icon-pomodoro">
+                  <path d="M427.252 93.939c-42.503-26.268-97.046-35.291-143.541-25.641l.01-.021C293.236 49.25 309.9 40 334.667 40c11.046 0 20-8.954 20-20s-8.954-20-20-20C303.084 0 274.696 11.109 256 	37.029 237.305 11.111 208.918 0 177.333 0c-11.046 0-20 8.954-20 20s8.954 20 20 20c24.333 0 40.828 8.919 50.428 27.267.18.343.351.687.523 1.031C126.652 47.206 0 110.518 0 255.958 0 394.862 96.599 512 256 512c159.009 0 256-116.731 256-256.042 0-70.703-30.098-128.243-84.748-162.019zm-180.196 22.616a20.07 20.07 0 0 0 17.889 0c68.531-34.269 218.655-.395 206.296 158.778h-96.574V256c0-11.046-8.954-20-20-20s-20 8.954-20 20v19.333H276v-58.667c0-11.046-8.954-20-20-20s-20 8.954-20 20v58.667h-58.667V256c0-11.046-8.954-20-20-20s-20 8.954-20 20v19.333H40.76C28.521 117.712 177.219 81.638 247.056 116.555zM256 472c-111.908 0-185.684-65.315-208.727-156.667h417.453C441.728 406.508 368.115 472 256 472zm33.809-92.476c7.811 7.811 7.811 20.474 0 28.284-7.811 7.811-20.474 7.81-28.284 0L256 402.284l-5.524 5.524c-7.811 7.811-20.474 7.811-28.284 0s-7.811-20.474 0-28.284l19.667-19.667c7.811-7.811 20.474-7.811 28.284 0z"></path>
+                </svg>
+                <span data-v-018521fc="" class="tooltip">Pomodoro</span>
+              </div>
+
+
               <div data-v-018521fc="" data-test="percent-opt" className="nav-item">
                 <svg data-v-018521fc="" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="icon icon-percent"><g>
                   <path d="M256,512A256,256,0,0,1,75,75,256,256,0,0,1,437,437,254.33,254.33,0,0,1,256,512Zm0-472A216,216,0,0,0,103.26,408.74,216,216,0,0,0,408.74,103.26,214.62,214.62,0,0,0,256,40Z"></path>
@@ -81,14 +101,14 @@ const Time = ({getHour, getMinute, getTwentyFourHour}) => {
         </div>
 
         <div className="side-col right">
-          <div className="more more-dash">
+          <div onClick={() => display24HoursTime()} className="more more-dash">
             <div onBlur={() => handleBlur()} onClick={() => displayDropDown()} style={{opacity: timeDropDownDisplay ? "1" : ""}} className="icon-wrapper dash-icon-wrapper more-toggle">
-              <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M432 0h-76c-44.1 0-80 35.9-80 80v76c0 44.1 35.9 80 80 80h76c44.1 0 80-35.9 80-80V80C512 35.9 476.1 0 432 0zM472 156c0 22.1-17.9 40-40 40h-76c-22.1 0-40-17.9-40-40V80c0-22.1 17.9-40 40-40h76c22.1 0 40 17.9 40 40V156z"/><path d="M156 0H80C35.9 0 0 35.9 0 80v76c0 44.1 35.9 80 80 80h76c44.1 0 80-35.9 80-80V80C236 35.9 200.1 0 156 0zM196 156c0 22.1-17.9 40-40 40H80c-22.1 0-40-17.9-40-40V80c0-22.1 17.9-40 40-40h76c22.1 0 40 17.9 40 40V156z"/><path d="M156 276H80c-44.1 0-80 35.9-80 80v76c0 44.1 35.9 80 80 80h76c44.1 0 80-35.9 80-80v-76C236 311.9 200.1 276 156 276zM196 432c0 22.1-17.9 40-40 40H80c-22.1 0-40-17.9-40-40v-76c0-22.1 17.9-40 40-40h76c22.1 0 40 17.9 40 40V432z"/><path d="M492 412c-11 0-20 9-20 20 0 22.1-17.9 40-40 40h-76c-22.1 0-40-17.9-40-40v-76c0-22.1 17.9-40 40-40h76c15.9 0 30.3 9.4 36.7 24 4.4 10.1 16.2 14.7 26.3 10.3 10.1-4.4 14.7-16.2 10.3-26.3C492.6 294.8 463.8 276 432 276h-76c-44.1 0-80 35.9-80 80v76c0 44.1 35.9 80 80 80h76c44.1 0 80-35.9 80-80C512 421 503 412 492 412z"/></svg>
+              <svg data-v-c8d4d4da="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="icon icon-ellipsis more-icon dash-icon"><path data-v-c8d4d4da="" d="M8 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM52 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM30 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"></path></svg>
             </div>
 
-            <div style={{display: timeDropDownDisplay ? "block" : "none"}} className="right-dropdown-container more-dropdown dash-dropdown nipple nipple-top-left ">
+            <div style={{visibility: timeDropDownDisplay ? "visible" : "hidden"}} className="right-dropdown-container more-dropdown dash-dropdown nipple nipple-top-left ">
               <ul className="time-ul dropdown-list">
-                <li onClick={() => display24HoursTime()} className="time-li has-toggle">
+                <li  className="time-li has-toggle">
                   <span className="dropdown-list-label">24-hour clock</span>
                   <span className="toggle-slider">
                     <TimeFormatSwitch />

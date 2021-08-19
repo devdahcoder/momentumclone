@@ -6,7 +6,6 @@ import TodoInput from "./momentumComponents/TodoInput/TodoInput";
 import DateWeather from "./momentumComponents/DateWeather/DateWeather"
 import Footer from "./momentumComponents/Footer/Footer";
 import {getUserLocation} from "./Actions/locationAction";
-import {getBackgroundImage} from "./Actions/backgroundImageAction";
 import {useDispatch, useSelector} from "react-redux";
 
 
@@ -16,8 +15,6 @@ function App() {
     const [getHour, setHour] = useState("");
     const [getTwentyFourHour, setTwentyFourHour] = useState("");
     const [getMinute, setMinute] = useState("");
-    // const [greeting, setGreeting] = useState("");
-
 
 
     const dispatch = useDispatch();
@@ -58,11 +55,6 @@ function App() {
       return () => clearInterval(interval)
     }, [])
 
-    // useEffect(() => {
-    //   dispatch(getBackgroundImage());
-    // }, []);
-
-    
     
     return (
       <>

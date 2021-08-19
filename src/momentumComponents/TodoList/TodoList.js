@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import "./todolist.css";
+import store from "store"
 
 //imported components
 import TodoItem from "../TodoItem/TodoItem";
@@ -7,6 +8,16 @@ import TodoItem from "../TodoItem/TodoItem";
 import { useSelector } from 'react-redux';
 
 const TodoList = () => {
+
+  // const [todos, setTodos] = useState([]);
+
+  // useEffect(() => {
+  //   const getTodo = store.get("todo");
+  //   if (getTodo) {
+  //       // dispatch(addTodo(todos));
+  //       setTodos(getTodo);
+  //   }
+  // }, [])
 
   const todos = useSelector(state => state.todo.todos);
 
@@ -21,12 +32,12 @@ const TodoList = () => {
         
         <div className="todo-focus-container">
           <div className="todo-title" >Today</div>
-          {todos.map((todo) => (
-            <TodoItem
-              key={todo.id}
-              todo={todo}
-            />
-          ))}
+            {todos && todos.map((todo) => (
+              <TodoItem
+                key={todo.id}
+                todo={todo}
+              />
+            ))}
         </div>
       </div>
     </section>

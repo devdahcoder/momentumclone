@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import "./inputname.css";
+import store from "store"
 
 //imported packages
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,10 +24,9 @@ const InputName = () => {
     const handleTodoSubmit = (e) => {
         if (e.key === "Enter") {
             e.preventDefault();
-            if (inputName !== "") {
-                dispatch(addName(inputName));
-                localStorage.setItem("name", inputName);
-                // setState(inputName)
+            if (inputName.trim() !== "") {
+                // localStorage.setItem("name", inputName);
+                store.set("name", inputName);
             } 
             else {
                 alert("cant happen");

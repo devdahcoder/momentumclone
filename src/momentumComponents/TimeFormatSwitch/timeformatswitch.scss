@@ -6,32 +6,27 @@
 
     .time-format-checkbox {
         appearance: none;
-        height: 1.1em;
+        height: 1.2em;
         width: 2.1em;
         background: hsl(0, 7%, 40%);
-        // box-shadow: 0px 1px 5px #10101c;
         border-radius: 100vh;
         position: relative;
         outline: none;
         cursor: pointer;
-        transition: 0.6s;
 
         &:before {
             content: "";
             position: absolute;
             border-radius: 50%;
             background: hsl(0, 10%, 72%);
-            // box-shadow: 0px 1px 3px rgba(72,72,72,0.42);
             height: 12px;
             width: 12px;
             left: 2.2px;
-            top: 50%;
-            transform: translate(0, -50%);
-            transition: 0.6s;
+            top: 0.17em;
         }
 
         &:checked {
-            background: hsl(120, 85%, 49%);
+            background: hsl(114, 50%, 50%);
 
             &:before {
                 background: #ffffff;

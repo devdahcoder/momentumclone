@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {getBackgroundImage} from "../../Actions/backgroundImageAction";
 
 const Greeting = () => {
-  
+
   const [greeting, setGreeting] = useState("");
   const name = useSelector(state => state.name.name);
   const dispatch = useDispatch();
@@ -15,18 +15,14 @@ const Greeting = () => {
 
   const greetings = () => {
     let currentTime = new Date();
-
     let hour = currentTime.getHours();
 
     if (hour < 12) {
       setGreeting("Good morning,");
-      dispatch(getBackgroundImage());
     } else if (hour < 17) {
       setGreeting("Good afternoon,");
-      dispatch(getBackgroundImage());
     } else {
       setGreeting("Good evening,");
-      dispatch(getBackgroundImage());
     }
   };
 
@@ -34,9 +30,9 @@ const Greeting = () => {
     greetings();
   }, [])
 
-  // useEffect(() => {
-  //   dispatch(getBackgroundImage());
-  // }, [greeting]);
+  useEffect(() => {
+    dispatch(getBackgroundImage());
+  }, []);
 
 
   return (
@@ -51,7 +47,7 @@ const Greeting = () => {
 
             <span className="greeting-name-container">
               <span className="greeting-name-wrapper">
-                <InputName />
+                {/* <InputName /> */}
                 {/* <span className="greeting-user-name" data-test="name">{name && name}</span> */}
               </span>
 

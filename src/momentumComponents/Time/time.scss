@@ -99,11 +99,11 @@
                         min-width: max-content;
                         padding: 0;
                         color: hsl(0, 0%, 100%);
-                        right: 2px;
-                        left: 19px;
+                        right: auto;
+                        left: 20px;
                         top: 110px;
                         display: block;
-                        // display: none;
+
 
 
                         .time-ul {
@@ -184,17 +184,14 @@
 
                     nav {
                         transition: opacity 0.5s ease;
-                        color: #fff;
-                        font-size: 100%;
-                        text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-                        box-sizing: inherit;
                         margin: 0 -2px;
                         position: absolute;
-                        top: 0;
+                        top: 5px;
+                        left: 2.5px;
                         display: flex;
                         background: hsla(0, 0%, 6%, 0.925);
                         border-radius: 100px;
-                        display: none;
+                        // display: none;
 
                         .nav-item {
                             transition: opacity 0.5s ease;
@@ -309,35 +306,14 @@
                 .main-time-display {
                     font-size: 10rem;
                     cursor: default;
-                    // font-size: 1050%;
                     letter-spacing: -5px;
                     text-align: center;
                     line-height: 1;
+                    transition: 0.6s;
                 }
+
             }
-
-            // &:hover {
-            //     .time-icon {
-            //         opacity: 1;
-            //         transition: opacity 1s linear 100ms;
-            //     }
-            // }
-
-            // .time-icon {
-            //     opacity: 0;
-            //     position: relative;
-
-            //     &:hover {
-            //         img {
-            //             &::after {
-            //                 position: absolute;
-            //                 z-index: 0;
-            //                 display: block;
-            //                 border-radius: 50px;
-            //             }
-            //         }
-            //     }
-            // }
+            
         }
 
         .time-resize-sensor {

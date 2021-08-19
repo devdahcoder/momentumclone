@@ -74,8 +74,8 @@
   min-width: max-content;
   padding: 0;
   color: white;
-  right: 2px;
-  left: 19px;
+  right: auto;
+  left: 20px;
   top: 110px;
   display: block;
 }
@@ -151,17 +151,13 @@
 
 .time-section-container .time-section-wrapper .time-section-display .side-col .more-dash nav {
   transition: opacity 0.5s ease;
-  color: #fff;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  box-sizing: inherit;
   margin: 0 -2px;
   position: absolute;
-  top: 0;
+  top: 5px;
+  left: 2.5px;
   display: flex;
   background: rgba(15, 15, 15, 0.925);
   border-radius: 100px;
-  display: none;
 }
 
 .time-section-container .time-section-wrapper .time-section-display .side-col .more-dash nav .nav-item {
@@ -261,6 +257,7 @@
   letter-spacing: -5px;
   text-align: center;
   line-height: 1;
+  transition: 0.6s;
 }
 
 .time-section-container .time-section-wrapper .time-resize-sensor {
