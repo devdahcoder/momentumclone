@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/momentumclone/static/css/main.098ed856.chunk.css",
-    "main.js": "/momentumclone/static/js/main.a60efa62.chunk.js",
-    "main.js.map": "/momentumclone/static/js/main.a60efa62.chunk.js.map",
+    "main.js": "/momentumclone/static/js/main.40c369eb.chunk.js",
+    "main.js.map": "/momentumclone/static/js/main.40c369eb.chunk.js.map",
     "runtime-main.js": "/momentumclone/static/js/runtime-main.68ac6b06.js",
     "runtime-main.js.map": "/momentumclone/static/js/runtime-main.68ac6b06.js.map",
     "static/js/2.0b69f7cb.chunk.js": "/momentumclone/static/js/2.0b69f7cb.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.68ac6b06.js",
     "static/js/2.0b69f7cb.chunk.js",
     "static/css/main.098ed856.chunk.css",
-    "static/js/main.a60efa62.chunk.js"
+    "static/js/main.40c369eb.chunk.js"
   ]
 }
