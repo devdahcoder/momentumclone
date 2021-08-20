@@ -56,7 +56,7 @@ export const getUserCity = (locationData) => {
     return async (dispatch) => {
         dispatch(requestLocation());
         try {
-            let url = `http://dataservice.accuweather.com/currentconditions/v1/${locationData.Key}?apikey=${process.env.REACT_APP_WEATHER_API_KEY}`
+            let url = `https://dataservice.accuweather.com/currentconditions/v1/${locationData.Key}?apikey=${process.env.REACT_APP_WEATHER_API_KEY}`
 
             const response = await fetch(url);
             const data = await response.json();
@@ -75,7 +75,7 @@ export const getUserLocation = () => {
             async (position) => {
                 const { latitude, longitude } = position.coords;
 
-                let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
+                let url = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
 
                 const response = await fetch(url);
                 const data = await response.json();
