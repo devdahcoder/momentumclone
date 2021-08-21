@@ -6,9 +6,9 @@ import TodoGreetMessage from "../TodoGreetMessage/TodoGreetMessage";
 import Input from "../Input/Input";
 import TodoList from "../TodoList/TodoList";
 
-const TodoInput = () => {
+const TodoInput = ({todoList}) => {
     return (
-        <section className="todo-input-container">
+        <div className="todo-input-container">
             <div className="todo-input-wrapper">
 
                 <div className="todo-input-focus">
@@ -17,14 +17,14 @@ const TodoInput = () => {
                     <div className="todo-input-focus-wrapper">
                         <Input />
 
-                        <TodoList />
+                        {/* <TodoList todoList={todoList} /> */}
                     </div>
                     
 
                     <TodoGreetMessage />
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

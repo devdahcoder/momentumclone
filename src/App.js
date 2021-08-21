@@ -7,6 +7,7 @@ import DateWeather from "./momentumComponents/DateWeather/DateWeather"
 import Footer from "./momentumComponents/Footer/Footer";
 import {getUserLocation} from "./Actions/locationAction";
 import {useDispatch, useSelector} from "react-redux";
+import store from "store"
 
 
 
@@ -16,14 +17,28 @@ function App() {
     const [getTwentyFourHour, setTwentyFourHour] = useState("");
     const [getMinute, setMinute] = useState("");
 
+    const [todoList, setTodoList] = useState([]);
+
+    useEffect(() => {
+      const getTodo = store.get("todo");
+      if (getTodo) {
+          // dispatch(addTodo(todos));
+          setTodoList(getTodo);
+          console.log(getTodo);
+      }
+
+      // setTodos(store.get("todo"));
+      // console.log(store.get("todo"));
+    }, [])
+
 
     const dispatch = useDispatch();
     const backgroundImage = useSelector(state => state.background.backgroundImage);
     
 
-    useEffect(() => {
-      dispatch(getUserLocation());
-    }, []);
+    // useEffect(() => {
+    //   dispatch(getUserLocation());
+    // }, []);
 
 
     // give user time 
@@ -71,7 +86,7 @@ function App() {
 
             <div className="region full"></div>
 
-            <DateWeather />
+            {/* <DateWeather /> */}
 
             <div className="center-above"></div>
 
@@ -85,7 +100,7 @@ function App() {
             />
             
 
-            <TodoInput />
+            <TodoInput todoList={todoList} />
 
             <Footer />
           </div>

@@ -1,10 +1,9 @@
 .todo-input-container {
-  flex: 1 1 50%;
+  flex: 1 1 35%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex-direction: column;
 }
 
 .todo-input-container .todo-input-wrapper {
@@ -37,10 +36,6 @@
 }
 
 .todo-input-container .todo-input-wrapper .todo-input-focus .todo-input-focus-wrapper {
-  color: #fff;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   box-sizing: inherit;
   display: flex;

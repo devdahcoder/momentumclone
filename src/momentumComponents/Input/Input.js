@@ -12,7 +12,7 @@ import {addTodo} from "../../Actions/todoAction";
 
 const Input = () => {
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState("");
   const todos = useSelector(state => state.todo.todos);
 
@@ -43,9 +43,23 @@ const Input = () => {
     setInputValue(e.target.value);
   }
 
+  // useEffect(() => {
+  //   const getTodo = store.get("todo");
+  //   // if (getTodo) {
+  //   //     // dispatch(addTodo(todos));
+  //   //     // setTodoList(getTodo);
+  //   //     console.log(getTodo);
+  //   //     dispatch(addTodo(getTodo));
+  //   // }
+  //   dispatch(addTodo(getTodo));
+
+  // //   // setTodos(store.get("todo"));
+  // //   // console.log(store.get("todo"));
+  // }, [])
+
 
   return (
-    <section style={{ display: todos.length === 0 ? "block" : "none" }}>
+    <section /*style={{ display: todos.length === 0 ? "block" : "none" }}*/>
       <form action="" onSubmit={handleTodoSubmit}>
         <div className="input-form-display">
             <label htmlFor="">What is your main Focus today?</label>

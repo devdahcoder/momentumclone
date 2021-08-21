@@ -1,43 +1,54 @@
 import React, {useState, useEffect} from 'react';
 import "./todolist.css";
 import store from "store"
-
+import {addTodo} from "../../Actions/todoAction"
 //imported components
 import TodoItem from "../TodoItem/TodoItem";
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 const TodoList = () => {
 
-  // const [todos, setTodos] = useState([]);
+  const dispatch = useDispatch();
+  const [todoList, setTodoList] = useState([]);
+
+  
+
+  // const todoList = useSelector(state => state.todo.todos);
+
 
   // useEffect(() => {
   //   const getTodo = store.get("todo");
-  //   if (getTodo) {
-  //       // dispatch(addTodo(todos));
-  //       setTodos(getTodo);
-  //   }
+  //   // dispatch(addTodo(getTodo));
+  //   setTodoList(getTodo);
+  //   // if (getTodo) {
+  //   //     // dispatch(addTodo(todos));
+  //   //     // setTodoList(getTodo);
+  //   //     console.log(getTodo);
+  //   //     dispatch(addTodo(getTodo));
+  //   // }
+
+  // //   // setTodos(store.get("todo"));
+  // //   // console.log(store.get("todo"));
   // }, [])
 
-  const todos = useSelector(state => state.todo.todos);
+
+  // const parent = todoList && todoList.length > 0 ? todoList.map((todo, index) => (<TodoItem key={todo.index} todo={todo}/>)) : <span>no todo</span>
+  
+
 
   return (
-    <section className="todo-list-section" style={{ display: todos.length === 0 ? "none" : "block" }}>
+    <section className="todo-list-section" style={{ visibility: todoList && todoList.length === 0 ? "hidden" : "visible" }}>
       <div className="todo-list-section-display">
 
         <div data-v-20431cdb="" className="todo-list-fake-input-prompt">
-          <h3 data-v-20431cdb="">What is your main focus for today?</h3> 
+          <h3 className="fake-todo-input-label" data-v-20431cdb="">What is your main focus for today?</h3> 
           <input data-v-20431cdb="" />
         </div>
         
         <div className="todo-focus-container">
           <div className="todo-title" >Today</div>
-            {todos && todos.map((todo) => (
-              <TodoItem
-                key={todo.id}
-                todo={todo}
-              />
-            ))}
+            {/* {parent} */}
         </div>
       </div>
     </section>
