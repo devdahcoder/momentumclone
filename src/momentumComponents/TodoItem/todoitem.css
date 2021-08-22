@@ -1,7 +1,4 @@
 .todo-list-item-container {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   box-sizing: inherit;
   display: flex;
@@ -12,9 +9,6 @@
 }
 
 .todo-list-item-container .todo-checkbox-container {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   transition: opacity 0.5s ease;
   font-size: 120%;
@@ -27,9 +21,6 @@
 }
 
 .todo-list-item-container .todo-checkbox-container .todo-checkbox {
-  color: #fff;
-  user-select: none;
-  box-sizing: inherit;
   display: inline-flex;
   border-radius: 100px;
   cursor: pointer;
@@ -87,9 +78,6 @@
 }
 
 .todo-list-item-container .today-todo {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   font-size: 120%;
   line-height: 120%;
@@ -103,9 +91,6 @@
 }
 
 .todo-list-item-container .todo-delete-container {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   font-size: 120%;
   line-height: 120%;
@@ -118,9 +103,6 @@
 }
 
 .todo-list-item-container .todo-delete-container .todo-delete {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   line-height: 120%;
   box-sizing: inherit;
@@ -139,9 +121,6 @@
 }
 
 .todo-list-item-container .todo-delete-container .todo-delete .icon-wrapper {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   line-height: 120%;
   font-size: 70%;

@@ -16,8 +16,9 @@ function App() {
     const [getHour, setHour] = useState("");
     const [getTwentyFourHour, setTwentyFourHour] = useState("");
     const [getMinute, setMinute] = useState("");
-
     const [todoList, setTodoList] = useState([]);
+    const dispatch = useDispatch();
+    const backgroundImage = useSelector(state => state.background.backgroundImage);
 
     useEffect(() => {
       const getTodo = store.get("todo");
@@ -31,15 +32,9 @@ function App() {
       // console.log(store.get("todo"));
     }, [])
 
-
-    const dispatch = useDispatch();
-    const backgroundImage = useSelector(state => state.background.backgroundImage);
-    
-
     // useEffect(() => {
     //   dispatch(getUserLocation());
     // }, []);
-
 
     // give user time 
     useEffect(() => {

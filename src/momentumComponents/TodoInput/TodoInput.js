@@ -17,7 +17,7 @@ const TodoInput = ({todoList}) => {
                     <div className="todo-input-focus-wrapper">
                         <Input />
 
-                        {/* <TodoList todoList={todoList} /> */}
+                        <TodoList todoList={todoList} />
                     </div>
                     
 

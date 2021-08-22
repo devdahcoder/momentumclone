@@ -48,9 +48,9 @@ const InputName = () => {
 
 
     return (
-        <span data-v-4e331ed7="" className="input-name-container">
-            <input onKeyPress={handleTodoSubmit} data-v-4e331ed7="" onChange={handleName} value={inputName} spellcheck="false" data-test="name-input" class="name editing pulse" /> 
-            {/* <span data-v-4e331ed7="" className="name-hidden-span">{name && name}</span> */}
+        <span className="input-name-container">
+            <input onKeyPress={handleTodoSubmit} onChange={handleName} value={inputName} spellcheck="false" data-test="name-input" class="name editing pulse" /> 
+            {/* <span className="name-hidden-span">{name && name}</span> */}
         </span>
     )
 }

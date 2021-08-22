@@ -30,9 +30,9 @@ const Greeting = () => {
     greetings();
   }, [])
 
-  useEffect(() => {
-    dispatch(getBackgroundImage());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getBackgroundImage());
+  // }, []);
 
 
   return (
@@ -48,6 +48,7 @@ const Greeting = () => {
             <span className="greeting-name-container">
               <span className="greeting-name-wrapper">
                 {/* <InputName /> */}
+                <span className="greeting-user-name" data-test="name">Olamide</span>
                 {/* <span className="greeting-user-name" data-test="name">{name && name}</span> */}
               </span>
 
