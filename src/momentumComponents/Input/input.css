@@ -1,17 +1,14 @@
+section {
+  transition: opacity 0.5s ease;
+}
+
 section form .input-form-display {
-  color: #fff;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   box-sizing: inherit;
   padding-bottom: 0.5em;
 }
 
 section form .input-form-display label {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   padding: 0;
   font-size: 2.1875em;
@@ -21,7 +18,6 @@ section form .input-form-display label {
 }
 
 section form .input-form-display input {
-  user-select: none;
   font-family: Inter, sans-serif;
   width: 100%;
   padding-top: 4px;

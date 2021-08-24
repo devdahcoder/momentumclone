@@ -30,9 +30,9 @@ const Greeting = () => {
     greetings();
   }, [])
 
-  // useEffect(() => {
-  //   dispatch(getBackgroundImage());
-  // }, []);
+  useEffect(() => {
+    dispatch(getBackgroundImage());
+  }, []);
 
 
   return (

@@ -5,7 +5,7 @@ import "./weatheradd.css";
 const WeatherAdd = () => {
     return (
         <div data-v-6ac648f0="" className="add-widget-container needs-hover" data-just-bound-click-outside-handler="false" data-click-outside-mouseup-handler-id="iwp6pn" data-click-outside-mousedown-handler-id="82nsu5">
-            <div data-v-6ac648f0="" data-ob="add-widget" class="app-dash metric-item add-shadow">
+            <div data-v-6ac648f0="" data-ob="add-widget" className="app-dash metric-item add-shadow">
                 <div data-v-6ac648f0="" className="add-metric-stat">
                     <span data-v-6ac648f0="" className="placeholder">
                         <span data-v-6ac648f0="" className="add-hide">a</span>

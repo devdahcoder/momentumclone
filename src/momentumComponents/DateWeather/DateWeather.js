@@ -7,11 +7,11 @@ import Weather from "../Weather/Weather";
 
 const DateWeather = () => {
     return (
-        <header class="date-weather-header">
+        <header className="date-weather-header">
             
             <Date />
 
-            <div class="top-center"></div>
+            <div className="top-center"></div>
 
             <Weather />
 

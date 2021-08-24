@@ -1,0 +1,112 @@
+.todo-dropdown-container {
+  font-size: 120%;
+  line-height: 120%;
+  max-height: 100vh;
+  max-width: 100vw;
+  text-shadow: none;
+  background: #333333;
+  border-radius: 5px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  overflow: visible;
+  transition: transform .25s ease,height .25s ease;
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  text-align: left;
+  min-width: max-content;
+  padding: 0;
+  right: auto;
+  background-color: rgba(15, 15, 15, 0.925);
+  color: white;
+  display: block;
+  margin-top: -10px;
+  left: 460px;
+}
+
+.todo-dropdown-container::after {
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  display: block;
+  opacity: 1;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  top: -7px;
+  border-bottom: 7px solid rgba(15, 15, 15, 0.925);
+  overflow: visible;
+  left: 33px;
+}
+
+.todo-dropdown-container .todo-dropdown-list {
+  font-size: 120%;
+  line-height: 120%;
+  text-shadow: none;
+  text-align: left;
+  box-sizing: inherit;
+  margin: 0;
+  list-style: none;
+  padding: 6px 0;
+  position: relative;
+  z-index: 0;
+  transition: transform .25s ease,height .25s ease;
+}
+
+.todo-dropdown-container .todo-dropdown-list li {
+  max-width: 280px;
+  padding: 6px calc(21px - 6px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: normal;
+  text-shadow: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+.todo-dropdown-container .todo-dropdown-list li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper {
+  width: 15px;
+  margin-left: -1px;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper svg {
+  cursor: pointer;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: normal;
+  height: 13px;
+  fill: white;
+  opacity: .45;
+  display: inline-block;
+}
+
+.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper .icon-delete {
+  height: 10px;
+  margin-top: 1px;
+}
+
+.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper .icon-pomodoro {
+  height: 15px;
+}
+
+.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper .icon-autofocus {
+  height: 9px;
+}
+/*# sourceMappingURL=tododropdown.css.map */

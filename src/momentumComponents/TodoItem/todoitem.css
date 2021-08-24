@@ -107,7 +107,7 @@
   line-height: 120%;
   box-sizing: inherit;
   display: inline-flex;
-  opacity: 0;
+  opacity: 1;
   border-radius: 100px;
   cursor: pointer;
   transition: all 0.1s ease;
@@ -135,8 +135,8 @@
 }
 
 .todo-list-item-container .todo-delete-container .todo-delete .icon-wrapper svg {
-  height: 10px;
-  width: 10px;
+  height: 17px;
+  width: 17px;
   transition: transform 0.1s ease;
   opacity: 0.8;
 }
@@ -154,21 +154,5 @@
   z-index: 0;
   display: block;
   border-radius: 50px;
-}
-
-.todo-list-item-container:hover .todo-checkbox {
-  opacity: 0.8;
-}
-
-.todo-list-item-container:hover .todo-checkbox label {
-  opacity: 1;
-}
-
-.todo-list-item-container:hover .todo-delete {
-  opacity: 0.8;
-}
-
-.todo-list-item-container:hover .todo-delete svg {
-  opacity: 1;
 }
 /*# sourceMappingURL=todoitem.css.map */

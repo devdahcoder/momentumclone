@@ -123,7 +123,7 @@
             line-height: 120%;
             box-sizing: inherit;
             display: inline-flex;
-            opacity: 0;
+            opacity: 1;
             border-radius: 100px;
             cursor: pointer;
             transition: all 0.1s ease;
@@ -149,8 +149,8 @@
                 vertical-align: top;
 
                 svg {
-                    height: 10px;
-                    width: 10px;
+                    height: 17px;
+                    width: 17px;
                     transition: transform 0.1s ease;
                     opacity: 0.8;
                     path {
@@ -178,22 +178,22 @@
         }
     }
 
-    &:hover {
-        .todo-checkbox {
-            opacity: 0.8;
+    // &:hover {
+    //     .todo-checkbox {
+    //         opacity: 0.8;
 
-            label {
-                opacity: 1;
-            }
-        }
+    //         label {
+    //             opacity: 1;
+    //         }
+    //     }
 
 
-        .todo-delete {
-            opacity: 0.8;
+    //     .todo-delete {
+    //         opacity: 0.8;
 
-            svg {
-                opacity: 1;
-            }
-        }
-    }
+    //         svg {
+    //             opacity: 1;
+    //         }
+    //     }
+    // }
 }
