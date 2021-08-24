@@ -1,16 +1,15 @@
 .input-name-container {
   text-align: center;
-  font-weight: 500;
   line-height: normal;
   white-space: nowrap;
-  box-sizing: inherit;
   margin: -5px -2px -8px;
   padding: 5px 2px 8px;
   position: relative;
+  font-size: 100%;
 }
 
 .input-name-container input {
-  color: #fff;
+  color: white;
   font-size: 100%;
   background: 0 0;
   vertical-align: top;
@@ -21,17 +20,17 @@
   white-space: nowrap;
   animation: pulse 1s ease 0s 1 normal;
   border: none;
+  min-width: 1.5ch;
+  width: 100%;
   font-weight: 500;
   max-width: 12em;
   text-align: center;
-  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  min-width: 1.5ch;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid white;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   cursor: auto;
@@ -48,18 +47,16 @@
 
 .input-name-container .name-hidden-span {
   text-align: center;
-  font-weight: 500;
   line-height: normal;
-  font-size: 337.5%;
-  box-sizing: inherit;
+  min-width: 1.5ch;
   vertical-align: top;
   max-width: 12em;
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 30px;
   outline: 0;
   overflow: hidden;
   white-space: nowrap;
-  min-width: 1.5ch;
-  visibility: hidden;
+  visibility: visible;
+  font-size: 100%;
 }
 /*# sourceMappingURL=inputname.css.map */

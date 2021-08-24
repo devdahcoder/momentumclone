@@ -8,18 +8,26 @@
 
 
     .greeting-display {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        color: hsl(0, 0%, 100%);
-        font-size: 100%;
-        text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
         position: relative;
         transition: opacity 0.5s ease;
-        display: flex;
-        text-align: center;
         font-weight: 500;
         line-height: normal;
+
+
+        font-size: 90%;
+        box-sizing: inherit;
+        position: relative;
+        // --app-container-transition: opacity 0.5s ease;
+        // transition: var(--app-container-transition);
+        display: flex;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-weight: 500;
+        line-height: normal;
+
+
+        
 
         .greeting-side-col {
             text-align: center;
@@ -40,9 +48,6 @@
 
             .greeting-text-content {
                 text-align: center;
-                font-weight: 500;
-                line-height: normal;
-                box-sizing: inherit;
                 transition: opacity 0.5s ease;
                 font-size: 337.5%;
                 display: inline;
@@ -57,41 +62,38 @@
                 }
 
                 .greeting-name-container {
-                    color: #fff;
-                    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-                    // user-select: none;
-                    text-align: center;
-                    font-weight: 500;
-                    line-height: normal;
-                    // font-size: 337.5%;
-                    box-sizing: inherit;
+                    // text-align: center;
+                    // font-weight: 500;
+                    // line-height: normal;
+                    // // font-size: 337.5%;
+                    // box-sizing: inherit;
                     white-space: nowrap;
 
                     .greeting-name-wrapper {
-                        color: #fff;
-                        text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-                        user-select: none;
-                        text-align: center;
-                        font-weight: 500;
-                        line-height: normal;
+                        position: relative;
+                        // text-align: center;
+                        // font-weight: 500;
+                        // line-height: normal;
                         // font-size: 337.5%;
                         white-space: nowrap;
-                        .greeting-user-name {
-                            color: #fff;
-                            text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-                            user-select: none;
-                            text-align: center;
-                            font-weight: 500;
-                            line-height: normal;
-                            // font-size: 337.5%;
-                            vertical-align: top;
-                            max-width: 12em;
-                            display: inline-block;
-                            border-radius: 3px;
-                            outline: 0;
-                            overflow: hidden;
-                            white-space: nowrap;
-                        }
+
+
+                        // .greeting-user-name {
+                        //     color: #fff;
+                        //     text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
+                        //     user-select: none;
+                        //     text-align: center;
+                        //     font-weight: 500;
+                        //     line-height: normal;
+                        //     // font-size: 337.5%;
+                        //     vertical-align: top;
+                        //     max-width: 12em;
+                        //     display: inline-block;
+                        //     border-radius: 3px;
+                        //     outline: 0;
+                        //     overflow: hidden;
+                        //     white-space: nowrap;
+                        // }
                     }
 
                     .punctuation {
@@ -107,10 +109,8 @@
         }
 
         .greeting-menu-container {
-            color: #fff;
-            font-size: 100%;
-            text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-            user-select: none;
+            font-weight: 500;
+            font-size: 337.5%;
             text-align: center;
             font-weight: 500;
             line-height: normal;
@@ -121,10 +121,6 @@
             transition: opacity 0.5s ease;
             
             .greeting-menu-display {
-                color: #fff;
-                font-size: 100%;
-                text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-                user-select: none;
                 text-align: center;
                 font-weight: 500;
                 line-height: normal;
@@ -132,6 +128,7 @@
                 position: relative;
                 padding-left: 4px;
                 transition: opacity 0.5s ease;
+
                 .greeting-menu-wrapper {
                     text-align: center;
                     font-weight: 500;
@@ -151,8 +148,18 @@
                     
                     svg {
                         // opacity: 0;
-                        transition: opacity 0.5s ease;
-                        height: 25px;
+                        // transition: opacity 0.5s ease;
+                        // height: 25px;
+
+                        text-align: center;
+                        font-weight: 500;
+                        line-height: normal;
+                        cursor: pointer;
+                        box-sizing: inherit;
+                        fill: #fff;
+                        // opacity: 0;
+                        height: 18px;
+
                         path {
                             fill: hsl(0, 0%, 100%);
                         }

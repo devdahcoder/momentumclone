@@ -1,11 +1,15 @@
 .greeting-section .greeting-display {
-  color: white;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   transition: opacity 0.5s ease;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 90%;
+  box-sizing: inherit;
+  position: relative;
   display: flex;
   text-align: center;
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   line-height: normal;
 }
@@ -30,9 +34,6 @@
 
 .greeting-section .greeting-display .greeting-text-container .greeting-text-content {
   text-align: center;
-  font-weight: 500;
-  line-height: normal;
-  box-sizing: inherit;
   transition: opacity 0.5s ease;
   font-size: 337.5%;
   display: inline;
@@ -48,38 +49,11 @@
 }
 
 .greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-name-container {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-weight: 500;
-  line-height: normal;
-  box-sizing: inherit;
   white-space: nowrap;
 }
 
 .greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-name-container .greeting-name-wrapper {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
-  text-align: center;
-  font-weight: 500;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-name-container .greeting-name-wrapper .greeting-user-name {
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
-  text-align: center;
-  font-weight: 500;
-  line-height: normal;
-  vertical-align: top;
-  max-width: 12em;
-  display: inline-block;
-  border-radius: 3px;
-  outline: 0;
-  overflow: hidden;
+  position: relative;
   white-space: nowrap;
 }
 
@@ -88,10 +62,8 @@
 }
 
 .greeting-section .greeting-display .greeting-menu-container {
-  color: #fff;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
+  font-weight: 500;
+  font-size: 337.5%;
   text-align: center;
   font-weight: 500;
   line-height: normal;
@@ -103,10 +75,6 @@
 }
 
 .greeting-section .greeting-display .greeting-menu-container .greeting-menu-display {
-  color: #fff;
-  font-size: 100%;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
   text-align: center;
   font-weight: 500;
   line-height: normal;
@@ -135,8 +103,13 @@
 }
 
 .greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper svg {
-  transition: opacity 0.5s ease;
-  height: 25px;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  box-sizing: inherit;
+  fill: #fff;
+  height: 18px;
 }
 
 .greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper svg path {

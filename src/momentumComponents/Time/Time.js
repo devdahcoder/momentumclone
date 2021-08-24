@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./time.css";
 
 //imported components
@@ -7,18 +7,26 @@ import TwentyFourHours from "../TwentyFourHours/TwentyFourHours";
 import TwelveHours from "../TwelveHours/TwelveHours";
 
 //imported utils
+import {TimeContext} from "../../context/TimeContext"
+
 import {useSelector, useDispatch} from "react-redux";
 import {timeDisplay24Hours, timeHide24Hours} from "../../Actions/timeAction";
 import {timeDisplayDropDown, timeHideDropDown} from "../../Actions/timeDropDownAction";
 import {otherTimeDisplayDropDown, otherTimeHideDropDown} from "../../Actions/otherTimeDropDownAction";
 
-const Time = ({getHour, getMinute, getTwentyFourHour}) => {
+const Time = () => {
 
-
+  const {
+    time, 
+    toggleDigitalTimeDropDown, 
+    toggleDisplayDigitalTimeDropDown,
+    toggle24DigitalTimeDropDown,
+    toggle24DigitalTime
+  } = useContext(TimeContext);
+  const {getHour, getMinute, getTwentyFourHour} = time;
   const time24HoursDisplay = useSelector(state => state.time.display24Hours);
   const timeDropDownDisplay =  useSelector(state => state.timeDropDown.timeDropDown);
   const otherTimeDropDownDisplay = useSelector(state => state.otherTimeDropDownReducer.otherTimeDropDown);
-
   const dispatch = useDispatch();
 
 
@@ -27,15 +35,6 @@ const Time = ({getHour, getMinute, getTwentyFourHour}) => {
       dispatch(timeHide24Hours())
     } else {
       dispatch(timeDisplay24Hours())
-    }
-  }
-
-
-  const displayDropDown = () => {
-    if (timeDropDownDisplay) {
-      dispatch(timeHideDropDown())
-    } else {
-      dispatch(timeDisplayDropDown())
     }
   }
 
@@ -96,19 +95,19 @@ const Time = ({getHour, getMinute, getTwentyFourHour}) => {
 
         <div className="main-time-container">
           <div className="main-time-display">
-            {time24HoursDisplay === true ? <TwentyFourHours getTwentyFourHour={getTwentyFourHour} getMinute={getMinute} /> : <TwelveHours getHour={getHour} getMinute={getMinute} />}
+            {toggle24DigitalTime === true ? <TwentyFourHours getTwentyFourHour={getTwentyFourHour} getMinute={getMinute} /> : <TwelveHours getHour={getHour} getMinute={getMinute} />}
           </div>
         </div>
 
         <div className="side-col right">
           <div className="more more-dash">
-            <div onBlur={() => handleBlur()} onClick={() => displayDropDown()} style={{opacity: timeDropDownDisplay ? "1" : ""}} className="icon-wrapper dash-icon-wrapper more-toggle">
+            <div onBlur={() => handleBlur()} onClick={toggleDisplayDigitalTimeDropDown} style={{opacity: timeDropDownDisplay ? "1" : ""}} className="icon-wrapper dash-icon-wrapper more-toggle">
               <svg data-v-c8d4d4da="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" className="icon"><path data-v-c8d4d4da="" d="M8 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM52 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM30 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"></path></svg>
             </div>
 
-            <div style={{visibility: timeDropDownDisplay ? "visible" : "hidden"}} className="right-dropdown-container more-dropdown dash-dropdown nipple nipple-top-left ">
+            <div style={{visibility: toggleDigitalTimeDropDown ? "visible" : "hidden"}} className="right-dropdown-container more-dropdown dash-dropdown nipple nipple-top-left ">
               <ul className="time-ul dropdown-list">
-                <li onClick={() => display24HoursTime()} className="time-li has-toggle">
+                <li onClick={toggle24DigitalTimeDropDown} className="time-li has-toggle">
                   <span className="dropdown-list-label">24-hour clock</span>
                   <span className="toggle-slider">
                     <TimeFormatSwitch />

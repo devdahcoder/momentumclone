@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import "./App.css";
 import Overlay from "./PageOverlay/PageOverlay"
 import TimeGreet from "./momentumComponents/TimeGreet/TimeGreet";
@@ -9,50 +9,17 @@ import {getUserLocation} from "./Actions/locationAction";
 import {useDispatch, useSelector} from "react-redux";
 // import store from "store"
 import TodoContextProvider from "./context/TodoContext"
+import TimeContextProvider from "./context/TimeContext";
 
 
 function App() {
-    const [getAmPm, setAmPm] = useState("");
-    const [getHour, setHour] = useState("");
-    const [getTwentyFourHour, setTwentyFourHour] = useState("");
-    const [getMinute, setMinute] = useState("");
+
     const dispatch = useDispatch();
     const backgroundImage = useSelector(state => state.background.backgroundImage);
-
 
     useEffect(() => {
       dispatch(getUserLocation());
     }, []);
-
-
-    // give user time 
-    useEffect(() => {
-      const interval = setInterval(() => {
-        const getDay = new Date();
-        const getHour = getDay.getHours();
-        const getMinute = getDay.getMinutes();
-
-
-        let twentyFourHours = getHour <= 9 ? `0${getHour}`: `${getHour}`;
-
-        setTwentyFourHour(twentyFourHours);
-
-
-        const amPm = getHour >= 12 ? "PM" : "AM";
-        setAmPm(amPm);
-
-
-        const hour = getHour % 12 || 12;
-        setHour(hour);
-
-        let addzero = getMinute <= 9 ? `0${getMinute}`: `${getMinute}`;
-
-
-        setMinute(addzero);
-        // setMinute(getMinute);
-      }, 1000);
-      return () => clearInterval(interval)
-    }, [])
 
     
     return (
@@ -75,13 +42,10 @@ function App() {
             <div className="center-above"></div>
 
 
-            <TimeGreet 
-              getAmPm={getAmPm} 
-              getMinute={getMinute} 
-              getHour={getHour} 
-              getTwentyFourHour={getTwentyFourHour}
-
-            />
+            <TimeContextProvider>
+              <TimeGreet />
+            </TimeContextProvider>
+            
             
 
             <TodoContextProvider>

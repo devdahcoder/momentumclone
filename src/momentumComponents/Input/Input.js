@@ -11,16 +11,7 @@ import {TodoContext} from "../../context/TodoContext"
 
 const Input = () => {
 
-  // const [inputValue, setInputValue] = useState("");
-  const {todoList, setTodoList, isEditing, setIsEditing, inputValue, setInputValue} = useContext(TodoContext);
-
-  // const handleEdit = () => {
-  //   if (isEditing) {
-  //     setInputValue(input);
-  //   }
-  // }
-
-  // isEditing ? setInputValue(input) : null;
+  const {todoList, setTodoList, setIsEditing, inputValue, setInputValue} = useContext(TodoContext);
 
 
   const handleTodoSubmit = (e) => {

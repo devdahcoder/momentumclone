@@ -40,21 +40,9 @@ const TodoContextProvider = (props) => {
     };
 
 
-
-    // const editTodo = (id) => {
-    //     let newTodo = todoList.find((todo) => todo.id === id);
-    //     let {value} = newTodo;
-    //     setIsEditing(!isEditing);
-    //     setTodoList(value);
-    //     console.log(value);
-    // }
-
-
     const editTodo = (id) => {
         setIsEditing(true);
         let currentTodo = todoList.find((todo) => todo.id === id);
-        // newTodo.value = value;
-        // setTodoList(todoList);
         setInputValue(currentTodo.value);
         console.log(currentTodo);
         deleteTodo(id);
