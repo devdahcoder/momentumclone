@@ -8,6 +8,7 @@ const TimeContextProvider = (props) => {
     const [time, setTime] = useState({});
     const [toggleDigitalTimeDropDown, setToggleDigitalTimeDropDown] = useState(false);
     const [toggle24DigitalTime, setToggle24DigitalTime] = useState(false);
+    const [toggleOtherTimeDropDown, setToggleOtherTimeDropDown] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -42,13 +43,19 @@ const TimeContextProvider = (props) => {
         setToggle24DigitalTime(!toggle24DigitalTime);
     };
 
+    const toggleDisplayOtherTimeDropDown = () => {
+        setToggleOtherTimeDropDown(!toggleOtherTimeDropDown);
+    };
+
 
     const value = {
         time, 
         toggleDigitalTimeDropDown, 
         toggleDisplayDigitalTimeDropDown, 
         toggle24DigitalTimeDropDown,
-        toggle24DigitalTime
+        toggle24DigitalTime,
+        toggleOtherTimeDropDown,
+        toggleDisplayOtherTimeDropDown
     };
 
     return (

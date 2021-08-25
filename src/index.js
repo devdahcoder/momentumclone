@@ -10,11 +10,9 @@ import BackgroundImageContextProvider from "./context/BackgroundImageContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
       <BackgroundImageContextProvider>
         <App />
       </BackgroundImageContextProvider>
-    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,13 +1,14 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import "./footer.css"
-import { useSelector, useDispatch } from 'react-redux';
-import { getBackgroundImage } from "../../Actions/backgroundImageAction"
+
+
+// imported utils
+import {BackgroundImageContext} from "../../context/BackgroundImageContext";
 
 
 const Footer = () => {
 
-    const backgroundImage = useSelector(state => state.background.backgroundImage);
-    const dispatch = useDispatch();
+    const {backgroundImage, getBackgroundImage} = useContext(BackgroundImageContext);
 
     return (
         <footer>
@@ -332,7 +333,7 @@ const Footer = () => {
                             </svg>
                         </span>
 
-                        <span onClick={() => dispatch(getBackgroundImage())} data-v-1040273e="" title="Skip Photo" data-test="control-skip" className="photo-source-control control-skip">
+                        <span onClick={getBackgroundImage()} data-v-1040273e="" title="Skip Photo" data-test="control-skip" className="photo-source-control control-skip">
                             <span data-v-1040273e="" data-test="control-skip-icon-container" className="skip-icon-container">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="512" viewBox="0 0 512 512" width="512"><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="256" x2="256" y1="481" y2="31"><stop offset="0" stopColor="#5558ff"/><stop offset="1" stopColor="#00c0ff"/></linearGradient><path d="m505.7 183.8-212-150c-4.6-3.3-10.6-3.7-15.6-1.1-5 2.6-8.1 7.7-8.1 13.3v75.4c-150.2 7.8-270 132.5-270 284.6v60c0 7.5 5.5 13.8 12.9 14.9 7.2 1.1 14.4-3.4 16.5-10.7l2.3-8.1c30.8-107.6 127.5-184.2 238.3-190.6v74.6c0 5.6 3.1 10.8 8.1 13.3 5 2.6 11 2.1 15.6-1.1l212-150c3.9-2.8 6.3-7.4 6.3-12.2s-2.3-9.4-6.3-12.2z" fill="url(#SVGID_1_)"/></svg>
                             </span>
