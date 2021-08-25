@@ -1,0 +1,20 @@
+.todo-greet-message-wrapper {
+  text-align: center;
+  box-sizing: inherit;
+  position: relative;
+}
+
+.todo-greet-message-wrapper .todo-greet-focus-message {
+  text-align: center;
+  box-sizing: inherit;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.todo-greet-message-wrapper .todo-greet-focus-message span {
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  box-sizing: inherit;
+}
+/*# sourceMappingURL=todogreetmessage.css.map */

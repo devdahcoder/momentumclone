@@ -11,6 +11,7 @@ const GreetingContextProvider = (props) => {
     const [inputName, setInputName] = useState("");
     const [isEditingName, setIsEditingName] = useState(false);
     const [name, setName] = useState("");
+    const [greeting, setGreeting] = useState("");
 
 
 
@@ -36,9 +37,35 @@ const GreetingContextProvider = (props) => {
         deleteName();
     };
 
+    const greetings = () => {
+        let currentTime = new Date();
+        let hour = currentTime.getHours();
+
+        if (hour < 12) {
+            setGreeting("Good morning,");
+        } else if (hour < 17) {
+            setGreeting("Good afternoon,");
+        } else {
+            setGreeting("Good evening,");
+        }
+    };
+
+    useEffect(() => {
+        greetings();
+    }, [])
 
 
-    const value = { inputName, setInputName, setName, name, isEditingName, setIsEditingName, editName };
+
+    const value = { 
+        inputName, 
+        setInputName, 
+        setName, 
+        name, 
+        isEditingName, 
+        setIsEditingName, 
+        editName, 
+        greeting
+    };
 
 
     return (

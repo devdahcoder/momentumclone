@@ -6,6 +6,7 @@ import Time from "../Time/Time";
 import Greeting from "../Greeting/Greeting";
 
 // imported utils
+import BackgroundImageContextProvider from '../../context/BackgroundImageContext';
 import GreetingContextProvider from '../../context/GreetingContext';
 
 const TimeGreet = () => {
@@ -16,8 +17,11 @@ const TimeGreet = () => {
 
                 
                 <GreetingContextProvider>
-                    <Greeting />
+                    <BackgroundImageContextProvider>
+                        <Greeting />
+                    </BackgroundImageContextProvider>
                 </GreetingContextProvider>
+                
             </div>
         </section>
     )

@@ -1,16 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "./metric.css";
 
-
-
-//imported package
-import { useSelector } from 'react-redux';
+// imported utils
+import {WeatherContext} from "../../context/WeatherContext"
 
 const Metric = () => {
-    const weatherUi = useSelector(state => state.location.locationDetails);
+    
+    const {locationDetails} = useContext(WeatherContext);
 
     const renderIcon = () => {
-        let weatherIcon = weatherUi && weatherUi.WeatherIcon;
+        let weatherIcon = locationDetails && locationDetails.WeatherIcon;
 
         if (weatherIcon) {
             return <img src={process.env.PUBLIC_URL + "/img/"+ weatherIcon + ".png" } alt="weather-icon" />
@@ -18,14 +17,14 @@ const Metric = () => {
     }
     return (
         <div className="weather-metric-stat-container">
-            <span className="icon icon-weather" data-icon="H" title={weatherUi && weatherUi.WeatherText}>
+            <span className="icon icon-weather" data-icon="H" title={locationDetails && locationDetails.WeatherText}>
                 {renderIcon()}
             </span>
 
             <div>
-                <span className="metric-stat-number" data-test="temperature">{weatherUi && weatherUi.Temperature.Metric.Value.toFixed()}</span>
+                <span className="metric-stat-number" data-test="temperature">{locationDetails && locationDetails.Temperature.Metric.Value.toFixed()}</span>
                 <span className="weather-degree">°</span>
-                <span className="unit hide">{weatherUi && weatherUi.Temperature.Metric.Unit.toLowerCase()}</span>
+                <span className="unit hide">{locationDetails && locationDetails.Temperature.Metric.Unit.toLowerCase()}</span>
             </div>
         </div>
     )

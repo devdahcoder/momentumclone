@@ -1,6 +1,10 @@
 import React from 'react';
 import "./dateweather.css";
 
+// imported utils
+import WeatherContextProvider from "../../context/WeatherContext";
+
+
 //imported components
 import Date from "../Date/Date";
 import Weather from "../Weather/Weather";
@@ -13,7 +17,9 @@ const DateWeather = () => {
 
             <div className="top-center"></div>
 
-            <Weather />
+            <WeatherContextProvider>
+                <Weather />
+            </WeatherContextProvider>
 
         </header>
     )

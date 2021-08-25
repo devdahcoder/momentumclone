@@ -1,27 +1,22 @@
-import React, {useEffect} from "react";
+import React, {useContext} from "react";
 import "./App.css";
+
+// imported components
 import Overlay from "./PageOverlay/PageOverlay"
 import TimeGreet from "./momentumComponents/TimeGreet/TimeGreet";
 import TodoInput from "./momentumComponents/TodoInput/TodoInput";
 import DateWeather from "./momentumComponents/DateWeather/DateWeather"
 import Footer from "./momentumComponents/Footer/Footer";
-import {getUserLocation} from "./Actions/locationAction";
-import {useDispatch, useSelector} from "react-redux";
-// import store from "store"
+
+// imported utils
 import TodoContextProvider from "./context/TodoContext"
 import TimeContextProvider from "./context/TimeContext";
-
+import {BackgroundImageContext} from "./context/BackgroundImageContext"
 
 function App() {
 
-    const dispatch = useDispatch();
-    const backgroundImage = useSelector(state => state.background.backgroundImage);
+    const {backgroundImage} = useContext(BackgroundImageContext);
 
-    useEffect(() => {
-      dispatch(getUserLocation());
-    }, []);
-
-    
     return (
       <>
         <Overlay />

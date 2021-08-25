@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "./weather.css";
 
-//imported package
-import { useSelector } from 'react-redux';
+
+// imported utils
+import {WeatherContext} from "../../context/WeatherContext"
 
 //imported components
 import Metric from "../Metric/Metric"
@@ -11,17 +12,17 @@ import WeatherHourForcast from '../../WeatherHourForcast/WeatherHourForcast';
 
 
 const Weather = () => {
-
-    const weatherUi = useSelector(state => state.location.locationDetails);
+    
+    const {locationDetails} = useContext(WeatherContext);
 
     return (
         <div className="weather-top-right">
             <div className="app-container weather show show-fade-in" data-test="weather">
 
-                <div className="app-dash metric-item" title={weatherUi && weatherUi.WeatherText} data-test="app-dash">
+                <div className="app-dash metric-item" title={locationDetails && locationDetails.WeatherText} data-test="app-dash">
                     <Metric />
                     <div className="location-metric-label-name-container data" data-test="location" title="Lagos, Nigeria">
-                        <span className="metric-label-name">{weatherUi && weatherUi.AdministrativeArea.EnglishName}</span>
+                        <span className="metric-label-name">{locationDetails && locationDetails.AdministrativeArea.EnglishName}</span>
                     </div>
 
                     <span className="metric-message"></span>

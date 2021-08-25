@@ -5,11 +5,15 @@ import App from './App';
 import store from "./Utils/Store";
 import { Provider } from "react-redux";
 import * as serviceWorker from './serviceWorker';
+import BackgroundImageContextProvider from "./context/BackgroundImageContext";
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BackgroundImageContextProvider>
+        <App />
+      </BackgroundImageContextProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

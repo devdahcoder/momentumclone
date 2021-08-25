@@ -3,8 +3,6 @@ import "./greeting.css";
 
 // import NameInput from "../nameInput";
 import InputName from "../InputName/InputName";
-import { useSelector, useDispatch } from 'react-redux';
-import {getBackgroundImage} from "../../Actions/backgroundImageAction";
 
 
 // imported utils
@@ -12,31 +10,8 @@ import {GreetingContext} from "../../context/GreetingContext";
 
 const Greeting = () => {
 
-  const [greeting, setGreeting] = useState("");
-  const {name, isEditingName, editName} = useContext(GreetingContext);
-  const dispatch = useDispatch();
+  const {name, editName, greeting} = useContext(GreetingContext);
   
-
-  const greetings = () => {
-    let currentTime = new Date();
-    let hour = currentTime.getHours();
-
-    if (hour < 12) {
-      setGreeting("Good morning,");
-    } else if (hour < 17) {
-      setGreeting("Good afternoon,");
-    } else {
-      setGreeting("Good evening,");
-    }
-  };
-
-  useEffect(() => {
-    greetings();
-  }, [])
-
-  useEffect(() => {
-    dispatch(getBackgroundImage());
-  }, []);
 
 
   return (
