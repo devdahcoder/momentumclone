@@ -1,16 +1,12 @@
 import React, {useContext, useEffect}  from 'react';
 import {TodoContext} from '../../context/TodoContext';
 import "./todolist.css";
-// import store from "store"
-// import {addTodo} from "../../Actions/todoAction"
+
 //imported components
 import TodoItem from "../TodoItem/TodoItem";
-import store from "store";
-// import { useSelector } from 'react-redux';
 
 const TodoList = () => {
-
-  // const todoList = useSelector(state => state.todo.todos);
+  
   const { todoList } = useContext(TodoContext);
 
 

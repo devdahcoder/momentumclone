@@ -1,9 +1,4 @@
 footer {
-    color: #fff;
-    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -11,25 +6,16 @@ footer {
     svg {height: 25px;}
 
     .footer-left-container {
-        color: hsl(0, 0%, 100%);
-        text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-        user-select: none;
         display: flex;
         align-items: flex-end;
         flex: 0 0 188px;
 
         .settings-icon-container {
-            color: #fff;
-            font-size: 100%;
-            text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-            user-select: none;
             position: relative;
             display: inline-block;
             transition: opacity 0.5s ease;
 
             .setting-icon-toggle {
-                text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-                user-select: none;
                 position: relative;
                 cursor: pointer;
                 padding: 0 15px;
@@ -46,8 +32,6 @@ footer {
                 padding-left: 20px;
 
                 svg {
-                    text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-                    user-select: none;
                     cursor: pointer;
                     color: rgba(255, 255, 255, .85);
                     font-size: 106.25%;
@@ -62,10 +46,6 @@ footer {
         }
 
         .photo-info-container {
-            color: #fff;
-            font-size: 100%;
-            text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-            user-select: none;
             position: relative;
             height: 60px;
             min-width: 135px;
@@ -77,10 +57,6 @@ footer {
             transform 1s ease;
 
             .photo-info-name {
-                color: #fff;
-                text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-                user-select: none;
-                box-sizing: inherit;
                 height: 18px;
                 transition: all 0.3s ease;
                 z-index: 2;
@@ -94,10 +70,6 @@ footer {
             
 
             .photo-source {
-                color: #fff;
-                text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-                user-select: none;
-                box-sizing: inherit;
                 height: 18px;
                 transition: all 0.3s ease;
                 display: flex;
@@ -108,9 +80,6 @@ footer {
                 white-space: nowrap;
 
                 .photo-source-link {
-                    color: #fff;
-                    text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-                    user-select: none;
                     font-size: 0.6875rem;
                     white-space: nowrap;
                     box-sizing: inherit;
@@ -172,13 +141,6 @@ footer {
     }
 
     .footer-center-container {
-        color: #fff;
-        font-size: 100%;
-        text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        box-sizing: inherit;
         display: flex;
         align-items: flex-end;
         min-width: 0;
@@ -186,10 +148,6 @@ footer {
 
 
         .footer-center-display {
-            color: hsl(0, 0%, 100%);
-            font-size: 100%;
-            text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-            user-select: none;
             position: relative;
             transition: opacity 0.5s ease;
             height: 58px;
@@ -203,7 +161,6 @@ footer {
 
             .footer-center-text-container {
                 text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-                // --app-container-transition: opacity 0.5s ease;
                 text-align: center;
                 box-sizing: inherit;
                 margin: 0;
@@ -217,7 +174,6 @@ footer {
 
                 .footer-center-body-text {
                     text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-                    // --app-container-transition: opacity 0.5s ease;
                     text-align: center;
                     color: hsla(0, 0%, 100%, 0.9);
                     line-height: 1.2;

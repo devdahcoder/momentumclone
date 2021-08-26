@@ -327,15 +327,14 @@ const Footer = () => {
                     <div data-v-1040273e="" className="photo-source">
                         <span data-v-1040273e="" data-test="background-info-source-link" data-url="https://unsplash.com/photos/qnjKufYqIIE" className="photo-source-link">{`${backgroundImage && backgroundImage.user.name}`}</span>
                         <span data-v-1040273e="" data-test="control-fav" className="photo-source-control control-heart">
-                            <svg height="464pt" viewBox="0 -20 464 464" width="464pt" xmlns="http://www.w3.org/2000/svg">
-                                <path d="m340 0c-44.773438.00390625-86.066406 24.164062-108 63.199219-21.933594-39.035157-63.226562-63.19531275-108-63.199219-68.480469 0-124 63.519531-124 132 0 172 232 292 232 292s232-120 232-292c0-68.480469-55.519531-132-124-132zm0 0" fill="red"/>
-                                <path d="m32 132c0-63.359375 47.550781-122.359375 108.894531-130.847656-5.597656-.769532-11.242187-1.15625025-16.894531-1.152344-68.480469 0-124 63.519531-124 132 0 172 232 292 232 292s6-3.113281 16-8.992188c-52.414062-30.824218-216-138.558593-216-283.007812zm0 0" fill="red"/>
-                            </svg>
+                            
+                            {/* <img data-v-1040273e="" src="img/icon-heart-empty.svg" className="icon icon-dash-heart-empty" alt="djbncd" /> */}
+                            {/* <img data-v-1040273e="" src="img/icon-heart.svg" className="icon icon-dash-heart" alt="dele" /> */}
                         </span>
 
-                        <span onClick={getBackgroundImage()} data-v-1040273e="" title="Skip Photo" data-test="control-skip" className="photo-source-control control-skip">
+                        <span onClick={getBackgroundImage} data-v-1040273e="" title="Skip Photo" data-test="control-skip" className="photo-source-control control-skip">
                             <span data-v-1040273e="" data-test="control-skip-icon-container" className="skip-icon-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="512" viewBox="0 0 512 512" width="512"><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="256" x2="256" y1="481" y2="31"><stop offset="0" stopColor="#5558ff"/><stop offset="1" stopColor="#00c0ff"/></linearGradient><path d="m505.7 183.8-212-150c-4.6-3.3-10.6-3.7-15.6-1.1-5 2.6-8.1 7.7-8.1 13.3v75.4c-150.2 7.8-270 132.5-270 284.6v60c0 7.5 5.5 13.8 12.9 14.9 7.2 1.1 14.4-3.4 16.5-10.7l2.3-8.1c30.8-107.6 127.5-184.2 238.3-190.6v74.6c0 5.6 3.1 10.8 8.1 13.3 5 2.6 11 2.1 15.6-1.1l212-150c3.9-2.8 6.3-7.4 6.3-12.2s-2.3-9.4-6.3-12.2z" fill="url(#SVGID_1_)"/></svg>
+                                <svg data-v-1040273e="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.05 132.12" className="icon icon-skip"><circle data-v-1040273e="" cx="115.5" cy="108.62" r="23"></circle> <path data-v-1040273e="" d="M291.5,281A22.5,22.5,0,1,1,269,303.5,22.52,22.52,0,0,1,291.5,281m0-1A23.5,23.5,0,1,0,315,303.5,23.5,23.5,0,0,0,291.5,280Z" transform="translate(-176 -194.88)"></path> <path data-v-1040273e="" d="M399,257.5a135.18,135.18,0,0,0-41.16-42.17c-22.7-14.74-49.38-21.92-75.15-20.2a108.71,108.71,0,0,0-65.16,27c-19.91,17.5-33.76,41.79-41.18,72.19a13.52,13.52,0,0,0,9.92,16.32,13.66,13.66,0,0,0,3.21.38,13.51,13.51,0,0,0,13.11-10.3c6.07-24.92,17.1-44.54,32.76-58.31a82,82,0,0,1,49.13-20.32c20-1.33,40.81,4.32,58.65,15.9A108.07,108.07,0,0,1,374,268.51l-30,13.2,72.43,40.36,8.6-76Z" transform="translate(-176 -194.88)" class="arrow"></path></svg>
                             </span>
                         </span>
                     </div>

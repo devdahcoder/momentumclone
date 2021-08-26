@@ -1,26 +1,52 @@
 .todo-dropdown-container {
+    margin-top: 4px;
+    left: 6px;
+    display: block;
+    min-width: max-content;
     font-size: 120%;
     line-height: 120%;
+    box-sizing: inherit;
     max-height: 100vh;
     max-width: 100vw;
     text-shadow: none;
     background: rgb(51, 51, 51);
     border-radius: 5px;
-    box-shadow: 0 1px 8px rgba(0,0,0,.25);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .25);
     overflow: visible;
     transition: transform .25s ease,height .25s ease;
     position: absolute;
     top: 100%;
     z-index: 100;
     text-align: left;
-    min-width: max-content;
     padding: 0;
     right: auto;
     background-color: hsla(0, 0%, 6%, 0.925);
     color: hsl(0, 0%, 100%);
-    display: block;
-    margin-top: -10px;
-    left: 460px;
+    
+    
+    
+    // font-size: 120%;
+    // line-height: 120%;
+    // max-height: 100vh;
+    // max-width: 100vw;
+    // text-shadow: none;
+    // background: rgb(51, 51, 51);
+    // border-radius: 5px;
+    // box-shadow: 0 1px 8px rgba(0,0,0,.25);
+    // overflow: visible;
+    // transition: transform .25s ease,height .25s ease;
+    // position: absolute;
+    // top: 100%;
+    // z-index: 100;
+    // text-align: left;
+    // min-width: max-content;
+    // padding: 0;
+    // right: auto;
+    // background-color: hsla(0, 0%, 6%, 0.925);
+    // color: hsl(0, 0%, 100%);
+    // display: block;
+    // margin-top: -10px;
+    // left: 460px;
 
 
     &::after {
@@ -35,22 +61,22 @@
         top: -7px;
         border-bottom: 7px solid hsla(0, 0%, 6%, 0.925);
         overflow: visible;
-        left: 33px;
+        left: 14px;
     }
 
-    .todo-dropdown-list {
+    .todo-dropdown-ul {
+        transition: transform .25s ease,
+        height .25s ease;
         font-size: 120%;
         line-height: 120%;
         text-shadow: none;
         text-align: left;
-        box-sizing: inherit;
         margin: 0;
         list-style: none;
         padding: 6px 0;
         position: relative;
         z-index: 0;
-        transition: transform .25s ease,height .25s ease;
-        // border: 1px solid white;
+        
 
         li {
             max-width: 280px;

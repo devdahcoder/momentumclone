@@ -1,4 +1,4 @@
-import React, {useState, createContext, useEffect} from "react";
+import React, {useState, createContext, useEffect, useRef} from "react";
 import store from "store"
 
 
@@ -10,6 +10,7 @@ const TodoContextProvider = (props) => {
     const [todoList, setTodoList] = useState([]);
     const [isEditing, setIsEditing] = useState(false);
     const [inputValue, setInputValue] = useState("");
+    const focusInput = useRef(null);
 
     useEffect(() => {
         const getTodo = store.get("todo");
@@ -39,6 +40,12 @@ const TodoContextProvider = (props) => {
         }))
     };
 
+    // focus todo function
+    const focusTodoInput = () => {
+        // focusInput.current.focus();
+        // console.log(focusInput.focus());
+    };
+
 
     const editTodo = (id) => {
         setIsEditing(true);
@@ -46,6 +53,7 @@ const TodoContextProvider = (props) => {
         setInputValue(currentTodo.value);
         console.log(currentTodo);
         deleteTodo(id);
+        // focusTodoInput();
     };
     
     // const editTodo = (id, newTodo) => {
@@ -60,7 +68,7 @@ const TodoContextProvider = (props) => {
     //     }))
     // };
 
-    const value = {todoList, setTodoList, deleteTodo, toggleTodo, editTodo, isEditing, setIsEditing, inputValue, setInputValue};
+    const value = {todoList, setTodoList, deleteTodo, toggleTodo, editTodo, isEditing, focusInput, setIsEditing, inputValue, setInputValue};
 
 
 

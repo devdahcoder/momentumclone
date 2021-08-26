@@ -1,6 +1,11 @@
 .todo-dropdown-container {
+  margin-top: 4px;
+  left: 6px;
+  display: block;
+  min-width: max-content;
   font-size: 120%;
   line-height: 120%;
+  box-sizing: inherit;
   max-height: 100vh;
   max-width: 100vw;
   text-shadow: none;
@@ -13,14 +18,10 @@
   top: 100%;
   z-index: 100;
   text-align: left;
-  min-width: max-content;
   padding: 0;
   right: auto;
   background-color: rgba(15, 15, 15, 0.925);
   color: white;
-  display: block;
-  margin-top: -10px;
-  left: 460px;
 }
 
 .todo-dropdown-container::after {
@@ -35,24 +36,23 @@
   top: -7px;
   border-bottom: 7px solid rgba(15, 15, 15, 0.925);
   overflow: visible;
-  left: 33px;
+  left: 14px;
 }
 
-.todo-dropdown-container .todo-dropdown-list {
+.todo-dropdown-container .todo-dropdown-ul {
+  transition: transform .25s ease, height .25s ease;
   font-size: 120%;
   line-height: 120%;
   text-shadow: none;
   text-align: left;
-  box-sizing: inherit;
   margin: 0;
   list-style: none;
   padding: 6px 0;
   position: relative;
   z-index: 0;
-  transition: transform .25s ease,height .25s ease;
 }
 
-.todo-dropdown-container .todo-dropdown-list li {
+.todo-dropdown-container .todo-dropdown-ul li {
   max-width: 280px;
   padding: 6px calc(21px - 6px);
   display: flex;
@@ -66,18 +66,18 @@
   cursor: pointer;
 }
 
-.todo-dropdown-container .todo-dropdown-list li:hover {
+.todo-dropdown-container .todo-dropdown-ul li:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper {
+.todo-dropdown-container .todo-dropdown-ul li .dropdown-list-label-wrapper {
   width: max-content;
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
-.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper {
+.todo-dropdown-container .todo-dropdown-ul li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper {
   width: 15px;
   margin-left: -1px;
   margin-right: 8px;
@@ -86,7 +86,7 @@
   justify-content: center;
 }
 
-.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper svg {
+.todo-dropdown-container .todo-dropdown-ul li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper svg {
   cursor: pointer;
   font-size: .875rem;
   font-weight: 400;
@@ -97,16 +97,16 @@
   display: inline-block;
 }
 
-.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper .icon-delete {
+.todo-dropdown-container .todo-dropdown-ul li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper .icon-delete {
   height: 10px;
   margin-top: 1px;
 }
 
-.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper .icon-pomodoro {
+.todo-dropdown-container .todo-dropdown-ul li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper .icon-pomodoro {
   height: 15px;
 }
 
-.todo-dropdown-container .todo-dropdown-list li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper .icon-autofocus {
+.todo-dropdown-container .todo-dropdown-ul li .dropdown-list-label-wrapper .dropdown-list-icon-wrapper .icon-autofocus {
   height: 9px;
 }
 /*# sourceMappingURL=tododropdown.css.map */

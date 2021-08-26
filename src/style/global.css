@@ -1,0 +1,10 @@
+.side-col {
+  flex: 1 0 50px;
+  display: inline-flex;
+  align-items: center;
+}
+
+center-col {
+  display: inline-block;
+}
+/*# sourceMappingURL=global.css.map */

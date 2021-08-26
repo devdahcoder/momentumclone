@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 import "./input.css";
 
 //imported packages
@@ -11,7 +11,7 @@ import {TodoContext} from "../../context/TodoContext"
 
 const Input = () => {
 
-  const {todoList, setTodoList, setIsEditing, inputValue, setInputValue} = useContext(TodoContext);
+  const {todoList, setTodoList, setIsEditing, inputValue, isEditing, setInputValue, focusInput} = useContext(TodoContext);
 
 
   const handleTodoSubmit = (e) => {
@@ -30,7 +30,6 @@ const Input = () => {
     setInputValue(e.target.value);
   }
 
-
   return (
     <section style={{ display: todoList.length > 0 ? "none" : "block" }}>
       <form action="" onSubmit={handleTodoSubmit}>
@@ -42,6 +41,8 @@ const Input = () => {
               id=""
               onChange={handleTodoInput}
               value={inputValue}
+              autoFocus
+              // { ...( isEditing ? { autoFocus: true } : { autoFocus: false } ) }
             />
         </div>
       </form>

@@ -13,6 +13,7 @@ const TimeGreet = () => {
     return (
         <section className="time-greet-container">
             <div className="time-greet-display">
+                
                 <Time />
 
                 

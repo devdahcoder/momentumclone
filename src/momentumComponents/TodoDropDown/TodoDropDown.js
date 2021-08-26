@@ -10,7 +10,7 @@ const TodoDropDown = ({id}) => {
 
     return (
         <div data-v-c8d4d4da="" data-test="dropdown" className="todo-dropdown-container more-dropdown app dash-dropdown nipple nipple-top-left">
-          <ul data-v-c8d4d4da="" data-test="dropdown-options" className="todo-dropdown-list">
+          <ul data-v-c8d4d4da="" data-test="dropdown-options" className="todo-dropdown-ul">
             <li onClick={() => editTodo(id)} data-v-20431cdb="" className="focus-edit" data-test="edit">
               <div data-test="drop-down-wrapper" className="dropdown-list-label-wrapper">
                 <span className="dropdown-list-icon-wrapper">

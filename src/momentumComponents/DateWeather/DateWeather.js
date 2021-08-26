@@ -3,6 +3,7 @@ import "./dateweather.css";
 
 // imported utils
 import WeatherContextProvider from "../../context/WeatherContext";
+import DateContextProvider from "../../context/DateContext";
 
 
 //imported components
@@ -13,7 +14,9 @@ const DateWeather = () => {
     return (
         <header className="date-weather-header">
             
-            <Date />
+            <DateContextProvider>
+                <Date />
+            </DateContextProvider>
 
             <div className="top-center"></div>
 

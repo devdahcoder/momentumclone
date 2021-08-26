@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import store from "./Utils/Store";
-import { Provider } from "react-redux";
 import * as serviceWorker from './serviceWorker';
 import BackgroundImageContextProvider from "./context/BackgroundImageContext";
 

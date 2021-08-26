@@ -56,9 +56,9 @@ const WeatherContextProvider = (props) => {
         );
     }
 
-    useEffect(() => {
-        getUserLocation();
-    }, []);
+    // useEffect(() => {
+    //     getUserLocation();
+    // }, []);
 
 
 

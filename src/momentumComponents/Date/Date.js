@@ -1,25 +1,32 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import "./date.css"
 
 
 //imported packages
 import moment from "moment"
 
+// imported utils
+import {DateContext} from "../../context/DateContext"
+
 
 const Date = () => {
-    const [day, setDay] = useState();
-    const [date, setDate] = useState();
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-        const currentDateTime = moment();
+    const {currentDate} = useContext(DateContext);
+    const {day, date} = currentDate;
 
-        setDay(currentDateTime.format("dddd"));
-        setDate(currentDateTime.format("MMMM Do YYYY"))
+    // const [day, setDay] = useState();
+    // const [date, setDate] = useState();
+
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //     const currentDateTime = moment();
+
+    //     setDay(currentDateTime.format("dddd"));
+    //     setDate(currentDateTime.format("MMMM Do YYYY"))
         
-    }, 1000);
-        return () => clearInterval(interval)
-    }, [])
+    // }, 1000);
+    //     return () => clearInterval(interval)
+    // }, [])
 
 
     
