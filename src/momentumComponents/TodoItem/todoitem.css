@@ -11,12 +11,6 @@
 .todo-list-item-container .todo-checkbox-container {
   text-align: center;
   transition: opacity 0.5s ease;
-  font-size: 120%;
-  line-height: 120%;
-  box-sizing: inherit;
-  flex: 1 0 50px;
-  display: inline-flex;
-  align-items: center;
   justify-content: flex-end;
 }
 
@@ -78,10 +72,8 @@
 }
 
 .todo-list-item-container .today-todo {
+  font-size: 2rem;
   text-align: center;
-  font-size: 120%;
-  line-height: 120%;
-  box-sizing: inherit;
   max-width: 87%;
   margin: 3px 0;
   display: inline-block;
@@ -90,35 +82,8 @@
   white-space: nowrap;
 }
 
-.todo-list-item-container .todo-delete-container {
-  text-align: center;
-  font-size: 120%;
-  line-height: 120%;
-  box-sizing: inherit;
-  flex: 1 0 50px;
-  display: inline-flex;
-  align-items: center;
-  padding-top: 3px;
-  align-self: center;
-  position: relative;
-}
-
 .todo-list-item-container .todo-delete-container .todo-delete {
-  text-align: center;
-  line-height: 120%;
-  box-sizing: inherit;
-  display: inline-flex;
-  opacity: 1;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: all 0.1s ease;
-  transform-origin: 50% 50%;
-  vertical-align: top;
-  height: 30px;
-  width: 30px;
-  margin-left: 14px;
-  align-self: center;
-  font-size: 70%;
+  display: flex;
   position: relative;
 }
 
@@ -126,14 +91,15 @@
   text-align: center;
   line-height: 120%;
   font-size: 70%;
-  box-sizing: inherit;
   cursor: pointer;
   padding: 5px;
+  margin-left: 15px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   vertical-align: top;
+  position: relative;
 }
 
 .todo-list-item-container .todo-delete-container .todo-delete .icon-wrapper svg {
@@ -141,20 +107,36 @@
   width: 17px;
   transition: transform 0.1s ease;
   opacity: 0.8;
-}
-
-.todo-list-item-container .todo-delete-container .todo-delete .icon-wrapper svg path {
   fill: white;
 }
 
-.todo-list-item-container .todo-delete-container .todo-delete .icon-wrapper:hover::after {
+.todo-list-item-container .todo-delete-container .todo-delete .icon-wrapper::after {
   content: "";
-  height: 30px;
-  width: 30px;
-  background: rgba(255, 255, 255, 0.2);
+  height: 42px;
+  width: 42px;
   position: absolute;
   z-index: 0;
   display: block;
   border-radius: 50px;
+}
+
+.todo-list-item-container .todo-delete-container .todo-delete .icon-wrapper:hover::after {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.todo-list-item-container:hover .todo-checkbox {
+  opacity: 0.8;
+}
+
+.todo-list-item-container:hover .todo-checkbox label {
+  opacity: 1;
+}
+
+.todo-list-item-container:hover .todo-delete {
+  opacity: 0.8;
+}
+
+.todo-list-item-container:hover .todo-delete svg {
+  opacity: 1;
 }
 /*# sourceMappingURL=todoitem.css.map */

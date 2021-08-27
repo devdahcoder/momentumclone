@@ -1,3 +1,5 @@
+@import "../../style/variable";
+
 .todo-list-item-container {
     text-align: center;
     box-sizing: inherit;
@@ -13,12 +15,6 @@
     .todo-checkbox-container {
         text-align: center;
         transition: opacity 0.5s ease;
-        font-size: 120%;
-        line-height: 120%;
-        box-sizing: inherit;
-        flex: 1 0 50px;
-        display: inline-flex;
-        align-items: center;
         justify-content: flex-end;
 
         .todo-checkbox {
@@ -95,10 +91,8 @@
     
 
     .today-todo {
+        font-size: 2rem;
         text-align: center;
-        font-size: 120%;
-        line-height: 120%;
-        box-sizing: inherit;
         max-width: 87%;
         margin: 3px 0;
         display: inline-block;
@@ -107,70 +101,69 @@
         white-space: nowrap;
     }
 
+
+
+
     .todo-delete-container {
-        text-align: center;
-        font-size: 120%;
-        line-height: 120%;
-        box-sizing: inherit;
-        flex: 1 0 50px;
-        display: inline-flex;
-        align-items: center;
-        padding-top: 3px;
-        align-self: center;
-        position: relative;
+        // text-align: center;
+        // padding-top: 3px;
+        // align-self: center;
+        // position: relative;
 
         .todo-delete {
-            text-align: center;
-            line-height: 120%;
-            box-sizing: inherit;
-            display: inline-flex;
-            opacity: 1;
-            border-radius: 100px;
-            cursor: pointer;
-            transition: all 0.1s ease;
-            transform-origin: 50% 50%;
-            vertical-align: top;
-            height: 30px;
-            width: 30px;
-            margin-left: 14px;
-            align-self: center;
-            font-size: 70%;
+            // text-align: center;
+            // line-height: 120%;
+            // box-sizing: inherit;
+            display: flex;
+            // opacity: 0;
+            // border-radius: 100px;
+            // cursor: pointer;
+            // transition: all 0.1s ease;
+            // transform-origin: 50% 50%;
+            // vertical-align: top;
+            // height: 30px;
+            // width: 30px;
+            // margin-left: 14px;
+            // align-self: center;
+            // font-size: 70%;
             position: relative;
 
             .icon-wrapper {
                 text-align: center;
                 line-height: 120%;
                 font-size: 70%;
-                box-sizing: inherit;
                 cursor: pointer;
                 padding: 5px;
+                margin-left: 15px;
                 display: inline-flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 vertical-align: top;
+                position: relative;
 
                 svg {
                     height: 17px;
                     width: 17px;
                     transition: transform 0.1s ease;
                     opacity: 0.8;
-                    path {
-                        fill: white;
-                    }
+                    fill: $icon-color;
                     
+                }
+
+                &::after {
+                    content: "";
+                    height: $icon-wrapper-size;
+                    width: $icon-wrapper-size;
+                    position: absolute;
+                    z-index: 0;
+                    display: block;
+                    border-radius: 50px;
                 }
 
                 &:hover {
                     &::after {
-                        content: "";
-                        height: 30px;
-                        width: 30px;
-                        background: rgba(255, 255, 255, 0.2);
-                        position: absolute;
-                        z-index: 0;
-                        display: block;
-                        border-radius: 50px;
+                        background: $background-hover-icon;
                     }
                 }
 
@@ -180,22 +173,22 @@
         }
     }
 
-    // &:hover {
-    //     .todo-checkbox {
-    //         opacity: 0.8;
+    &:hover {
+        .todo-checkbox {
+            opacity: 0.8;
 
-    //         label {
-    //             opacity: 1;
-    //         }
-    //     }
+            label {
+                opacity: 1;
+            }
+        }
 
 
-    //     .todo-delete {
-    //         opacity: 0.8;
+        .todo-delete {
+            opacity: 0.8;
 
-    //         svg {
-    //             opacity: 1;
-    //         }
-    //     }
-    // }
+            svg {
+                opacity: 1;
+            }
+        }
+    }
 }

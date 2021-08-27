@@ -3,9 +3,10 @@
   transition: opacity 0.5s ease;
   font-weight: 500;
   line-height: normal;
-  font-size: 90%;
+  font-size: 0.8rem;
   box-sizing: inherit;
   position: relative;
+  transition: opacity 0.5s ease;
   display: flex;
   text-align: center;
   padding: 0;
@@ -67,10 +68,6 @@
   text-align: center;
   font-weight: 500;
   line-height: normal;
-  box-sizing: inherit;
-  flex: 1 0 50px;
-  display: inline-flex;
-  align-items: center;
   transition: opacity 0.5s ease;
 }
 
@@ -86,9 +83,6 @@
 
 .greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper {
   text-align: center;
-  font-weight: 500;
-  line-height: normal;
-  box-sizing: inherit;
   cursor: pointer;
   padding: 5px;
   display: inline-flex;
@@ -98,25 +92,52 @@
   margin-top: 9px;
   padding-left: 14px;
   padding-right: 14px;
-  opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper svg {
+.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper .more-icon {
+  transition: opacity 0.5s ease;
+  height: 18px;
   text-align: center;
   font-weight: 500;
   line-height: normal;
   cursor: pointer;
-  box-sizing: inherit;
-  fill: #fff;
+  opacity: 0;
   height: 18px;
-}
-
-.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper svg path {
   fill: white;
+  cursor: pointer;
 }
 
-.greeting-section:hover .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper {
+.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper .more-icon::before {
+  content: '\e808';
+  width: 1em;
+  display: inline-block;
+  font-family: icons;
+  font-weight: 400;
+  font-variant: normal;
+  speak: none;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper::after {
+  content: '';
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  z-index: 0;
+  display: block;
+  border-radius: 50px;
+}
+
+.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper:hover::after {
+  background: rgba(255, 255, 255, 0.2);
+  transition: opacity 0.5s ease;
+}
+
+.greeting-section:hover .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper .more-icon {
   opacity: 1;
   transition: opacity 0.5s ease;
 }

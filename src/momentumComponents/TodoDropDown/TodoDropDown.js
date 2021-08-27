@@ -6,11 +6,11 @@ import {TodoContext} from "../../context/TodoContext"
 
 const TodoDropDown = ({id}) => {
 
-    const {editTodo, deleteTodo} = useContext(TodoContext);
+    const {editTodo, deleteTodo, todoDropdown,} = useContext(TodoContext);
 
     return (
-        <div data-v-c8d4d4da="" data-test="dropdown" className="todo-dropdown-container more-dropdown app dash-dropdown nipple nipple-top-left">
-          <ul data-v-c8d4d4da="" data-test="dropdown-options" className="todo-dropdown-ul">
+        <div style={{display: todoDropdown ? "block": "none"}} data-test="dropdown" className="todo-dropdown-container more-dropdown app dash-dropdown nipple nipple-top-left">
+          <ul data-test="dropdown-options" className="todo-dropdown-ul">
             <li onClick={() => editTodo(id)} data-v-20431cdb="" className="focus-edit" data-test="edit">
               <div data-test="drop-down-wrapper" className="dropdown-list-label-wrapper">
                 <span className="dropdown-list-icon-wrapper">
@@ -41,7 +41,7 @@ const TodoDropDown = ({id}) => {
                   </svg>
                 </span>
                 <span data-test="name" className="dropdown-list-label">Start Pomodoro Timer</span>
-                {/* <span data-test="beta" className="badge badge-plus">Plus</span> */}
+                
               </div>
             </li>
             <li data-v-20431cdb="" className="toggle-autofocus" data-test="autofocus">
@@ -52,7 +52,7 @@ const TodoDropDown = ({id}) => {
                   </svg>
                 </span>
                 <span data-test="name" className="dropdown-list-label">Turn on Autofocus</span>
-                <span data-test="beta" className="badge badge-plus">Plus</span>
+                
               </div>
             </li>
           </ul>

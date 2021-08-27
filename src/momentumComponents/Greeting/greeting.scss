@@ -1,10 +1,7 @@
+@import "../../style/variable";
+
 .greeting-section {
-    // text-align: center;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // transition: opacity 0.5s ease;
-    // width: 100%;
+    
 
 
     .greeting-display {
@@ -14,11 +11,10 @@
         line-height: normal;
 
 
-        font-size: 90%;
+        font-size: 0.8rem;
         box-sizing: inherit;
         position: relative;
-        // --app-container-transition: opacity 0.5s ease;
-        // transition: var(--app-container-transition);
+        transition: opacity 0.5s ease;
         display: flex;
         text-align: center;
         padding: 0;
@@ -114,10 +110,6 @@
             text-align: center;
             font-weight: 500;
             line-height: normal;
-            box-sizing: inherit;
-            flex: 1 0 50px;
-            display: inline-flex;
-            align-items: center;
             transition: opacity 0.5s ease;
             
             .greeting-menu-display {
@@ -131,9 +123,6 @@
 
                 .greeting-menu-wrapper {
                     text-align: center;
-                    font-weight: 500;
-                    line-height: normal;
-                    box-sizing: inherit;
                     cursor: pointer;
                     padding: 5px;
                     display: inline-flex;
@@ -143,25 +132,50 @@
                     margin-top: 9px;
                     padding-left: 14px;
                     padding-right: 14px;
-                    opacity: 0;
                     transition: opacity 0.5s ease;
+                    // margin-left: 12px;
                     
-                    svg {
-                        // opacity: 0;
-                        // transition: opacity 0.5s ease;
-                        // height: 25px;
-
+                    .more-icon {
+                        transition: opacity 0.5s ease;
+                        height: 18px;
                         text-align: center;
                         font-weight: 500;
                         line-height: normal;
                         cursor: pointer;
-                        box-sizing: inherit;
-                        fill: #fff;
-                        // opacity: 0;
+                        opacity: 0;
                         height: 18px;
+                        fill: $app-text-color;
+                        cursor: pointer;
 
-                        path {
-                            fill: hsl(0, 0%, 100%);
+                        &::before {
+                            content: '\e808';
+                            width: 1em;
+                            display: inline-block;
+                            font-family: icons;
+                            font-weight: 400;
+                            font-variant: normal;
+                            speak: none;
+                            text-align: center;
+                            text-decoration: inherit;
+                            text-transform: none;
+                            -webkit-font-smoothing: antialiased;
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                        height: 30px;
+                        width: 30px;
+                        position: absolute;
+                        z-index: 0;
+                        display: block;
+                        border-radius: 50px;
+                    }
+
+                    &:hover {
+                        &::after {
+                            background: $background-hover-icon;
+                            transition: opacity 0.5s $a-curve;
                         }
                     }
                 }
@@ -171,14 +185,14 @@
 
     &:hover {
         .greeting-display {
-
             .greeting-menu-container {
-
                 .greeting-menu-display {
-
                     .greeting-menu-wrapper {
-                        opacity: 1;
-                        transition: opacity 0.5s ease;
+                        .more-icon {
+                            opacity: 1;
+                            transition: opacity 0.5s ease;
+                        }
+                        
                     }
                 }
             }

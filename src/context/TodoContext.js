@@ -9,6 +9,7 @@ const TodoContextProvider = (props) => {
 
     const [todoList, setTodoList] = useState([]);
     const [isEditing, setIsEditing] = useState(false);
+    const [todoDropdown, setTodoDropdown] = useState(false);
     const [inputValue, setInputValue] = useState("");
     const focusInput = useRef(null);
 
@@ -55,6 +56,10 @@ const TodoContextProvider = (props) => {
         deleteTodo(id);
         // focusTodoInput();
     };
+
+    const toggleTodoDropdown = () => {
+        setTodoDropdown(!todoDropdown);
+    };
     
     // const editTodo = (id, newTodo) => {
     //     setTodoList(todoList.map(todo => {
@@ -68,7 +73,20 @@ const TodoContextProvider = (props) => {
     //     }))
     // };
 
-    const value = {todoList, setTodoList, deleteTodo, toggleTodo, editTodo, isEditing, focusInput, setIsEditing, inputValue, setInputValue};
+    const value = {
+        todoList, 
+        setTodoList, 
+        deleteTodo, 
+        toggleTodo, 
+        editTodo, 
+        isEditing, 
+        focusInput, 
+        setIsEditing, 
+        inputValue, 
+        setInputValue,
+        todoDropdown,
+        toggleTodoDropdown,
+    };
 
 
 

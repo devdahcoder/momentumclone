@@ -36,9 +36,9 @@ const BackgroundImageContextProvider = (props) => {
         
     }
 
-    // useEffect(() => {
-    //     getBackgroundImage();
-    // }, []);
+    useEffect(() => {
+        getBackgroundImage();
+    }, []);
 
     const value = {backgroundImage, getBackgroundImage};
 
