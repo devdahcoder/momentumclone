@@ -21,7 +21,7 @@
             transition: opacity 0.5s ease;
             height: $icon-size;
             width: $icon-size;
-            padding: $icon-padding calc($icon-padding - 4px);
+            padding: calc($icon-padding - 4px);
             box-sizing: content-box;
             cursor: pointer;
             vertical-align: top;
