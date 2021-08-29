@@ -106,7 +106,7 @@
   height: 17px;
   width: 17px;
   transition: transform 0.1s ease;
-  opacity: 0.8;
+  opacity: 0;
   fill: white;
 }
 
@@ -136,7 +136,7 @@
   opacity: 0.8;
 }
 
-.todo-list-item-container:hover .todo-delete svg {
+.todo-list-item-container:hover .todo-delete .icon-wrapper svg {
   opacity: 1;
 }
 /*# sourceMappingURL=todoitem.css.map */

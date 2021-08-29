@@ -7,11 +7,11 @@ import TodoItem from "../TodoItem/TodoItem";
 
 const TodoList = () => {
   
-  const { todoList } = useContext(TodoContext);
+  const { todoList, isEditing } = useContext(TodoContext);
 
 
   return (
-    <section className="todo-list-section" style={{ display: todoList && todoList.length === 0 ? "none" : "block" }}>
+    <section className="todo-list-section" style={{ display: todoList.length === 0 || isEditing ? "none" : "block" }}>
       <div className="todo-list-section-display">
 
         {/* <div className="todo-list-fake-input-prompt">

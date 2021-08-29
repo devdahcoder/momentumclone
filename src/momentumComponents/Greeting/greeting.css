@@ -1,9 +1,8 @@
 .greeting-section .greeting-display {
   position: relative;
   transition: opacity 0.5s ease;
-  font-weight: 500;
   line-height: normal;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   box-sizing: inherit;
   position: relative;
   transition: opacity 0.5s ease;
@@ -11,7 +10,6 @@
   text-align: center;
   padding: 0;
   margin: 0;
-  font-weight: 500;
   line-height: normal;
 }
 
@@ -28,7 +26,7 @@
 .greeting-section .greeting-display .greeting-text-container {
   transition: opacity 0.5s ease;
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
   display: inline-flex;
 }
@@ -42,11 +40,9 @@
 
 .greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-message {
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
-  box-sizing: inherit;
   transition: opacity 0.5s ease;
-  margin-right: 0.3em;
 }
 
 .greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-name-container {

@@ -21,6 +21,7 @@
     left: 20px;
     top: 46px;
     display: block;
+    background: hsla(0, 0%, 6%, 0.925);
 
 
 
@@ -97,6 +98,7 @@
         display: inline-block;
         border-right: 7px solid transparent;
         border-bottom: 7px solid $dropdown-bg;
+        border-bottom: 7px solid hsla(0, 0%, 6%, 0.925);
         border-left: 7px solid transparent;
         overflow: visible;
     }

@@ -18,6 +18,7 @@
   left: 20px;
   top: 46px;
   display: block;
+  background: rgba(15, 15, 15, 0.925);
 }
 
 .right-dropdown-container .time-ul {
@@ -74,6 +75,7 @@
   display: inline-block;
   border-right: 7px solid transparent;
   border-bottom: 7px solid #333333;
+  border-bottom: 7px solid rgba(15, 15, 15, 0.925);
   border-left: 7px solid transparent;
   overflow: visible;
 }

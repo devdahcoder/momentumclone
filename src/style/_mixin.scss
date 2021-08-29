@@ -1,5 +1,25 @@
 @import "./_variable";
 
+@mixin responsive($size) {
+    @if $size==phone {
+        @media screen and (min-width: 600px) {
+            @content
+        }
+    }
+
+    @if else $size==tablet {
+        @media screen and (min-width: 900px) {
+            @content
+        }
+    }
+
+    @if else $size==desktop {
+        @media screen and (min-width: 1200px) {
+            @content
+        }
+    }
+}
+
 @mixin icon-size($size) {
     height: $size;
     width: $size;

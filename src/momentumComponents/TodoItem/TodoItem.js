@@ -10,7 +10,7 @@ import TodoDropDown from "../TodoDropDown/TodoDropDown"
 
 const TodoItem = ({ todo }) => {
 
-  const { toggleTodo, deleteTodo, todoDropdown, toggleTodoDropdown, } = useContext(TodoContext)
+  const { toggleTodo, todoDropdown, toggleTodoDropdown } = useContext(TodoContext)
 
 
   const {id, value, completed} = todo;
@@ -39,7 +39,7 @@ const TodoItem = ({ todo }) => {
           </div>
         
         
-          <TodoDropDown id={id} />
+          <TodoDropDown value={todo} />
 
 
         

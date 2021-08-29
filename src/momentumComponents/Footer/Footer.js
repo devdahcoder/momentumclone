@@ -322,6 +322,9 @@ const Footer = () => {
                         </svg>
                     </span>
                 </div>
+
+                
+
                 <div data-v-1040273e="" data-test="background-info-container" className="app-container app-dash photo-info-container show-hover">
                     <div data-v-1040273e="" data-test="background-info-title" className="photo-info-name">{`${backgroundImage && backgroundImage.location.city}, ${ backgroundImage && backgroundImage.location.country}`}</div>
                     <div data-v-1040273e="" className="photo-source">

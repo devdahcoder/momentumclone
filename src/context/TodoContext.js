@@ -53,7 +53,7 @@ const TodoContextProvider = (props) => {
         let currentTodo = todoList.find((todo) => todo.id === id);
         setInputValue(currentTodo.value);
         console.log(currentTodo);
-        deleteTodo(id);
+        // deleteTodo(id);
         // focusTodoInput();
     };
 

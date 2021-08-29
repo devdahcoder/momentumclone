@@ -31,7 +31,7 @@ const Input = () => {
   }
 
   return (
-    <section style={{ display: todoList.length > 0 ? "none" : "block" }}>
+    <section style={{ display: todoList.length < 1 || isEditing ? "block" : "none" }}>
       <form action="" onSubmit={handleTodoSubmit}>
         <div className="input-form-display">
             <label htmlFor="">What is your main Focus today?</label>

@@ -12,6 +12,8 @@ const GreetingContextProvider = (props) => {
     const [isEditingName, setIsEditingName] = useState(false);
     const [name, setName] = useState("");
     const [greeting, setGreeting] = useState("");
+    const [greetingDropdown, setGreetingDropdown] = useState(false);
+
 
 
 
@@ -52,7 +54,11 @@ const GreetingContextProvider = (props) => {
 
     useEffect(() => {
         greetings();
-    }, [])
+    }, []);
+
+    const toggleGreetingDropdown = () => {
+        setGreetingDropdown(!greetingDropdown);
+    };
 
 
 
@@ -64,7 +70,9 @@ const GreetingContextProvider = (props) => {
         isEditingName, 
         setIsEditingName, 
         editName, 
-        greeting
+        greeting,
+        toggleGreetingDropdown,
+        greetingDropdown
     };
 
 

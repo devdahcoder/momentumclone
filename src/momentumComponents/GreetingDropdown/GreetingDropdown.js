@@ -6,11 +6,11 @@ import {GreetingContext} from "../../context/GreetingContext";
 
 const GreetingDropdown = () => {
 
-    const {editName} = useContext(GreetingContext);
+    const {editName, greetingDropdown} = useContext(GreetingContext);
 
 
     return (
-        <div data-test="dropdown" className="dropdown greeting-more-dropdown app dash-dropdown nipple nipple-top-left">
+        <div style={{display: greetingDropdown ? "block" : "none"}} className="dropdown greeting-more-dropdown app dash-dropdown nipple nipple-top-left">
             <ul data-test="dropdown-options" className="greeting-dropdown-list">
                 <li className="" data-test="greeting-show-mantra">
                     <div data-test="drop-down-wrapper" className="dropdown-list-label-wrapper">
