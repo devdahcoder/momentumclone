@@ -25,7 +25,9 @@ const InputName = () => {
                 alert("cant happen");
             }
             setInputName("");
-            setIsEditingName(!isEditingName);
+            // please leave like this and don't do !isEditingName because it breaks the name input
+            // when a new user enters their name.
+            setIsEditingName(false);
         }
     }
 
@@ -34,7 +36,7 @@ const InputName = () => {
     return (
         <span className="input-name-container">
             <input onKeyPress={handleTodoSubmit} onChange={handleName} value={inputName} spellCheck="false" data-test="name-input" className="name editing pulse" /> 
-            <span className="name-hidden-span" contentEditable="true">{inputName}</span>
+            <span className="name-hidden-span">{inputName}</span>
         </span>
     )
 }

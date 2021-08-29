@@ -12,7 +12,7 @@ import {GreetingContext} from "../../context/GreetingContext";
 
 const Greeting = () => {
 
-  const {name, editName, greeting, greetingDropdown, toggleGreetingDropdown} = useContext(GreetingContext);
+  const {name, editName, isEditingName, greeting, greetingDropdown, toggleGreetingDropdown} = useContext(GreetingContext);
   
 
   return (
@@ -29,7 +29,8 @@ const Greeting = () => {
               <span className="greeting-name-wrapper">
                 
                 {
-                  name && name ? <span onDoubleClick={editName} className="greeting-user-name" data-test="name">{name && name}</span> : <InputName /> 
+                  // name && name ? <span onDoubleClick={editName} className="greeting-user-name" data-test="name">{name && name}</span> : <InputName /> 
+                  isEditingName || !name ?  <InputName /> : <span onDoubleClick={editName} className="greeting-user-name" data-test="name">{name}</span>
                 }
                 
               </span>

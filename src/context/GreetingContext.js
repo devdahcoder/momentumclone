@@ -29,14 +29,15 @@ const GreetingContextProvider = (props) => {
         store.set("name", name);
     }, [name])
 
-    const deleteName = () => {
-        setName("");
-    }
+    // const deleteName = () => {
+    //     setName("");
+    // }
 
     const editName = () => {
-        setIsEditingName(!isEditingName);
+        // please leave like this and don't do !isEditingName because it breaks the name input
+        // when a new user enters their name.
+        setIsEditingName(true);
         setInputName(name);
-        deleteName();
     };
 
     const greetings = () => {
