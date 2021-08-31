@@ -1,0 +1,158 @@
+.footer-center-container {
+  display: flex;
+  align-items: flex-end;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.footer-center-container .footer-center-display {
+  position: relative;
+  transition: opacity 0.5s ease;
+  height: 58px;
+  width: auto;
+  margin: 0 auto;
+  padding-bottom: 2px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container {
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.2;
+  transition: all 0.35s ease;
+  display: block;
+  position: relative;
+  user-select: text;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container .footer-center-body-text {
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.2;
+  font-size: 1rem;
+  user-select: text;
+  box-sizing: inherit;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container .footer-center-text-below {
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  user-select: text;
+  box-sizing: inherit;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.2;
+  transition: all 0.35s ease;
+  position: absolute;
+  bottom: -27px;
+  left: 50%;
+  font-size: 0.875rem;
+  opacity: 0;
+  transform: translate(-50%, -22px);
+  white-space: nowrap;
+  margin: 0;
+  transition: all 0.35s ease;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container .footer-center-text-below .footer-center-text-below-name {
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  user-select: text;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.2;
+  font-size: 0.755rem;
+  white-space: nowrap;
+  box-sizing: inherit;
+  margin-right: 4px;
+  opacity: 0.75;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container .footer-center-text-below .control {
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  user-select: text;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  height: 16px;
+  width: 25px;
+  padding: 6px 2px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 100%;
+  opacity: 0.75;
+  transition: opacity 0.5s ease;
+  vertical-align: middle;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container .footer-center-text-below .control .icon {
+  transition: opacity 0.5s ease;
+  text-align: center;
+  fill: rgba(255, 255, 255, 0.902);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 100%;
+  vertical-align: top;
+  opacity: 1;
+  fill: #fff;
+  height: 16px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  height: 16px;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container .footer-center-text-below .control .icon-heart {
+  text-align: center;
+  user-select: text;
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 100%;
+  vertical-align: top;
+  opacity: 1;
+  fill: white;
+  height: 16px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container .footer-center-text-below .control-skip {
+  width: 25px;
+  margin-left: -2px;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container .footer-center-text-below .control-skip .skip-icon-container {
+  position: absolute;
+  height: 17px;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  overflow: hidden;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container .footer-center-text-below .control-skip .skip-icon-container .icon-skip {
+  height: 14px;
+  width: 18px;
+}
+
+.footer-center-container .footer-center-display .footer-center-text-container .footer-center-text-below:hover {
+  opacity: 1;
+}
+
+.footer-center-container .footer-center-display:hover .footer-center-text-container {
+  transform: translateY(-50%);
+}
+
+.footer-center-container .footer-center-display:hover .footer-center-text-container .footer-center-text-below {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+/*# sourceMappingURL=quote.css.map */

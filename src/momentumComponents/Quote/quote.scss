@@ -1,0 +1,164 @@
+@import "../../style/variable";
+
+.footer-center-container {
+    display: flex;
+    align-items: flex-end;
+    min-width: 0;
+    flex: 1 1 auto;
+
+
+    .footer-center-display {
+        position: relative;
+        transition: opacity 0.5s ease;
+        height: 58px;
+        width: auto;
+        margin: 0 auto;
+        padding-bottom: 2px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        box-sizing: content-box;
+
+        .footer-center-text-container {
+            text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
+            text-align: center;
+            margin: 0;
+            color: hsla(0, 0%, 100%, 0.9);
+            line-height: 1.2;
+            transition: all 0.35s ease;
+            display: block;
+            position: relative;
+            user-select: text;
+
+            .footer-center-body-text {
+                text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+                text-align: center;
+                color: hsla(0, 0%, 100%, 0.9);
+                line-height: 1.2;
+                font-size: 1rem;
+                user-select: text;
+                box-sizing: inherit;
+            }
+
+            .footer-center-text-below {
+                text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
+                text-align: center;
+                user-select: text;
+                box-sizing: inherit;
+                color: hsla(0, 0%, 100%, 0.9);
+                line-height: 1.2;
+                transition: all 0.35s ease;
+                position: absolute;
+                bottom: -27px;
+                left: 50%;
+                font-size: 0.875rem;
+                opacity: 0;
+                transform: translate(-50%, -22px);
+                white-space: nowrap;
+                margin: 0;
+                transition: all 0.35s $a-curve;
+
+                .footer-center-text-below-name {
+                    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
+                    text-align: center;
+                    user-select: text;
+                    color: hsla(0, 0%, 100%, 0.9);
+                    line-height: 1.2;
+                    font-size: 0.755rem;
+                    white-space: nowrap;
+                    box-sizing: inherit;
+                    margin-right: 4px;
+                    opacity: 0.75;
+                }
+
+                .control {
+                    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
+                    text-align: center;
+                    user-select: text;
+                    color: hsla(0, 0%, 100%, 0.9);
+                    font-size: 0.875rem;
+                    white-space: nowrap;
+                    height: 16px;
+                    width: 25px;
+                    padding: 6px 2px;
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    line-height: 100%;
+                    opacity: 0.75;
+                    transition: opacity 0.5s ease;
+                    vertical-align: middle;
+
+
+                    .icon {
+                        transition: opacity 0.5s ease;
+                        text-align: center;
+                        fill: hsla(0, 0%, 100%, 0.902);
+                        font-size: 0.875rem;
+                        white-space: nowrap;
+                        cursor: pointer;
+                        line-height: 100%;
+                        vertical-align: top;
+                        opacity: 1;
+                        fill: #fff;
+                        height: 16px;
+                        position: absolute;
+                        top: 0px;
+                        left: 3px;
+                        height: 16px;
+                    }
+
+                    .icon-heart {
+                        text-align: center;
+                        user-select: text;
+                        white-space: nowrap;
+                        cursor: pointer;
+                        line-height: 100%;
+                        vertical-align: top;
+                        opacity: 1;
+                        fill: hsl(0, 0%, 100%);
+                        height: 16px;
+                        position: absolute;
+                        top: 0px;
+                        left: 3px;
+                    }
+                }
+
+                .control-skip {
+                    width: 25px;
+                    margin-left: -2px;
+
+                    .skip-icon-container {
+                        position: absolute;
+                        height: 17px;
+                        width: 100%;
+                        top: 0px;
+                        left: 0;
+                        overflow: hidden;
+
+                        .icon-skip {
+                            height: 14px;
+                            width: 18px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:hover {
+            .footer-center-text-container {
+                transform: translateY(-50%);
+
+                .footer-center-text-below {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                }
+            }
+
+        }
+    }
+}

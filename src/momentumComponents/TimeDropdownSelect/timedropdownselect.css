@@ -20,16 +20,11 @@
   transition: opacity 0.5s ease;
   height: 29px;
   width: 29px;
-  padding: calc($icon-padding - 4px);
   box-sizing: content-box;
   cursor: pointer;
   vertical-align: top;
   opacity: 0.5;
   fill: white;
-}
-
-.nav .nav-item .icon:first-child {
-  padding-left: calc($icon-padding + 2px);
 }
 
 .nav .nav-item:hover {

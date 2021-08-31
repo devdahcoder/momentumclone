@@ -27,7 +27,7 @@ const TimeContextProvider = (props) => {
                 getAmPm,
                 getHour,
                 getTwentyFourHour,
-                getMinute
+                getMinute,
             });
 
         }, 1000);
