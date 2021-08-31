@@ -1,5 +1,6 @@
 section {
     transition: opacity 0.5s ease;
+
     form {
         .input-form-display {
             text-align: center;
@@ -26,22 +27,22 @@ section {
                 color: hsl(0, 0%, 100%);
                 font-size: 2.25em;
                 line-height: 1.2;
-                font-weight: 400;
+                font-weight: 500;
                 outline: none;
                 text-align: center;
                 transition: border-color .2s ease;
                 font-family: Inter,
-                -apple-system,
-                BlinkMacSystemFont,
-                'Segoe UI',
-                'Roboto',
-                'Oxygen',
-                'Ubuntu',
-                'Cantarell',
-                'Fira Sans',
-                'Droid Sans',
-                'Helvetica Neue',
-                sans-serif;
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    'Segoe UI',
+                    'Roboto',
+                    'Oxygen',
+                    'Ubuntu',
+                    'Cantarell',
+                    'Fira Sans',
+                    'Droid Sans',
+                    'Helvetica Neue',
+                    sans-serif;
             }
         }
     }

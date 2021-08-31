@@ -12,308 +12,13 @@ const Footer = () => {
 
     return (
         <footer>
+
+            
             <div className="region footer-left-container" id="bottom-left">
-                <div id="settings" className="app-container settings-icon-container" data-test="settings" data-justboundclickoutsidehandler="false" data-clickoutsidemouseuphandlerid="a7ezab" data-clickoutsidemousedownhandlerid="z7qp9f">
+                <div id="settings" className="app-container settings-icon-container" data-justboundclickoutsidehandler="false" data-clickoutsidemouseuphandlerid="a7ezab" data-clickoutsidemousedownhandlerid="z7qp9f">
                     <div className="app-wrapper nipple nipple-bottom-left">
-                        <div className="app settings-app" data-test="settings-app">
-                            {/* <ul id="nav-menu" className="settings-nav" data-test="nav-menu">
-                                <li data-navitem="general" className="main-nav-item active" data-test="nav-menu-general">General</li>
-                                <li data-navitem="todo" className="main-nav-item" data-test="nav-menu-todo">Todo</li>
-                                <li data-navitem="mantra-settings" className="main-nav-item" data-test="nav-menu-mantra-settings">Mantras</li>
-                                <li data-navitem="background-settings" className="main-nav-item" data-test="nav-menu-background-settings">Photos</li>
-                                <li data-navitem="quote-settings" className="main-nav-item" data-test="nav-menu-quote-settings">Quotes</li>
-                                <li data-navitem="bookmark-settings" className="main-nav-item" data-test="nav-menu-bookmark-settings">Links &amp; Bookmarks</li>
-                                <li data-navitem="balance" className="main-nav-item" data-test="nav-menu-balance">Balance</li>
-                                <li data-navitem="help" className="main-nav-item secondary secondary-first" data-test="nav-menu-help">Help</li>
-                                <li data-navitem="about" className="main-nav-item secondary" data-test="nav-menu-about">About</li>
-                                <li data-navitem="upgrade" className="main-nav-item secondary" data-test="nav-menu-upgrade">Upgrade to Plus</li>
-
-
-                                <div className="user u--no-transition">
-                                    <div className="user-info" data-test="user-info" title="adigunolamide200@gmail.com">
-                                        <div className="user-avatar-wrapper">
-                                            <div className="user-avatar">
-                                                <img src="https://www.gravatar.com/avatar/4c57e42ef42f5f1ba3dae5e9cbf3b7bb?s=50&amp;d=mm" alt="heart" />
-                                            </div>
-                                            <div className="user-avatar-hidden">
-                                                <img className="avatar" src="https://www.gravatar.com/avatar/4c57e42ef42f5f1ba3dae5e9cbf3b7bb?s=50&amp;d=mm" alt="heart" />
-                                            </div>
-                                            <div className="user-badge-wrapper">
-                                                <span className="badge badge-plus" data-test="plus">PLUS</span>
-                                                <span className="badge badge-team" data-test="team">TEAM</span>
-                                            </div>
-                                        </div>
-                                        <span className="name-wrapper">
-                                            <span className="user-info-name">Olamide</span>
-                                            <span className="anim-caret u--no-transition">
-                                                <svg className="icon anim-caret-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.16 11.75"><path d="M52.16,26.08A5.87,5.87,0,0,1,46.29,32H5.88A5.88,5.88,0,0,1,0,26.08H0a5.87,5.87,0,0,1,5.88-5.87H46.29a5.87,5.87,0,0,1,5.87,5.87Z" transform="translate(0 -20.21)"></path></svg>
-                                                <svg className="icon anim-caret-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.16 11.75"><path d="M52.16,26.08A5.87,5.87,0,0,1,46.29,32H5.88A5.88,5.88,0,0,1,0,26.08H0a5.87,5.87,0,0,1,5.88-5.87H46.29a5.87,5.87,0,0,1,5.87,5.87Z" transform="translate(0 -20.21)"></path></svg>
-                                            </span>
-                                        </span>
-                                    </div>
-                                        <div className="user-hidden">
-                                            <ul className="user-nav">
-                                                <li className="action action-profile">Profile</li>
-                                                <li className="action action-logout">Log Out</li>
-                                            </ul>
-                                        <div className="user-close"></div>
-                                    </div>
-                                </div>
-
-                            </ul> */}
-                            {/* <div className="settings-view-container" data-test="settings-view-container">
-                                <div id="settings-general" className="settings-view settings-general" data-test="settings-general">
-                                    <header className="settings-header">
-                                        <h3 data-test="general-header">General</h3>
-                                        <p className="description">Customize your dashboard</p>
-                                    </header>
-
-
-                                    <h4>Show</h4>
-                                    <ul id="apps-list" className="settings-list options-list">
-                                        <li className="slide-toggle has-toggle on" data-related-widget="linksVisible" data-test="settings-general-links">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Links</span>
-                                            
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                        
-                                        
-                                        </li>
-
-                                        <li className="slide-toggle has-toggle" data-related-widget="bookmarksVisible" data-test="settings-general-bookmarks-bar">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Bookmarks Bar</span>
-                                            
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle" data-related-widget="mostVisited" data-test="settings-general-most-visited">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Top Sites</span>
-                                            
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            <span className="option-message">Show most visited websites by default in Bookmarks Bar</span>
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle on" data-related-widget="searchVisible" data-test="settings-general-search">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Search</span>
-                                            
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle on" data-related-widget="weatherVisible" data-test="settings-general-weather">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Weather</span>
-                                            
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle on" data-related-widget="focusVisible" data-test="settings-general-focus">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Focus</span>
-                                            
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle on" data-related-widget="todoVisible" data-test="settings-general-todo">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Todo</span>
-                                            
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle on" data-related-widget="quoteVisible" data-test="settings-general-quote">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Quotes</span>
-                                            
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle on" data-related-widget="mantraVisible" data-test="settings-general-mantras">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Mantras</span>
-                                            
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            <span className="option-message">Simple phrases to build positive mental habits</span>
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle" data-related-widget="countdownVisible" data-test="settings-general-countdown">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Countdowns</span>
-                                            <span className="badge badge-plus">PLUS</span>
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            <span className="option-message">Count down to important dates and deadlines</span>
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle" data-related-widget="metricVisible" data-test="settings-general-metric">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Metrics</span>
-                                            <span className="badge badge-plus">PLUS</span>
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            <span className="option-message">Keep your important metrics at a glance</span>
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle" data-related-widget="notesVisible" data-test="settings-general-notes">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">Notes</span>
-                                            <span className="badge badge-plus">PLUS</span>
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            <span className="option-message">Take quick notes and store wisdom to review</span>
-                                            
-                                        </li>
-                                        <li className="slide-toggle has-toggle" data-related-widget="multiClockVisible" data-test="settings-general-world-clocks">
-                                            <input type="checkbox" />
-                                            <span className="setting-name">World Clocks</span>
-                                            <span className="badge badge-plus">PLUS</span>
-                                            
-                                            <span className="toggle-slider">
-                                                <svg className="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                                            </span>
-                                            <span className="option-message">Keep track of time anywhere on Earth</span>
-                                            
-                                        </li>
-                                    </ul>
-
-
-                                    <h4>Customize</h4>
-                                    <ul id="customize-list" className="settings-list options-list">
-                                        <li className="slide-toggle has-toggle" data-related-widget="themeColour" data-test="settings-general-theme">
-                                            <span className="setting-name">Theme</span>
-                                        
-                                            <span className="toggle-options">
-                                                <span className="toggle-option themeColour" data-related-widget="themeColour" data-option-value="dark">
-                                                    <div className="sub-view"></div>
-                                                    <span className="toggle-label">Dark</span>
-                                                    
-                                                </span>
-                                                <span className="toggle-divider">|</span> 
-                                                <span className="toggle-option themeColour" data-related-widget="themeColour" data-option-value="light">
-                                                    <div className="sub-view"></div>
-                                                    <span className="toggle-label">Light</span>
-                                                    
-                                                </span>
-                                                <span className="toggle-divider">|</span> 
-                                                <span className="toggle-option themeColour active" data-related-widget="themeColour" data-option-value="system">
-                                                    <div className="sub-view"></div>
-                                                    <span className="toggle-label">System</span>
-                                                    
-                                                </span>
-                                                <br />
-                                                <span className="toggle-option themeColour" data-related-widget="themeColour" data-option-value="photo">
-                                                    <div className="sub-view"></div>
-                                                    <span className="toggle-label">Photo Match</span>
-                                                    <span className="badge badge-plus">PLUS</span>
-                                                </span>
-                                                <span className="toggle-divider">|</span> 
-                                                <span className="toggle-option themeColour" data-related-widget="themeColour" data-option-value="custom" data-test="custom">
-                                                    <div data-v-a62956c0="" className="color-picker-wrapper sub-view">
-                                                        <span data-v-a62956c0="" data-related-widget="themeColour" data-option-value="custom" className="toggle-label">
-                                                            <span data-v-a62956c0="" className="preview"></span> 
-                                                            <span data-v-a62956c0="">Custom</span>
-                                                        </span>
-                                                    </div>
-                                                    <span className="toggle-label"></span>
-                                                    <span className="badge badge-plus">PLUS</span>
-                                                </span>
-                                                
-                                            </span>
-                                        
-                                            <div className="option-clear"></div>
-                                            </li>
-                                                <li className="slide-toggle has-toggle" data-related-widget="themeFont" data-test="settings-general-font">
-                                                    <span className="setting-name">Font</span>
-                                                    <span className="badge badge-plus">PLUS</span>
-                                                    <span className="toggle-options">
-                                                        <span className="toggle-option themeFont active" data-related-widget="themeFont" data-option-value="default">
-                                                            <div className="sub-view"></div>
-                                                            <span className="toggle-label">Classic</span>
-                                                            
-                                                        </span>
-                                                        <span className="toggle-divider">|</span> 
-                                                        <span className="toggle-option themeFont" data-related-widget="themeFont" data-option-value="modern">
-                                                            <div className="sub-view"></div>
-                                                            <span className="toggle-label">Modern</span>
-                                                            
-                                                        </span>
-                                                        <span className="toggle-divider">|</span> 
-                                                        <span className="toggle-option themeFont" data-related-widget="themeFont" data-option-value="startup">
-                                                            <div className="sub-view"></div>
-                                                            <span className="toggle-label">Startup</span>
-                                                            
-                                                        </span>
-                                                        <br />
-                                                        <span className="toggle-option themeFont" data-related-widget="themeFont" data-option-value="retro">
-                                                            <div className="sub-view"></div>
-                                                            <span className="toggle-label">Retro</span>
-                                                            
-                                                        </span>
-                                                        <span className="toggle-divider">|</span> 
-                                                        <span className="toggle-option themeFont" data-related-widget="themeFont" data-option-value="warehouse">
-                                                            <div className="sub-view"></div>
-                                                            <span className="toggle-label">Warehouse</span>
-                                                            
-                                                        </span>
-                                                        <span className="toggle-divider">|</span> 
-                                                        <span className="toggle-option themeFont" data-related-widget="themeFont" data-option-value="quirky">
-                                                            <div className="sub-view"></div>
-                                                            <span className="toggle-label">Quirky</span>
-                                                            
-                                                        </span>
-                                                        
-                                                    </span>
-                                            
-                                                <div className="option-clear"></div>
-                                            </li>
-                                    </ul>
-
-
-                                    <h5>Tip</h5>
-                                    <p className="tip no-top-margin">Many items in Momentum can be edited by double-clicking on them, including <strong>your name</strong> and your <strong>to-dos</strong>.</p>
-                                </div>
-                            </div> */}
+                        <div className="app settings-app" >
+                            {/* setting component */}
                         </div>
                     </div>
                     <span className="app-dash setting-icon-toggle" data-test="settings-toggle" data-ob="settings-toggle">
@@ -325,19 +30,24 @@ const Footer = () => {
 
                 
 
-                <div data-v-1040273e="" data-test="background-info-container" className="app-container app-dash photo-info-container show-hover">
-                    <div data-v-1040273e="" data-test="background-info-title" className="photo-info-name">{`${backgroundImage && backgroundImage.location.city}, ${ backgroundImage && backgroundImage.location.country}`}</div>
-                    <div data-v-1040273e="" className="photo-source">
-                        <span data-v-1040273e="" data-test="background-info-source-link" data-url="https://unsplash.com/photos/qnjKufYqIIE" className="photo-source-link">{`${backgroundImage && backgroundImage.user.name}`}</span>
-                        <span data-v-1040273e="" data-test="control-fav" className="photo-source-control control-heart">
-                            
+                <div className="app-container app-dash photo-info-container show-hover">
+                    <div className="photo-info-name">{`${backgroundImage && backgroundImage.location.city}, ${ backgroundImage && backgroundImage.location.country}`}</div>
+                    <div className="photo-source">
+                        <span data-url="https://unsplash.com/photos/qnjKufYqIIE" className="photo-info-name">{`${backgroundImage && backgroundImage.user.name}`}</span>
+                        <span className="photo-source-control control-heart">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 953 1000" fill="#fff"><path d="M1 329q7-115 79-191h2l2-2q88-76 199-76t191 70q32-28 67-45l2-2h2q56-23 117-23 88-2 161 43t110 124v2l2 4q30 106 10 202t-80 175q-62 88-162 172 0 2-2 2-49 45-107 90-34 25-59 41-33 23-55 23l-6 2-5-2q-28-3-59-29-10-6-21-16t-16-13h-2q-246-188-328-340v-2q-49-94-42-209zm85 10q-6 86 33 162 74 135 303 310h2q6 6 18 16t19 14q8 6 15 10 8-2 14-6 22-14 51-37 58-43 105-88 94-80 151-161 107-142 58-298-27-57-78-88t-113-29q-43 0-86 17-39 22-68 57l-32 43-35-43q-52-65-141-73t-161 53q-49 55-55 141z"/></svg>
                             {/* <img data-v-1040273e="" src="img/icon-heart-empty.svg" className="icon icon-dash-heart-empty" alt="djbncd" /> */}
                             {/* <img data-v-1040273e="" src="img/icon-heart.svg" className="icon icon-dash-heart" alt="dele" /> */}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 953 1000" fill="#fff"><path d="M1 329q7-115 79-191h2l2-2q88-76 199-76t191 70q32-28 67-45l2-2h2q56-23 117-23 88-2 161 43t110 124v2l2 4q30 106 10 202t-80 175q-62 88-162 172 0 2-2 2-49 45-107 90-34 25-59 41-33 23-55 23l-6 2-5-2q-28-3-59-29-10-6-21-16t-16-13h-2Q125 692 43 540v-2Q-6 444 1 329zm85"/></svg>
                         </span>
 
-                        <span onClick={getBackgroundImage} data-v-1040273e="" title="Skip Photo" data-test="control-skip" className="photo-source-control control-skip">
-                            <span data-v-1040273e="" data-test="control-skip-icon-container" className="skip-icon-container">
-                                <svg data-v-1040273e="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.05 132.12" className="icon icon-skip"><circle data-v-1040273e="" cx="115.5" cy="108.62" r="23"></circle> <path data-v-1040273e="" d="M291.5,281A22.5,22.5,0,1,1,269,303.5,22.52,22.52,0,0,1,291.5,281m0-1A23.5,23.5,0,1,0,315,303.5,23.5,23.5,0,0,0,291.5,280Z" transform="translate(-176 -194.88)"></path> <path data-v-1040273e="" d="M399,257.5a135.18,135.18,0,0,0-41.16-42.17c-22.7-14.74-49.38-21.92-75.15-20.2a108.71,108.71,0,0,0-65.16,27c-19.91,17.5-33.76,41.79-41.18,72.19a13.52,13.52,0,0,0,9.92,16.32,13.66,13.66,0,0,0,3.21.38,13.51,13.51,0,0,0,13.11-10.3c6.07-24.92,17.1-44.54,32.76-58.31a82,82,0,0,1,49.13-20.32c20-1.33,40.81,4.32,58.65,15.9A108.07,108.07,0,0,1,374,268.51l-30,13.2,72.43,40.36,8.6-76Z" transform="translate(-176 -194.88)" class="arrow"></path></svg>
+                        <span onClick={getBackgroundImage} title="Skip Photo" data-test="control-skip" className="photo-source-control control-skip">
+                            <span data-test="control-skip-icon-container" className="skip-icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.05 132.12" className="icon icon-skip">
+                                    <circle cx="115.5" cy="108.62" r="23"></circle>
+                                    <path d="M291.5,281A22.5,22.5,0,1,1,269,303.5,22.52,22.52,0,0,1,291.5,281m0-1A23.5,23.5,0,1,0,315,303.5,23.5,23.5,0,0,0,291.5,280Z" transform="translate(-176 -194.88)"></path>
+                                    <path d="M399,257.5a135.18,135.18,0,0,0-41.16-42.17c-22.7-14.74-49.38-21.92-75.15-20.2a108.71,108.71,0,0,0-65.16,27c-19.91,17.5-33.76,41.79-41.18,72.19a13.52,13.52,0,0,0,9.92,16.32,13.66,13.66,0,0,0,3.21.38,13.51,13.51,0,0,0,13.11-10.3c6.07-24.92,17.1-44.54,32.76-58.31a82,82,0,0,1,49.13-20.32c20-1.33,40.81,4.32,58.65,15.9A108.07,108.07,0,0,1,374,268.51l-30,13.2,72.43,40.36,8.6-76Z" transform="translate(-176 -194.88)" class="arrow"></path>
+                                </svg>
                             </span>
                         </span>
                     </div>

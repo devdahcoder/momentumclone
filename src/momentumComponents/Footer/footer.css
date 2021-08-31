@@ -55,7 +55,13 @@ footer .footer-left-container .photo-info-container {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  transition: all 0s ease, opacity 1s ease, transform 1s ease;
+  transition: all 0s ease, opacity 1s ease, transform 1s ease;
+}
+
+footer .footer-left-container .photo-info-container::before {
+  transition: opacity 1s ease;
+  content: '';
+  opacity: 0;
 }
 
 footer .footer-left-container .photo-info-container .photo-info-name {
@@ -64,7 +70,8 @@ footer .footer-left-container .photo-info-container .photo-info-name {
   z-index: 2;
   opacity: 0.8;
   cursor: default;
-  font-size: 0.8125rem;
+  font-size: 0.7rem;
+  transition: all 0.3s ease;
   transform: translateZ(0) translateY(10px);
   white-space: nowrap;
 }
@@ -106,8 +113,9 @@ footer .footer-left-container .photo-info-container .photo-source .photo-source-
 }
 
 footer .footer-left-container .photo-info-container .photo-source .photo-source-control svg {
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
+  fill: white;
 }
 
 footer .footer-left-container .photo-info-container .photo-source .photo-source-control .skip-icon-container {
