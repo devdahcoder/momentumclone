@@ -1,0 +1,359 @@
+.nipple-top-right {
+  text-align: right;
+  box-sizing: inherit;
+  position: relative;
+  transition: all 0.15s ease;
+  overflow: visible;
+  z-index: 2;
+  opacity: 1;
+  transform: none;
+}
+
+.nipple-top-right::after {
+  content: '';
+  overflow: visible;
+  height: 0;
+  width: 0;
+  position: absolute;
+  display: block;
+  opacity: 1;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  top: -7px;
+  border-bottom: 7px solid rgba(15, 15, 15, 0.925);
+  right: 33px;
+}
+
+.nipple-top-right .weather-app {
+  transition: all 0.15s ease;
+  max-height: 100vh;
+  max-width: 100vw;
+  min-width: 200px;
+  padding: 21px;
+  position: absolute;
+  z-index: 2;
+  background: rgba(15, 15, 15, 0.925);
+  border-radius: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: left;
+  text-shadow: none;
+  width: 440px;
+  padding-bottom: calc(21px - 3px);
+  right: 7px;
+}
+
+.nipple-top-right .weather-app .weather-current {
+  padding: 0px;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header {
+  margin: -3px 0 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location {
+  min-width: 0;
+  display: inline-block;
+  flex: 0 1 auto;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .weather-location {
+  display: flex;
+  align-items: center;
+  transition: opacity .2s;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .weather-location .weather-location-name {
+  min-height: 24px;
+  min-width: 32px;
+  max-width: 310px;
+  margin-right: 5px;
+  display: inline;
+  flex: 0 1 auto;
+  align-self: baseline;
+  cursor: pointer;
+  font-size: 118.75%;
+  outline: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .weather-location .weather-location-edit {
+  font-size: 15px;
+  padding: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .weather-location .weather-location-edit .icon-edit {
+  vertical-align: 5%;
+  font-style: normal;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .weather-location .weather-location-edit .icon-edit::before {
+  content: url("./pencil.svg");
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-weight: 400;
+  speak: none;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .weather-location .weather-location-edit:hover {
+  opacity: 1;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: .2s opacity;
+  margin-bottom: 21px;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group .input-wrapper {
+  position: relative;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group .input-wrapper .current-location-search {
+  margin: 0;
+  background: 0 0;
+  width: 100%;
+  padding: 6px 1px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  outline: 0;
+  transition: border 0.1s ease;
+  font-size: 19px;
+  padding-right: 40px;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group .input-wrapper .icon-row {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group .input-wrapper .icon-row .weather-location-reset-container {
+  display: inline-block;
+  opacity: .5;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group .input-wrapper .icon-row .weather-location-reset-container .weather-location-reset-icon {
+  height: 15px;
+  fill: white;
+  vertical-align: -10%;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group .input-wrapper .icon-row .clear-current-weather {
+  padding: 0 5px;
+  bottom: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group .input-wrapper .icon-row .clear-current-weather .icon-cancel {
+  text-align: left;
+  text-shadow: none;
+  font-style: normal;
+  font-size: 1rem;
+  cursor: pointer;
+  box-sizing: inherit;
+  fill: white;
+  height: 9px;
+  opacity: .5;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group .input-wrapper .icon-row .clear-current-weather::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  z-index: 0;
+  display: block;
+  border-radius: 50px;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group .input-wrapper .icon-row .clear-current-weather:hover::after {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .weather-current-conditions {
+  margin: 0 0 10px;
+  display: block;
+  line-height: 1.25;
+  opacity: .7;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more {
+  position: static;
+  margin: calc(-1 * 21px) calc(-1 * 21px) 0 0;
+  padding: 21px;
+  cursor: pointer;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .current-location-more-toggle {
+  padding-top: 2px;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .current-location-more-toggle .more-icon {
+  height: 15px;
+  opacity: .7;
+  fill: white;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .current-location-more-toggle::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  z-index: 0;
+  display: block;
+  border-radius: 50px;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .current-location-more-toggle:hover::after {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .more-dropdown {
+  transition: opacity 0.5s ease;
+  color: white;
+  text-shadow: none;
+  cursor: pointer;
+  box-sizing: inherit;
+  overflow: hidden;
+  background: #333333;
+  border-radius: 5px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, height 0.25s ease;
+  margin-top: -6px;
+  position: absolute;
+  z-index: 100;
+  text-align: left;
+  top: 35px;
+  right: -1px;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .more-dropdown .dropdown-list {
+  padding: 6px 0;
+  position: relative;
+  z-index: 0;
+  list-style: none;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .more-dropdown .dropdown-list li {
+  max-width: 280px;
+  padding: 6px calc(21px - 6px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .more-dropdown .dropdown-list li .toggle-switch {
+  margin-top: -1px;
+  margin-bottom: -1px;
+  margin-left: 15px;
+  top: 1px;
+  right: -2px;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .more-dropdown .dropdown-list li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .more-dropdown .dropdown-list .line {
+  height: 1px;
+  margin: 5px 0;
+  padding: 0;
+  background: #b2aeae;
+  cursor: default;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .more-dropdown .dropdown-list .has-toggle-switch {
+  justify-content: space-between;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-temp-row {
+  margin-bottom: 8px;
+  display: flex;
+  transition: filter .2s;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-temp-row .weather-current-temp-wrapper {
+  padding-right: 22px;
+  position: relative;
+  flex: 1 1 50%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-temp-row .weather-current-temp {
+  font-size: 60px;
+}
+
+.nipple-top-right .weather-app .weather-attribution {
+  margin: 0 0 -6px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all .2s;
+}
+
+.nipple-top-right .weather-app .weather-attribution .weather-attribution-link {
+  text-align: left;
+  text-shadow: none;
+  box-sizing: inherit;
+  outline: 0;
+  text-decoration: none;
+  margin: -5px 0;
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  opacity: .85;
+  border-radius: 3px;
+  font-size: 10px;
+  color: white;
+}
+
+.nipple-top-right .weather-app .weather-attribution .weather-attribution-link .weather-attribution-logo {
+  height: 11px;
+  margin-right: 5px;
+  vertical-align: 0;
+}
+
+.nipple-top-right .weather-app .weather-attribution .weather-attribution-link:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.nipple-top-right .weather-app .active {
+  opacity: 1;
+}
+/*# sourceMappingURL=weatherforcast.css.map */

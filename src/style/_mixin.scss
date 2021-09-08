@@ -2,19 +2,19 @@
 
 @mixin responsive($size) {
     @if $size==phone {
-        @media screen and (min-width: 600px) {
+        @media screen and (max-width: 600px) {
             @content
         }
     }
 
-    @if else $size==tablet {
-        @media screen and (min-width: 900px) {
+    @if $size==tablet {
+        @media screen and (max-width: 900px) {
             @content
         }
     }
 
-    @if else $size==desktop {
-        @media screen and (min-width: 1200px) {
+    @if $size==desktop {
+        @media screen and (max-width: 1200px) {
             @content
         }
     }

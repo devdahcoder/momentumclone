@@ -10,6 +10,7 @@
   text-align: center;
   box-sizing: inherit;
   width: 100%;
+  transition: opacity 0.5s ease;
 }
 
 .todo-input-container .todo-input-wrapper .todo-input-focus {
@@ -40,5 +41,6 @@
   box-sizing: inherit;
   display: flex;
   justify-content: center;
+  transition: opacity 0.5s ease;
 }
 /*# sourceMappingURL=todoinput.css.map */

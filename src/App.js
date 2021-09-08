@@ -1,21 +1,30 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import "./App.css";
 
 // imported components
 import Overlay from "./PageOverlay/PageOverlay"
 import TimeGreet from "./momentumComponents/TimeGreet/TimeGreet";
 import TodoInput from "./momentumComponents/TodoInput/TodoInput";
-import DateWeather from "./momentumComponents/DateWeather/DateWeather"
+import DateWeather from "./momentumComponents/DateWeather/DateWeather";
 import Footer from "./momentumComponents/Footer/Footer";
 
 // imported utils
-import TodoContextProvider from "./context/TodoContext"
+import TodoContextProvider from "./context/TodoContext";
 import TimeContextProvider from "./context/TimeContext";
-import {BackgroundImageContext} from "./context/BackgroundImageContext"
+import {BackgroundImageContext} from "./context/BackgroundImageContext";
 
 function App() {
 
     const {backgroundImage} = useContext(BackgroundImageContext);
+
+
+    // const [isLoading, setIsLoading] = useState(true);
+
+    // useEffect(() => {
+    //   setIsLoading(false);
+
+    //   // setTimeout(() => setIsLoading(false), 1000)
+    // }, [])
 
     return (
       <>

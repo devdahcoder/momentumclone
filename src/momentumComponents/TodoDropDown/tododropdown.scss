@@ -1,3 +1,5 @@
+@import "../../style/mixin";
+
 .todo-dropdown-container {
     margin-top: 4px;
     left: 6px;
@@ -22,6 +24,11 @@
     right: auto;
     background-color: hsla(0, 0%, 6%, 0.925);
     color: hsl(0, 0%, 100%);
+
+    @include responsive(tablet) {
+        left: auto;
+        right: -11px;
+    }
     
     
 
@@ -38,6 +45,12 @@
         border-bottom: 7px solid hsla(0, 0%, 6%, 0.925);
         overflow: visible;
         left: 14px;
+
+
+        @include responsive(tablet) {
+            left: auto;
+            right: 14px;
+        }
     }
 
     .todo-dropdown-ul {

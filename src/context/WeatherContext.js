@@ -9,46 +9,63 @@ export const WeatherContext = createContext();
 
 const WeatherContextProvider = (props) => {
 
-    const [locationDetails, setLocationDetails] = useState(null);
-
+    const [daysWeatherDropdown, setDaysWeatherDropdown] = useState(false)
+    const [weatherDailyMore, setWeatherDailyMore] = useState(false);
+    const [dropDownCurrentWeather, setDropDownCurrentWeather] = useState({});
+    const [weather, setWeather] = useState({
+        loading: false,
+        error: null,
+        now: {},
+        days: [],
+        location: {},
+        provider: "AccuWeather",
+    })
 
     useEffect(() => {
-        const getLocation = store.get("location");
+        const getWeather = store.get("weather");
 
-        if (getLocation) {
-            setLocationDetails(getLocation);
+        if (getWeather) {
+            setWeather(getWeather);
         }
     }, []);
 
     useEffect(() => {
-        store.set("location", locationDetails);
-    }, [locationDetails])
+        store.set("weather", weather);
+    }, [weather])
 
+    const getWeather = async (locationData) => {
+        let urlNow = `https://dataservice.accuweather.com/currentconditions/v1/${locationData.Key}?apikey=${process.env.REACT_APP_WEATHER_API_KEY}`
+        let urlDays = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationData.Key}?apikey=${process.env.REACT_APP_WEATHER_API_KEY}`
 
-    const getUserCity = async (locationData) => {
         try {
-            let url = `https://dataservice.accuweather.com/currentconditions/v1/${locationData.Key}?apikey=${process.env.REACT_APP_WEATHER_API_KEY}`
+            const responseNow = await fetch(urlNow);
+            const responseDays = await fetch(urlDays);
 
-            const response = await fetch(url);
-            const data = await response.json();
-            setLocationDetails({...locationData, ...data[0]});
-        } catch (error) {
-            console.log("Something went wrong");
+            const dataNow = await responseNow.json();
+            const dataDays = await responseDays.json();
+
+            setWeather({...weather, now: dataNow[0], days: dataDays.DailyForecasts, location: locationData,});
+        }
+        catch (error) {
+            console.log("Something went wrong", error);
         }
     }
-
 
     //get user location and collect location key
     const getUserLocation = () => {
         navigator.geolocation.getCurrentPosition(
             async (position) => {
-                const { latitude, longitude } = position.coords;
+                try {
+                    const { latitude, longitude } = position.coords;
 
-                let url = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
+                    let url = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
 
-                const response = await fetch(url);
-                const data = await response.json();
-                getUserCity(data);
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    getWeather(data);
+                } catch (error) {
+                    console.log(error);
+                }
             },
             () => {
                 console.log("your browser does not support it");
@@ -61,8 +78,30 @@ const WeatherContextProvider = (props) => {
     }, []);
 
 
+    const toggleWeatherDropdown = () => {
+        setDaysWeatherDropdown(!daysWeatherDropdown);
+    }
 
-    const value = { locationDetails, setLocationDetails };
+    const toggleWeatherDailyMore = () => {
+        setWeatherDailyMore(!weatherDailyMore);
+    }
+
+    const handleCurrentWeatherDropDown = (element) => {
+        const divElement = element;
+        setDropDownCurrentWeather(divElement);
+        console.log(divElement);
+    };
+
+
+    const value = { 
+        toggleWeatherDropdown, 
+        daysWeatherDropdown, 
+        weatherDailyMore,
+        toggleWeatherDailyMore,
+        dropDownCurrentWeather, 
+        handleCurrentWeatherDropDown,
+        weather,
+    };
 
 
     return (

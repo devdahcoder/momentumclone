@@ -1,0 +1,12 @@
+.weather-forecast-daily-container {
+  transition: opacity 0.5s ease;
+  color: white;
+  text-align: left;
+  text-shadow: none;
+  box-sizing: inherit;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  font-size: 11px;
+  padding: 6px 0;
+}
+/*# sourceMappingURL=weatherdailylist.css.map */

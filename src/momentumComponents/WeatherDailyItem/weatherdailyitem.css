@@ -1,0 +1,60 @@
+.weather-forecast-day {
+  margin: 0 1.5px;
+  padding: 5px 2px;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex: 1 1 11%;
+  text-align: center;
+}
+
+.weather-forecast-day:first-child {
+  margin-left: 0;
+}
+
+.weather-forecast-day .daily-weather-forecast-label {
+  margin-top: 1px;
+  opacity: .6;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.weather-forecast-day .daily-weather-forecast-day-details {
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-forecast-day .daily-weather-forecast-day-details .weather-forecast-icon {
+  margin-right: 5px;
+  font-size: 17px;
+  line-height: 14px;
+}
+
+.weather-forecast-day .daily-weather-forecast-day-details .weather-forecast-icon img {
+  height: 13px;
+}
+
+.weather-forecast-day .daily-weather-forecast-day-details .weather-forecast-hight {
+  font-size: 11px;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  box-sizing: inherit;
+  opacity: .85;
+  padding-right: 0;
+}
+
+.weather-forecast-day .daily-weather-forecast-day-details .weather-forecast-low {
+  padding-left: 3px;
+  opacity: .4;
+}
+
+.selected {
+  background: rgba(255, 255, 255, 0.09);
+}
+/*# sourceMappingURL=weatherdailyitem.css.map */

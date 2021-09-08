@@ -27,6 +27,13 @@
   font-size: 0.7rem;
 }
 
+@media screen and (max-width: 900px) {
+  .greeting-more-dropdown {
+    left: auto;
+    right: 0px;
+  }
+}
+
 .greeting-more-dropdown .greeting-dropdown-list {
   transition: opacity 0.5s ease;
   font-weight: 500;
@@ -96,5 +103,12 @@
   top: -7px;
   border-bottom: 7px solid rgba(15, 15, 15, 0.925);
   left: 14px;
+}
+
+@media screen and (max-width: 900px) {
+  .greeting-more-dropdown::after {
+    left: auto;
+    right: 14px;
+  }
 }
 /*# sourceMappingURL=greetingdropdown.css.map */

@@ -1,0 +1,405 @@
+@import "../../style/variable";
+
+.nipple-top-right {
+    text-align: right;
+    box-sizing: inherit;
+    position: relative;
+    transition: all 0.15s $a-curve;
+    overflow: visible;
+    // display: block;
+    z-index: 2;
+    opacity: 1;
+    transform: none;
+
+    &::after {
+        content: '';
+        overflow: visible;
+        height: 0;
+        width: 0;
+        position: absolute;
+        display: block;
+        opacity: 1;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        top: -7px;
+        border-bottom: 7px solid $app-background;
+        right: 33px;
+    }
+    .weather-app {
+        transition: all 0.15s ease;
+        max-height: $max-height;
+        max-width: $max-width;
+        min-width: 200px;
+        padding: $app-padding;
+        position: absolute;
+        z-index: 2;
+        background: $app-background;
+        border-radius: 5px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: left;
+        text-shadow: none;
+        width: 440px;
+        padding-bottom: calc(21px - 3px);
+        right: 7px;
+
+        .weather-current {
+            padding: 0px;
+            .weather-current-header {
+                margin: -3px 0 0;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+
+                .weather-current-location {
+                    min-width: 0;
+                    display: inline-block;
+                    flex: 0 1 auto;
+
+                    .weather-location {
+                        display: flex;
+                        align-items: center;
+                        transition: opacity .2s;
+
+                        .weather-location-name {
+                            min-height: 24px;
+                            min-width: 32px;
+                            max-width: 310px;
+                            margin-right: 5px;
+                            display: inline;
+                            flex: 0 1 auto;
+                            align-self: baseline;
+                            cursor: pointer;
+                            font-size: 118.75%;
+                            outline: 0;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                                
+                        }
+
+                        // .loading-icon {
+                        //     margin-left: 6px;
+                        //     display: block;
+                        //     vertical-align: 0;
+                        //     height: 14px;
+                        //     width: 14px;
+                        //     margin-right: 8px;
+                        //     display: inline-block;
+                        //     animation: loading-icon 1.4s ease infinite;
+                        //     background: 0 0;
+                        //     border: 2px solid #fff;
+                        //     border-radius: 100%;
+
+
+                        //     @keyframes loading-icon {
+                        //         0% { 
+                        //             opacity: 0;
+                        //             transform: scale(0);
+                        //         }
+                        //         15% { 
+                        //             opacity: 1;
+                        //             // scale: 0.5;
+                        //         }
+                        //         100% { 
+                        //             opacity: 0;
+                        //             transform: scale(1.5);
+                        //         }
+                        //     }
+                        // }
+
+                        .weather-location-edit {
+                            font-size: 15px;
+                            padding: 3px;
+                            cursor: pointer;
+                            opacity: 0;
+                            transition: opacity .5s ease;
+
+                            .icon-edit {
+                                vertical-align: 5%;
+                                font-style: normal;
+
+                                &::before {
+                                    content: url("./pencil.svg");
+                                    width: 1em;
+                                    height: 1em;
+                                    display: inline-block;
+                                    font-weight: 400;
+                                    speak: none;
+                                    text-align: center;
+                                    text-decoration: inherit;
+                                    text-transform: none;
+                                }
+                            }
+
+                            &:hover {
+                                opacity: 1;
+
+                            }
+                        }
+                    }
+
+                    .current-location-group {
+                        position: absolute;
+                        top: -6px;
+                        left: 0;
+                        right: 0;
+                        z-index: -1;
+                        opacity: 0;
+                        transition: .2s opacity;
+                        margin-bottom: 21px;
+
+                        .input-wrapper {
+                            position: relative;
+                            .current-location-search {
+                                margin: 0;
+                                background: 0 0;
+                                width: 100%;
+                                padding: 6px 1px;
+                                border: 0;
+                                border-radius: 0;
+                                border-bottom: 2px solid $button-background-hover;
+                                color: $app-text-color;
+                                outline: 0;
+                                transition: border .1s $a-curve;
+                                font-size: 19px;
+                                padding-right: 40px;
+                            }
+
+                            .icon-row {
+                                display: flex;
+                                align-items: center;
+                                position: absolute;
+                                top: 3px;
+                                right: 0;
+
+                                .weather-location-reset-container {
+                                    display: inline-block;
+                                    opacity: .5;
+                                    padding: 3px;
+                                    cursor: pointer;
+
+                                    .weather-location-reset-icon {
+                                        height: 15px;
+                                        fill: $icon-color;
+                                        vertical-align: -10%;
+                                    }
+                                }
+
+                                .clear-current-weather {
+                                    padding: 0 5px;
+                                    bottom: 0;
+                                    cursor: pointer;
+                                    font-size: 1rem;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: relative;
+                                    .icon-cancel {
+                                        text-align: left;
+                                        text-shadow: none;
+                                        font-style: normal;
+                                        font-size: 1rem;
+                                        cursor: pointer;
+                                        box-sizing: inherit;
+                                        fill: $icon-color;
+                                        height: 9px;
+                                        opacity: .5;
+
+                                        
+                                    }
+
+                                    &::after {
+                                        content: "";
+                                        height: 25px;
+                                        width: 25px;
+                                        position: absolute;
+                                        z-index: 0;
+                                        display: block;
+                                        border-radius: 50px;
+                                    }
+
+                                    
+
+                                    &:hover {
+                                        &::after {
+                                            background: hsla(0, 0%, 100%, 0.12);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .weather-current-conditions {
+                        margin: 0 0 10px;
+                        display: block;
+                        line-height: 1.25;
+                        opacity: .7;
+                    }
+
+                    // &:hover {
+                    //     .weather-location-edit {
+                    //         opacity: 1;
+                    //     }
+                    // }
+                        
+                }
+
+                .current-location-more {
+                    position: static;
+                    margin: calc(-1 * #{$app-padding}) calc(-1 * #{$app-padding}) 0 0;
+                    padding: $app-padding;
+                    cursor: pointer;
+
+                    .current-location-more-toggle {
+                        padding-top: 2px;
+
+                        .more-icon {
+                            height: 15px;
+                            opacity: .7;
+                            fill: $icon-color;
+                        }
+
+                        &::after {
+                            content: "";
+                            height: 25px;
+                            width: 25px;
+                            position: absolute;
+                            z-index: 0;
+                            display: block;
+                            border-radius: 50px;
+                        }
+
+                        &:hover {
+                            &::after {
+                                background: hsla(0, 0%, 100%, 0.12);
+                            }
+                        }
+                    }
+
+                    .more-dropdown {
+                        transition: opacity 0.5s ease;
+                        color: $app-text-color;
+                        text-shadow: none;
+                        cursor: pointer;
+                        box-sizing: inherit;
+                        overflow: hidden;
+                        background: $dropdown-bg;
+                        border-radius: $border-radius;
+                        box-shadow: 0 1px 8px hsla(0, 0%, 0%, 0.25);
+                        transition: transform .25s $a-curve, height .25s $a-curve;
+                        margin-top: -6px;
+                        position: absolute;
+                        z-index: 100;
+                        text-align: left;
+                        top: 35px;
+                        right: -1px;
+
+                        .dropdown-list {
+                            padding: 6px 0;
+                            position: relative;
+                            z-index: 0;
+                            list-style: none;
+
+                            li {
+                                max-width: 280px;
+                                padding: 6px calc(#{$app-padding} - 6px);
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                font-size: .875rem;
+                                font-weight: 400;
+                                line-height: normal;
+                                
+
+                                .toggle-switch {
+                                    margin-top: -1px;
+                                    margin-bottom: -1px;
+                                    margin-left: 15px;
+                                    top: 1px;
+                                    right: -2px;
+                                }
+
+                                &:hover {
+                                    background: $dropdown-hover-bg;
+                                }
+                            }
+
+                            .line {
+                                height: 1px;
+                                margin: 5px 0;
+                                padding: 0;
+                                background: hsl(0, 2%, 69%);
+                                cursor: default;
+                            }
+
+                            .has-toggle-switch {
+                                justify-content: space-between;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .weather-current-temp-row {
+                margin-bottom: 8px;
+                display: flex;
+                transition: filter .2s;
+
+                .weather-current-temp-wrapper {
+                    padding-right: 22px;
+                    position: relative;
+                    flex: 1 1 50%;
+                    white-space: nowrap;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .weather-current-temp {
+                    font-size: 60px;
+                }
+            }
+        }
+
+        .weather-attribution {
+            margin: 0 0 -6px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            border-top: 1px solid $border-color;
+            transition: all .2s;
+
+            .weather-attribution-link {
+                text-align: left;
+                text-shadow: none;
+                box-sizing: inherit;
+                outline: 0;
+                text-decoration: none;
+                margin: -5px 0;
+                padding: 5px;
+                display: inline-flex;
+                align-items: center;
+                opacity: .85;
+                border-radius: 3px;
+                font-size: 10px;
+                color: $app-text-color;
+
+                .weather-attribution-logo {
+                    height: 11px;
+                    margin-right: 5px;
+                    vertical-align: 0;
+                }
+
+                &:hover {
+                    background: hsla(0, 0%, 100%, 0.09)
+                }
+            }
+        }
+
+        .active {
+            opacity: 1;
+        }
+    }
+}

@@ -42,4 +42,5 @@ body {
   font-size: 100%;
   overflow: hidden;
   display: block;
+  text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
 }

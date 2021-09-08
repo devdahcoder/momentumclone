@@ -24,6 +24,13 @@
   color: white;
 }
 
+@media screen and (max-width: 900px) {
+  .todo-dropdown-container {
+    left: auto;
+    right: -11px;
+  }
+}
+
 .todo-dropdown-container::after {
   content: '';
   height: 0;
@@ -37,6 +44,13 @@
   border-bottom: 7px solid rgba(15, 15, 15, 0.925);
   overflow: visible;
   left: 14px;
+}
+
+@media screen and (max-width: 900px) {
+  .todo-dropdown-container::after {
+    left: auto;
+    right: 14px;
+  }
 }
 
 .todo-dropdown-container .todo-dropdown-ul {

@@ -3,35 +3,4 @@
   align-items: center;
   justify-content: center;
 }
-
-.time-format-checkbox-container .time-format-checkbox {
-  appearance: none;
-  height: 1.2em;
-  width: 2.1em;
-  background: #6d5f5f;
-  border-radius: 100vh;
-  position: relative;
-  outline: none;
-  cursor: pointer;
-}
-
-.time-format-checkbox-container .time-format-checkbox:before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: #bfb0b0;
-  height: 12px;
-  width: 12px;
-  left: 2.2px;
-  top: 0.17em;
-}
-
-.time-format-checkbox-container .time-format-checkbox:checked {
-  background: #4dbf40;
-}
-
-.time-format-checkbox-container .time-format-checkbox:checked:before {
-  background: #ffffff;
-  left: 15px;
-}
 /*# sourceMappingURL=timeformatswitch.css.map */

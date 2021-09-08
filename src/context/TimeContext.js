@@ -1,6 +1,10 @@
-import React, {useState, useEffect, createContext} from 'react'
+import React, {useState, useEffect, createContext} from 'react';
 
-export const TimeContext = createContext(null)
+
+//imported packages
+import store from "store"
+
+export const TimeContext = createContext(null);
 
 
 const TimeContextProvider = (props) => {
@@ -9,6 +13,23 @@ const TimeContextProvider = (props) => {
     const [toggleDigitalTimeDropDown, setToggleDigitalTimeDropDown] = useState(false);
     const [toggle24DigitalTime, setToggle24DigitalTime] = useState(false);
     const [toggleOtherTimeDropDown, setToggleOtherTimeDropDown] = useState(false);
+
+
+
+    useEffect(() => {
+        const getToggle24DigitalTime = store.get("toggle24DigitalTime");
+
+        if (getToggle24DigitalTime) {
+            setToggle24DigitalTime(getToggle24DigitalTime);
+        }
+    }, [])
+    
+
+    useEffect(() => {
+        store.set("toggle24DigitalTime", toggle24DigitalTime);
+    }, [toggle24DigitalTime])
+
+
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -34,7 +55,6 @@ const TimeContextProvider = (props) => {
         return () => clearInterval(interval)
     }, []);
 
-
     const toggleDisplayDigitalTimeDropDown = () => {
         setToggleDigitalTimeDropDown(!toggleDigitalTimeDropDown);
     };
@@ -46,7 +66,6 @@ const TimeContextProvider = (props) => {
     const toggleDisplayOtherTimeDropDown = () => {
         setToggleOtherTimeDropDown(!toggleOtherTimeDropDown);
     };
-
 
     const value = {
         time, 

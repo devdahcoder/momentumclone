@@ -3,35 +3,4 @@
     align-items: center;
     justify-content: center;
 
-
-    .time-format-checkbox {
-        appearance: none;
-        height: 1.2em;
-        width: 2.1em;
-        background: hsl(0, 7%, 40%);
-        border-radius: 100vh;
-        position: relative;
-        outline: none;
-        cursor: pointer;
-
-        &:before {
-            content: "";
-            position: absolute;
-            border-radius: 50%;
-            background: hsl(0, 10%, 72%);
-            height: 12px;
-            width: 12px;
-            left: 2.2px;
-            top: 0.17em;
-        }
-
-        &:checked {
-            background: hsl(114, 50%, 50%);
-
-            &:before {
-                background: #ffffff;
-                left: 15px;
-            }
-        }
-    }
 }

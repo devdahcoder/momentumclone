@@ -15,7 +15,7 @@
   fill: #cccccc;
   box-sizing: inherit;
   height: 4.5rem;
-  display: none;
+  display: block;
   opacity: 0;
   animation: fadein 1s linear 1s forwards;
 }

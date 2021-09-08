@@ -10,6 +10,7 @@
         text-align: center;
         box-sizing: inherit;
         width: 100%;
+        transition: opacity 0.5s ease;
 
         .todo-input-focus {
             text-align: center;
@@ -19,6 +20,7 @@
             width: 100%;
             position: relative;
             vertical-align: top;
+            
 
             &::before {
                 height: 335px;
@@ -38,6 +40,7 @@
                 box-sizing: inherit;
                 display: flex;
                 justify-content: center;
+                transition: opacity 0.5s ease;
             }
         }
     }

@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import "./timeformatswitch.css";
+import "../../style/global.css";
 
 //imported utils
 import {TimeContext} from "../../context/TimeContext"
