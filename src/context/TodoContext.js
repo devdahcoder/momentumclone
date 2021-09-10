@@ -48,16 +48,9 @@ const TodoContextProvider = (props) => {
         setInputValue(e.target.value);
     }
 
-    
-
     const deleteTodo = (id) => {
         setTodoList(todoList.filter(todo => todo.id !== id));
     };
-
-    // edit functions
-    // const handleNewTodoInput = (e) => {
-    //     setNewTodoInput(e.target.value);
-    // };
 
     const toggleEditTodo = (id) => {
         setIsEditing(true);
@@ -78,14 +71,6 @@ const TodoContextProvider = (props) => {
             return todo;
         }))
     };
-
-    // const handleEditSubmit = (e) => {
-    //     e.preventDefault();
-    //     editTodo(currentId, newTodoInput);
-    //     // setNewTodoInput("");
-    //     setInputValue("");
-    //     setIsEditing(false);
-    // }
 
     const handleTodoSubmit = (e) => {
         e.preventDefault();
@@ -115,20 +100,6 @@ const TodoContextProvider = (props) => {
         // console.log(focusInput.focus());
     };
 
-    
-
-
-
-    // const editTodo = (id) => {
-    //     setIsEditing(true);
-    //     let currentTodo = todoList.find((todo) => todo.id === id);
-    //     setInputValue(currentTodo.value);
-    //     console.log(currentTodo);
-    //     deleteTodo(id);
-    //     // focusTodoInput();
-    // };
-
-    
 
     const value = {
         todoList, 

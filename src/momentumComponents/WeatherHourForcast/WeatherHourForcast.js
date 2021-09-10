@@ -70,7 +70,7 @@ const WeatherHourForcast = () => {
                                 </div>
                             </div>
 
-                            <span className="weather-current-conditions">{weather && weather.now && weather.now.WeatherText}</span>
+                            <span className="weather-current-conditions">{dropDownCurrentWeather && dropDownCurrentWeather.Day && dropDownCurrentWeather.Day.IconPhrase}</span>
                         </div>
 
                         <div onClick={toggleWeatherDailyMore} className="current-location-more">

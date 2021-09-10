@@ -54,7 +54,7 @@
   opacity: .4;
 }
 
-.selected {
+#selected {
   background: rgba(255, 255, 255, 0.09);
 }
 /*# sourceMappingURL=weatherdailyitem.css.map */
