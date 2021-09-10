@@ -12,6 +12,7 @@ import {BackgroundImageContext} from "../../context/BackgroundImageContext";
 const Footer = () => {
 
     const {backgroundImage, getBackgroundImage} = useContext(BackgroundImageContext);
+    
 
     return (
         <footer>

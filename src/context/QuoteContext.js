@@ -9,7 +9,6 @@ export const QuoteContext = createContext();
 
 const QuoteContextProvider = (props) => {
 
-
     const [quote, setQuote] = useState("");
 
     useEffect(() => {
@@ -23,12 +22,29 @@ const QuoteContextProvider = (props) => {
         store.set("quote", quote);
     }, [quote])
 
-    
+
+    const getQuote = async () => {
+        const urlQuote = "https://api.quotable.io/random";
+        try {
+            const response = await fetch(urlQuote);
+            const data = await response.json();
+            setQuote(data);
+            console.log(data);
+        } catch (error) {
+            console.log("Something went wrong", error);
+        }
+    }
+
+    useEffect(() => {
+        getQuote();
+    }, []);
+
+    const value = {quote, getQuote};
 
     return (
-        <div>
+        <QuoteContext.Provider value={value}>
             {props.children}
-        </div>
+        </QuoteContext.Provider>
     )
 }
 

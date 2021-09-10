@@ -11,6 +11,7 @@ import Footer from "./momentumComponents/Footer/Footer";
 // imported utils
 import TodoContextProvider from "./context/TodoContext";
 import TimeContextProvider from "./context/TimeContext";
+import QuoteContextProvider from "./context/QuoteContext"
 import {BackgroundImageContext} from "./context/BackgroundImageContext";
 
 function App() {
@@ -56,9 +57,11 @@ function App() {
               <TodoInput />
             </TodoContextProvider>
 
-            
+            <QuoteContextProvider>
+              <Footer />
+            </QuoteContextProvider>
 
-            <Footer />
+            
           </div>
 
           {/* <div className="overlay drop-overlay">

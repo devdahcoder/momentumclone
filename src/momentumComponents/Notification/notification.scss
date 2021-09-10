@@ -2,7 +2,7 @@
 
 .notification-container {
     position: relative;
-
+    display: none;
     .notification-app-wrapper {
             visibility: visible;
             // --app-container-transition: opacity 0.5s ease;

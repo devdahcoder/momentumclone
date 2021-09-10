@@ -1,5 +1,6 @@
 .notification-container {
   position: relative;
+  display: none;
 }
 
 .notification-container .notification-app-wrapper {
