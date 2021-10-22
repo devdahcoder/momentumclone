@@ -32,9 +32,6 @@ const Weather = () => {
 
             </div>
 
-            <WeatherAdd />
-
-
         </div>
     )
 }
