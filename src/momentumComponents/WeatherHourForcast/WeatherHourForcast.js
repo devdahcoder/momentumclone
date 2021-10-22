@@ -99,6 +99,7 @@ const WeatherHourForcast = () => {
                                             <input type="checkbox" name="check" id="" className="time-format-checkbox" { ...( true ? { checked: true } : {} ) } />
                                         </span>
                                     </li>
+                                    
                                     <li className="line"></li>
 
                                     <li className="toggle-metric has-toggle-switch on" data-test="toggle-metrics-button">

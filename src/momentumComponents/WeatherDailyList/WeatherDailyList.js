@@ -12,7 +12,6 @@ const WeatherDailyList = () => {
 
     const { weather } = useContext(WeatherContext);
 
-
     return (
         <section className="weather-row weather-forecast weather-forecast-daily-container active">
             {weather.days.map((day, index) => {
@@ -20,7 +19,6 @@ const WeatherDailyList = () => {
                     <WeatherDailyItem key={index} day={day} index={index} />
                 )
             })}
-            
         </section>
     )
 }

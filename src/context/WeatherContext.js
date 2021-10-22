@@ -12,6 +12,7 @@ const WeatherContextProvider = (props) => {
     const [daysWeatherDropdown, setDaysWeatherDropdown] = useState(false)
     const [weatherDailyMore, setWeatherDailyMore] = useState(false);
     const [dropDownCurrentWeather, setDropDownCurrentWeather] = useState({});
+    const [activeLink, setActiveLink] = useState();
     const [weather, setWeather] = useState({
         loading: false,
         error: null,
@@ -19,9 +20,8 @@ const WeatherContextProvider = (props) => {
         days: [],
         location: {},
         provider: "AccuWeather",
-    })
-    const [activeLink, setActiveLink] = useState();
-
+    });
+    
     useEffect(() => {
         const getWeather = store.get("weather");
 
@@ -91,8 +91,6 @@ const WeatherContextProvider = (props) => {
         setDropDownCurrentWeather(element);
         setActiveLink(id);
     };
-    
-
 
     const value = { 
         toggleWeatherDropdown, 
@@ -104,7 +102,6 @@ const WeatherContextProvider = (props) => {
         weather,
         activeLink
     };
-
 
     return (
         <WeatherContext.Provider value={value}>

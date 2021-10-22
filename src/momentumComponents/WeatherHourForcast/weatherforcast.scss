@@ -6,7 +6,6 @@
     position: relative;
     transition: all 0.15s $a-curve;
     overflow: visible;
-    // display: block;
     z-index: 2;
     opacity: 1;
     transform: none;
@@ -333,6 +332,7 @@
                                 padding: 0;
                                 background: hsl(0, 2%, 69%);
                                 cursor: default;
+                                background: hsl(0deg 0% 100% 0.12);
                             }
 
                             .has-toggle-switch {
