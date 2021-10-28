@@ -29,7 +29,6 @@ const QuoteContextProvider = (props) => {
             const response = await fetch(urlQuote);
             const data = await response.json();
             setQuote(data);
-            console.log(data);
         } catch (error) {
             console.log("Something went wrong", error);
         }

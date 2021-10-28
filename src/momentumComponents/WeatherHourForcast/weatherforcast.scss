@@ -53,7 +53,7 @@
                 .weather-current-location {
                     min-width: 0;
                     display: inline-block;
-                    flex: 0 1 auto;
+                    flex: 1 1 auto;
 
                     .weather-location {
                         display: flex;
@@ -131,10 +131,7 @@
                                 }
                             }
 
-                            &:hover {
-                                opacity: 1;
-
-                            }
+                            
                         }
                     }
 
@@ -231,6 +228,11 @@
                         }
                     }
 
+                    .display-edit-location {
+                        z-index: 1;
+                        opacity: 1;
+                    }
+
                     .weather-current-conditions {
                         margin: 0 0 10px;
                         display: block;
@@ -238,11 +240,23 @@
                         opacity: .7;
                     }
 
+                    .hide-weather-location {
+                        opacity: 0;
+                    }
+
                     // &:hover {
                     //     .weather-location-edit {
                     //         opacity: 1;
                     //     }
                     // }
+
+                    &:hover {
+                        .weather-location {
+                            .weather-location-edit {
+                                opacity: 1;
+                            }
+                        }
+                    }
                         
                 }
 
@@ -252,6 +266,7 @@
                     padding: $app-padding;
                     cursor: pointer;
 
+
                     .current-location-more-toggle {
                         padding-top: 2px;
 
@@ -259,6 +274,10 @@
                             height: 15px;
                             opacity: .7;
                             fill: $icon-color;
+                        }
+
+                        .hide-more-icon {
+                            opacity: 0;
                         }
 
                         &::after {
@@ -287,7 +306,7 @@
                         overflow: hidden;
                         background: $dropdown-bg;
                         border-radius: $border-radius;
-                        box-shadow: 0 1px 8px hsla(0, 0%, 0%, 0.25);
+                        box-shadow: 0 1px 8px hsl(0, 0%, 20%);
                         transition: transform .25s $a-curve, height .25s $a-curve;
                         margin-top: -6px;
                         position: absolute;
@@ -330,9 +349,8 @@
                                 height: 1px;
                                 margin: 5px 0;
                                 padding: 0;
-                                background: hsl(0, 2%, 69%);
+                                background: hsla(0, 0%, 100%, 0.12);
                                 cursor: default;
-                                background: hsl(0deg 0% 100% 0.12);
                             }
 
                             .has-toggle-switch {

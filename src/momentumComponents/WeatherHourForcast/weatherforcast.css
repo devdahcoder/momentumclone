@@ -57,7 +57,7 @@
 .nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location {
   min-width: 0;
   display: inline-block;
-  flex: 0 1 auto;
+  flex: 1 1 auto;
 }
 
 .nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .weather-location {
@@ -105,10 +105,6 @@
   text-align: center;
   text-decoration: inherit;
   text-transform: none;
-}
-
-.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .weather-location .weather-location-edit:hover {
-  opacity: 1;
 }
 
 .nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .current-location-group {
@@ -200,11 +196,24 @@
   background: rgba(255, 255, 255, 0.12);
 }
 
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .display-edit-location {
+  z-index: 1;
+  opacity: 1;
+}
+
 .nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .weather-current-conditions {
   margin: 0 0 10px;
   display: block;
   line-height: 1.25;
   opacity: .7;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location .hide-weather-location {
+  opacity: 0;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .weather-current-location:hover .weather-location .weather-location-edit {
+  opacity: 1;
 }
 
 .nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more {
@@ -222,6 +231,10 @@
   height: 15px;
   opacity: .7;
   fill: white;
+}
+
+.nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .current-location-more-toggle .hide-more-icon {
+  opacity: 0;
 }
 
 .nipple-top-right .weather-app .weather-current .weather-current-header .current-location-more .current-location-more-toggle::after {
@@ -247,7 +260,7 @@
   overflow: hidden;
   background: #333333;
   border-radius: 5px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 8px #333333;
   transition: transform 0.25s ease, height 0.25s ease;
   margin-top: -6px;
   position: absolute;
@@ -291,7 +304,7 @@
   height: 1px;
   margin: 5px 0;
   padding: 0;
-  background: #b2aeae;
+  background: rgba(255, 255, 255, 0.12);
   cursor: default;
 }
 

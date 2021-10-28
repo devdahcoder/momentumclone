@@ -1,18 +1,14 @@
-import React, {useState, createContext, useEffect} from 'react'
-
+import React, {useState, createContext, useEffect, useMemo, useCallback } from 'react'
 
 // imported packages
-import store from "store"
+import store from "store";
+import debounce from "lodash.debounce";
 
 export const WeatherContext = createContext();
 
 
 const WeatherContextProvider = (props) => {
 
-    const [daysWeatherDropdown, setDaysWeatherDropdown] = useState(false)
-    const [weatherDailyMore, setWeatherDailyMore] = useState(false);
-    const [dropDownCurrentWeather, setDropDownCurrentWeather] = useState({});
-    const [activeLink, setActiveLink] = useState();
     const [weather, setWeather] = useState({
         loading: false,
         error: null,
@@ -21,6 +17,13 @@ const WeatherContextProvider = (props) => {
         location: {},
         provider: "AccuWeather",
     });
+    const [daysWeatherDropdown, setDaysWeatherDropdown] = useState(false)
+    const [weatherDailyMore, setWeatherDailyMore] = useState(false);
+    const [editWeather, setEditWeather] = useState(false);
+    const [dropDownCurrentWeather, setDropDownCurrentWeather] = useState({});
+    const [activeLink, setActiveLink] = useState();
+    const [editLocationInput, setEditLocationInput] = useState("");
+    
     
     useEffect(() => {
         const getWeather = store.get("weather");
@@ -92,6 +95,29 @@ const WeatherContextProvider = (props) => {
         setActiveLink(id);
     };
 
+    const toggleEditWeather = () => {
+        setEditWeather(!editWeather);
+    }
+
+    const searchLocation = async (locationInput) => {
+        try {
+            let url = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${locationInput}`;
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const debouncedChangeHandler = useCallback(debounce((text) => searchLocation(text), 5000), []);
+
+    const handleEditLocationInput = (e) => {
+        setEditLocationInput(e.target.value);
+        debouncedChangeHandler(e.target.value);
+    }
+    
+
     const value = { 
         toggleWeatherDropdown, 
         daysWeatherDropdown, 
@@ -100,7 +126,11 @@ const WeatherContextProvider = (props) => {
         dropDownCurrentWeather, 
         handleCurrentWeatherDropDown,
         weather,
-        activeLink
+        activeLink,
+        toggleEditWeather,
+        editWeather,
+        handleEditLocationInput,
+        editLocationInput,
     };
 
     return (
