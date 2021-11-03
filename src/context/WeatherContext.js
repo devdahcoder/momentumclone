@@ -6,7 +6,6 @@ import debounce from "lodash.debounce";
 
 export const WeatherContext = createContext();
 
-
 const WeatherContextProvider = (props) => {
 
     const [weather, setWeather] = useState({
@@ -17,12 +16,16 @@ const WeatherContextProvider = (props) => {
         location: {},
         provider: "AccuWeather",
     });
-    const [daysWeatherDropdown, setDaysWeatherDropdown] = useState(false)
+    const [daysWeatherDropdown, setDaysWeatherDropdown] = useState(false);
     const [weatherDailyMore, setWeatherDailyMore] = useState(false);
     const [editWeather, setEditWeather] = useState(false);
     const [dropDownCurrentWeather, setDropDownCurrentWeather] = useState({});
     const [activeLink, setActiveLink] = useState();
     const [editLocationInput, setEditLocationInput] = useState("");
+    const [editLocation, setEditLocation] = useState([]);
+    const [editLocationIsLoading, setEditLocationIsLoading] = useState(false);
+    const [editLocationError, setEditLocationError] = useState(null);
+    
     
     
     useEffect(() => {
@@ -100,24 +103,28 @@ const WeatherContextProvider = (props) => {
     }
 
     const searchLocation = async (locationInput) => {
+        setEditLocationIsLoading(true);
+        setEditLocationError(null);
         try {
             let url = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${locationInput}`;
             const response = await fetch(url);
             const data = await response.json();
             console.log(data);
+            setEditLocation(data);
+            setEditLocationIsLoading(false);
         } catch (error) {
             console.log(error);
+            setEditLocationError(error);
         }
     }
 
-    const debouncedChangeHandler = useCallback(debounce((text) => searchLocation(text), 5000), []);
+    const debouncedChangeHandler = useCallback(debounce((text) => searchLocation(text), 300), []);
 
     const handleEditLocationInput = (e) => {
         setEditLocationInput(e.target.value);
         debouncedChangeHandler(e.target.value);
     }
     
-
     const value = { 
         toggleWeatherDropdown, 
         daysWeatherDropdown, 
@@ -131,6 +138,9 @@ const WeatherContextProvider = (props) => {
         editWeather,
         handleEditLocationInput,
         editLocationInput,
+        editLocation,
+        editLocationIsLoading,
+        editLocationError,
     };
 
     return (

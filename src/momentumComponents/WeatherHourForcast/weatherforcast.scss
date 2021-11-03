@@ -226,6 +226,107 @@
                                 }
                             }
                         }
+
+                        .edit-location-dropdown {
+                            display: block;
+                            background: $dropdown-bg;
+                            border-radius: 0 0 $border-radius $border-radius;
+                            box-shadow: none;
+                            transition: transform .25s $a-curve,
+                            height .25s $a-curve;
+                            // overflow: hidden;
+
+                            .searching {
+                                padding: 4px 7px;
+                                display: block;
+                                font-size: 87.5%;
+                                opacity: .6;
+
+                                i {
+                                    visibility: visible;
+                                    color: $app-text-color;
+                                    text-align: left;
+                                    text-shadow: none;
+                                    font-size: 87.5%;
+                                    box-sizing: inherit;
+                                    font-style: normal;
+                                    animation: blink 1.4s infinite both;
+
+                                    &:nth-child(2) {
+                                        animation-delay: .2s;
+                                    }
+
+                                    &:nth-child(3) {
+                                        animation-delay: .4s;
+                                    }
+
+                                    @keyframes blink {
+                                        0% {
+                                            opacity: .2;
+                                        }
+                                        20% {
+                                            opacity: 1;
+                                        }
+                                        100% {
+                                            opacity: 0;
+                                        }
+                                    }
+                                }
+                                
+                            }
+
+                            .location-dropdown-list {
+                                color: $app-text-color;
+                                text-align: left;
+                                text-shadow: none;
+                                box-sizing: inherit;
+                                margin: 0;
+                                list-style: none;
+                                position: relative;
+                                z-index: 0;
+                                transition: transform .25s $a-curve,
+                                height .25s $a-curve;
+                                padding: 6px 0;
+                                max-height: 140px;
+                                overflow-x: hidden;
+                                overflow-y: auto;
+                                display: block;
+
+                                li {
+                                    text-shadow: none;
+                                    list-style: none;
+                                    box-sizing: inherit;
+                                    max-width: none;
+                                    padding: 4px 9px;
+                                    opacity: .8;
+                                    cursor: pointer;
+                                    font-size: .875rem;
+
+                                    span {
+                                        // color: var(--app-text-color);
+                                        text-shadow: none;
+                                        list-style: none;
+                                        cursor: pointer;
+                                        font-size: .875rem;
+                                        box-sizing: inherit;
+                                        margin-right: 2px;
+                                    }
+                                }
+                            }
+
+                            .not-found {
+                                text-align: left;
+                                text-shadow: none;
+                                box-sizing: inherit;
+                                max-width: none;
+                                padding: 4px 9px;
+                                cursor: pointer;
+                                font-size: .875rem;
+                                margin: 4px 0;
+                                opacity: .6;
+                                display: none;
+                            }
+                        }
                     }
 
                     .display-edit-location {
@@ -315,7 +416,7 @@
                         top: 35px;
                         right: -1px;
 
-                        .dropdown-list {
+                        .forecast-dropdown-list {
                             padding: 6px 0;
                             position: relative;
                             z-index: 0;

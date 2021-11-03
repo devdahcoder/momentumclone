@@ -11,20 +11,27 @@ import GreetingContextProvider from '../../context/GreetingContext';
 
 const TimeGreet = () => {
     return (
+
         <section className="time-greet-container">
+
             <div className="time-greet-display">
                 
                 <Time />
 
-                
                 <GreetingContextProvider>
+
                     <BackgroundImageContextProvider>
+
                         <Greeting />
+
                     </BackgroundImageContextProvider>
+
                 </GreetingContextProvider>
                 
             </div>
+
         </section>
+        
     )
 }
 

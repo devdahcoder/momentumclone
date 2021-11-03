@@ -5,7 +5,6 @@ import "./dateweather.css";
 import WeatherContextProvider from "../../context/WeatherContext";
 import DateContextProvider from "../../context/DateContext";
 
-
 //imported components
 import Date from "../Date/Date";
 import Weather from "../Weather/Weather";
@@ -15,13 +14,17 @@ const DateWeather = () => {
         <header className="date-weather-header">
             
             <DateContextProvider>
+
                 <Date />
+
             </DateContextProvider>
 
             <div className="top-center"></div>
 
             <WeatherContextProvider>
+
                 <Weather />
+
             </WeatherContextProvider>
 
         </header>
