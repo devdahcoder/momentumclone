@@ -9,6 +9,7 @@ const Quote = () => {
     const {quote, getQuote} = useContext(QuoteContext);
 
     return (
+        
         <div className="footer-center-container">
 
             <div className="footer-center-display">
@@ -73,7 +74,7 @@ const Quote = () => {
             </div>
 
         </div>
-        
+
     )
 }
 

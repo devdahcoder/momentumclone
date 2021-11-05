@@ -25,6 +25,7 @@ const WeatherContextProvider = (props) => {
     const [editLocation, setEditLocation] = useState([]);
     const [editLocationIsLoading, setEditLocationIsLoading] = useState(false);
     const [editLocationError, setEditLocationError] = useState(null);
+    const [locationKey, setLocationKey] = useState(null);
     
     
     
@@ -70,6 +71,8 @@ const WeatherContextProvider = (props) => {
                     const response = await fetch(url);
                     const data = await response.json();
                     getWeather(data);
+                    console.log(data);
+                    setLocationKey(data.Key);
                 } catch (error) {
                     console.log(error);
                 }
@@ -105,8 +108,10 @@ const WeatherContextProvider = (props) => {
     const searchLocation = async (locationInput) => {
         setEditLocationIsLoading(true);
         setEditLocationError(null);
+
         try {
             let url = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${locationInput}`;
+            // let url = `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${process.env.REACT_APP_WEATHER_API_KEY}=${locationInput}`;
             const response = await fetch(url);
             const data = await response.json();
             console.log(data);
@@ -115,6 +120,7 @@ const WeatherContextProvider = (props) => {
         } catch (error) {
             console.log(error);
             setEditLocationError(error);
+            setEditLocationIsLoading(false);
         }
     }
 
@@ -141,6 +147,7 @@ const WeatherContextProvider = (props) => {
         editLocation,
         editLocationIsLoading,
         editLocationError,
+        getWeather,
     };
 
     return (

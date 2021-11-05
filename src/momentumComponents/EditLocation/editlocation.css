@@ -1,4 +1,190 @@
-* {
-  color: red;
+.current-location-group {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: .2s opacity;
+  margin-bottom: 21px;
+}
+
+.current-location-group .input-wrapper {
+  position: relative;
+}
+
+.current-location-group .input-wrapper .current-location-search {
+  margin: 0;
+  background: 0 0;
+  width: 100%;
+  padding: 6px 1px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  outline: 0;
+  transition: border 0.1s ease;
+  font-size: 19px;
+  padding-right: 40px;
+}
+
+.current-location-group .input-wrapper .icon-row {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+
+.current-location-group .input-wrapper .icon-row .weather-location-reset-container {
+  display: inline-block;
+  opacity: .5;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.current-location-group .input-wrapper .icon-row .weather-location-reset-container .weather-location-reset-icon {
+  height: 15px;
+  fill: white;
+  vertical-align: -10%;
+}
+
+.current-location-group .input-wrapper .icon-row .clear-current-weather {
+  padding: 0 5px;
+  bottom: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.current-location-group .input-wrapper .icon-row .clear-current-weather .icon-cancel {
+  text-align: left;
+  text-shadow: none;
+  font-style: normal;
+  font-size: 1rem;
+  cursor: pointer;
+  box-sizing: inherit;
+  fill: white;
+  height: 9px;
+  opacity: .5;
+}
+
+.current-location-group .input-wrapper .icon-row .clear-current-weather::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  z-index: 0;
+  display: block;
+  border-radius: 50px;
+}
+
+.current-location-group .input-wrapper .icon-row .clear-current-weather:hover::after {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.current-location-group .edit-location-dropdown {
+  display: block;
+  background: #333333;
+  border-radius: 0 0 5px 5px;
+  box-shadow: none;
+  transition: transform 0.25s ease, height 0.25s ease;
+}
+
+.current-location-group .edit-location-dropdown .searching {
+  padding: 4px 7px;
+  display: block;
+  font-size: 87.5%;
+  opacity: .6;
+}
+
+.current-location-group .edit-location-dropdown .searching i {
+  visibility: visible;
+  color: white;
+  text-align: left;
+  text-shadow: none;
+  font-size: 87.5%;
+  box-sizing: inherit;
+  font-style: normal;
+  animation: blink 1.4s infinite both;
+}
+
+.current-location-group .edit-location-dropdown .searching i:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.current-location-group .edit-location-dropdown .searching i:nth-child(3) {
+  animation-delay: .4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: .2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.current-location-group .edit-location-dropdown .location-dropdown-list {
+  color: white;
+  text-align: left;
+  text-shadow: none;
+  box-sizing: inherit;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  z-index: 0;
+  transition: transform 0.25s ease, height 0.25s ease;
+  padding: 6px 0;
+  max-height: 140px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+}
+
+.current-location-group .edit-location-dropdown .location-dropdown-list li {
+  text-shadow: none;
+  list-style: none;
+  box-sizing: inherit;
+  max-width: none;
+  padding: 4px 9px;
+  opacity: .8;
+  cursor: pointer;
+  font-size: .875rem;
+}
+
+.current-location-group .edit-location-dropdown .location-dropdown-list li span {
+  text-shadow: none;
+  list-style: none;
+  cursor: pointer;
+  font-size: .875rem;
+  box-sizing: inherit;
+  margin-right: 2px;
+}
+
+.current-location-group .edit-location-dropdown .not-found {
+  text-align: left;
+  text-shadow: none;
+  box-sizing: inherit;
+  max-width: none;
+  padding: 4px 9px;
+  cursor: pointer;
+  font-size: .875rem;
+  margin: 4px 0;
+  opacity: .6;
+  display: block;
+}
+
+.display-edit-location {
+  z-index: 1;
+  opacity: 1;
 }
 /*# sourceMappingURL=editlocation.css.map */
