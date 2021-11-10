@@ -30,6 +30,6 @@
 }
 
 .loading-overlay {
-  z-index: 0;
+  z-index: 1;
 }
 /*# sourceMappingURL=pageoverlay.css.map */

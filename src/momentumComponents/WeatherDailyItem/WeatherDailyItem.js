@@ -7,34 +7,57 @@ import {WeatherContext} from "../../context/WeatherContext"
 const WeatherDailyItem = ({day, index}) => {
 
     const renderIcon = () => {
-        let weatherIcon = day && day.Day.Icon;
+
+        let weatherIcon = day?.Day?.Icon;
 
         if (weatherIcon) {
+
             return <img src={process.env.PUBLIC_URL + "/img/"+ weatherIcon + ".png" } alt="weather-icon" />
+        
         }
+
+    }
+
+    const {
+
+        handleCurrentWeatherDropDown,
+
+        activeLink
+
+    } = useContext(WeatherContext);
+
+    const DateToDay = (day) => {
+
+        let date = day && day.Date;
+
+        let newDay = new Date(date);
+
+        let dayOfWeek = newDay.toString().split(" ")[0];
+
+        return dayOfWeek;
+
     }
 
     const elementRef = useRef();
 
-    const {
-        handleCurrentWeatherDropDown,
-        activeLink
-    } = useContext(WeatherContext);
+    useEffect(() => {
 
-    const DateToDay = (day) => {
-        let date = day && day.Date;
-        let newDay = new Date(date);
-        let dayOfWeek = newDay.toString().split(" ")[0];
-        return dayOfWeek;
-    }
+        if (elementRef.current.tabIndex === 0) {
+
+            elementRef.current.click();
+
+        }
+
+    }, []);
+
 
     return (
         
-        <div onClick={() => handleCurrentWeatherDropDown(day, index)} ref={elementRef} id={`${activeLink === index ? "selected" : ""}`} className="weather-forecast-item weather-forecast-day" data-day="Friday" data-test="forecast-day" title={day && day.Day.IconPhrase}>
+        <div onClick={() => handleCurrentWeatherDropDown(day, index)} tabIndex={index} ref={elementRef} id={`${activeLink === index ? "selected" : ""}`} className="weather-forecast-item weather-forecast-day" data-day="Friday" data-test="forecast-day" title={day && day.Day.IconPhrase}>
 
             <div className="daily-weather-forecast-label" data-test="forecast-day-label">{DateToDay(day)}</div>
 
-            <span className="icon icon-weather weather-forecast-icon" data-icon="H" title={day && day.Day.IconPhrase}>
+            <span className="icon icon-weather daily-weather-forecast-icon" data-icon="H" title={day && day.Day.IconPhrase}>
 
                 {renderIcon()}  
 

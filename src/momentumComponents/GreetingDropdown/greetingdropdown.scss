@@ -36,7 +36,6 @@
         right: 0px;
     }
 
-
     .greeting-dropdown-list {
         transition: opacity 0.5s $a-curve;
         font-weight: 500;
@@ -88,7 +87,8 @@
             height: 1px;
             margin: 5px 0;
             padding: 0;
-            background: $button-background-active;
+            // background: $button-background-active;
+            background-color: rgba(255, 255, 255, 0.12);
             cursor: default;
         }
 
@@ -114,7 +114,6 @@
         top: -7px;
         border-bottom: 7px solid $app-background;
         left: 14px;
-
 
         @include responsive(tablet) {
             left: auto;

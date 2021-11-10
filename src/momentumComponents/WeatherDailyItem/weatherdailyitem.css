@@ -22,6 +22,11 @@
   margin-bottom: 5px;
 }
 
+.weather-forecast-day .daily-weather-forecast-icon img {
+  width: 3.5em;
+  height: 2em;
+}
+
 .weather-forecast-day .daily-weather-forecast-day-details {
   margin-bottom: 3px;
   display: flex;

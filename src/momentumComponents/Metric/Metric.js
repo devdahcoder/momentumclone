@@ -13,13 +13,12 @@ const Metric = () => {
         let weatherIcon = weather && weather.now && weather.now.WeatherIcon;
 
         if (weatherIcon) {
-
+        
             return <img src={process.env.PUBLIC_URL + "/img/"+ weatherIcon + ".png" } alt="weather-icon" />
         
         }
 
     }
-
 
     return (
         
@@ -28,6 +27,7 @@ const Metric = () => {
             <span className="icon icon-weather" title={weather && weather.now && weather.now.WeatherText}>
                 
                 {renderIcon()}
+                {/* <img src={require(`/public/img/${weather?.now?.WeatherIcon}.png`) } alt="weather-icon" /> */}
             
             </span>
 

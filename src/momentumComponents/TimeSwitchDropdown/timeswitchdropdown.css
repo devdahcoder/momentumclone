@@ -21,6 +21,13 @@
   background: rgba(15, 15, 15, 0.925);
 }
 
+@media screen and (max-width: 600px) {
+  .right-dropdown-container {
+    right: -6px;
+    left: auto;
+  }
+}
+
 .right-dropdown-container .time-ul {
   text-shadow: none;
   text-align: left;
@@ -67,16 +74,28 @@
   position: relative;
 }
 
+.right-dropdown-container .time-ul .time-li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
 .right-dropdown-container::after {
   content: '';
   position: absolute;
   top: -7px;
   left: 15px;
+  right: auto;
   display: inline-block;
   border-right: 7px solid transparent;
   border-bottom: 7px solid #333333;
   border-bottom: 7px solid rgba(15, 15, 15, 0.925);
   border-left: 7px solid transparent;
   overflow: visible;
+}
+
+@media screen and (max-width: 600px) {
+  .right-dropdown-container::after {
+    right: 14px;
+    left: auto;
+  }
 }
 /*# sourceMappingURL=timeswitchdropdown.css.map */

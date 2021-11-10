@@ -23,11 +23,15 @@ const WeatherHourForcast = () => {
 
 
     const renderIcon = () => {
-        let weatherIcon = dropDownCurrentWeather && dropDownCurrentWeather.Day && dropDownCurrentWeather.Day.Icon
+
+        let weatherIcon = dropDownCurrentWeather?.Day?.Icon
 
         if (weatherIcon) {
+
             return <img src={process.env.PUBLIC_URL + "/img/"+ weatherIcon + ".png" } alt="weather-icon" />
+
         }
+
     }
 
     return (
@@ -120,9 +124,9 @@ const WeatherHourForcast = () => {
                                         </span>
 
                                     </li>
-
                                     
                                     <li className="weather-location-edit-menu" data-test="edit-dropdown">Edit location</li>
+                                
                                 </ul>
 
                             </div>
@@ -137,7 +141,7 @@ const WeatherHourForcast = () => {
 
                             <span className="icon icon-weather" data-icon="H" title={dropDownCurrentWeather && dropDownCurrentWeather.Day && dropDownCurrentWeather.Day.IconPhrase}>
                                 
-                                {renderIcon()}  
+                                {renderIcon()}
                             
                             </span>
                             

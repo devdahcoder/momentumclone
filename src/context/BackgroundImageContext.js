@@ -7,41 +7,53 @@ export const BackgroundImageContext = createContext();
 
 const BackgroundImageContextProvider = (props) => {
 
-    const [backgroundImage, setBackgroundImage] = useState(null);
-
+    const [backgroundImage, setBackgroundImage] = useState("");
 
     useEffect(() => {
+
         const getBackgroundImage = store.get("backgroundImage");
 
         if (getBackgroundImage) {
+
             setBackgroundImage(getBackgroundImage);
+
         }
+
     }, [])
 
     useEffect(() => {
+
         store.set("backgroundImage", backgroundImage);
+
     }, [backgroundImage])
 
-
     const getBackgroundImage = async () => {
+
         try {
-            let url = `https://api.unsplash.com/photos/random/?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}&query=nature`
+
+            let url = `https://api.unsplash.com/photos/random/?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}&query=nature`;
+
             const response = await fetch(url);
+
             const data = await response.json();
+
             setBackgroundImage(data);
 
         } catch (error) {
+
             console.log(error);
+
         }
         
     }
 
-    useEffect(() => {
-        getBackgroundImage();
-    }, []);
+    // useEffect(() => {
+
+    //     getBackgroundImage();
+        
+    // }, []);
 
     const value = {backgroundImage, getBackgroundImage};
-
 
     return (
         <BackgroundImageContext.Provider value={value}>

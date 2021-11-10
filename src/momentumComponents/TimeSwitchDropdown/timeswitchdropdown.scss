@@ -1,4 +1,5 @@
 @import "../../style/variable";
+@import "../../style/mixin";
 
 .right-dropdown-container {
     background: $app-background;
@@ -23,7 +24,10 @@
     display: block;
     background: hsla(0, 0%, 6%, 0.925);
 
-
+    @include responsive(phone) {
+        right: -6px;
+        left: auto;
+    }
 
     .time-ul {
         text-shadow: none;
@@ -72,6 +76,10 @@
                 margin-left: 15px;
                 position: relative;
             }
+
+            &:hover {
+                background-color: $dropdown-hover-bg;
+            }
         }
 
         // &::before {
@@ -95,11 +103,17 @@
         position: absolute;
         top: -7px;
         left: 15px;
+        right: auto;
         display: inline-block;
         border-right: 7px solid transparent;
         border-bottom: 7px solid $dropdown-bg;
         border-bottom: 7px solid hsla(0, 0%, 6%, 0.925);
         border-left: 7px solid transparent;
         overflow: visible;
+
+        @include responsive(phone) {
+            right: 14px;
+            left: auto;
+        }
     }
 }

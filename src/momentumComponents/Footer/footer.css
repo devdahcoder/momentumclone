@@ -72,6 +72,12 @@ footer .footer-left-container .photo-info-container .photo-info-location {
   white-space: nowrap;
 }
 
+@media screen and (max-width: 900px) {
+  footer .footer-left-container .photo-info-container .photo-info-location {
+    transform: translateZ(0) translateY(0);
+  }
+}
+
 footer .footer-left-container .photo-info-container .photo-source {
   height: 18px;
   transition: all 0.3s ease;
@@ -81,6 +87,13 @@ footer .footer-left-container .photo-info-container .photo-source {
   font-size: 0.6875rem;
   transform: translateZ(0) translateY(-8px);
   white-space: nowrap;
+}
+
+@media screen and (max-width: 900px) {
+  footer .footer-left-container .photo-info-container .photo-source {
+    opacity: 1;
+    transform: translateZ(0) translateY(0);
+  }
 }
 
 footer .footer-left-container .photo-info-container .photo-source .photo-source-link {
