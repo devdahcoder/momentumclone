@@ -1,6 +1,13 @@
 @import "./_variable";
 
 @mixin responsive($size) {
+
+    @if $size==smallPhone {
+        @media screen and (max-width: 450px) {
+            @content
+        }
+    }
+
     @if $size==phone {
         @media screen and (max-width: 600px) {
             @content

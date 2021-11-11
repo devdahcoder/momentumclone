@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACpB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,CAAC;EACd,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,OAAO;EACf,cAAc,EAAE,IAAI;CACvB",
+    "sources": [
+        "twentyfourhours.scss"
+    ],
+    "names": [],
+    "file": "twentyfourhours.css"
+}

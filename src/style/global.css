@@ -47,4 +47,21 @@ center-col {
   background: #ffffff;
   left: 15px;
 }
+
+.time {
+  text-align: center;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  cursor: default;
+  letter-spacing: -5px;
+}
+
+@media screen and (max-width: 450px) {
+  .time {
+    font-size: 60px;
+    letter-spacing: 0px;
+  }
+}
 /*# sourceMappingURL=global.css.map */

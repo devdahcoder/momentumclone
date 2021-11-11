@@ -27,7 +27,6 @@ const Metric = () => {
             <span className="icon icon-weather" title={weather && weather.now && weather.now.WeatherText}>
                 
                 {renderIcon()}
-                {/* <img src={require(`/public/img/${weather?.now?.WeatherIcon}.png`) } alt="weather-icon" /> */}
             
             </span>
 

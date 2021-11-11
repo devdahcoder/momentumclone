@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import "../../style/global.css";
 
 const TwelveHours = ({getHour, getMinute}) => {
 
     return (
 
-        <div>
+        <div className="time">
 
             {getHour}:{getMinute}
 

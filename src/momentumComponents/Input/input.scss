@@ -1,5 +1,14 @@
-section {
+@import "../../style/mixin";
+
+.main-todo-input-form-section {
+
     transition: opacity 0.5s ease;
+    visibility: visible;
+    text-align: center;
+    box-sizing: inherit;
+    padding-bottom: 0.5em;
+    max-width: 87.5%;
+
     form {
         .input-form-display {
             text-align: center;
@@ -13,6 +22,11 @@ section {
                 font-weight: 400;
                 margin: 0;
                 line-height: normal;
+
+                @include responsive(smallPhone) {
+                    font-size: 20px;
+                    margin-bottom: 4px;
+                }
             }
 
             input {

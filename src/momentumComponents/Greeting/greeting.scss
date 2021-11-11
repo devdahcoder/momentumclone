@@ -1,15 +1,12 @@
 @import "../../style/variable";
+@import "../../style/mixin";
 
 .greeting-section {
     
-
-
     .greeting-display {
         position: relative;
         transition: opacity 0.5s ease;
         line-height: normal;
-
-
         font-size: 0.9rem;
         box-sizing: inherit;
         position: relative;
@@ -19,10 +16,7 @@
         padding: 0;
         margin: 0;
         line-height: normal;
-
-
         
-
         .greeting-side-col {
             text-align: center;
             font-weight: 500;
@@ -31,94 +25,17 @@
             flex: 1 0 50px;
             display: inline-flex;
             align-items: center;
-        }
 
-        .greeting-text-container {
-            transition: opacity 0.5s ease;
-            text-align: center;
-            font-weight: 400;
-            line-height: normal;
-            display: inline-flex;
-
-            .greeting-text-content {
-                text-align: center;
-                transition: opacity 0.5s ease;
-                font-size: 337.5%;
-                display: inline;
-
-                .greeting-message {
-                    text-align: center;
-                    font-weight: 400;
-                    line-height: normal;
-                    transition: opacity 0.5s ease;
-                }
-
-                .greeting-name-container {
-                    // text-align: center;
-                    // font-weight: 500;
-                    // line-height: normal;
-                    // // font-size: 337.5%;
-                    // box-sizing: inherit;
-                    white-space: nowrap;
-
-                    .greeting-name-wrapper {
-                        position: relative;
-                        // text-align: center;
-                        // font-weight: 500;
-                        // line-height: normal;
-                        // font-size: 337.5%;
-                        white-space: nowrap;
-
-
-                        // .greeting-user-name {
-                        //     color: #fff;
-                        //     text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-                        //     user-select: none;
-                        //     text-align: center;
-                        //     font-weight: 500;
-                        //     line-height: normal;
-                        //     // font-size: 337.5%;
-                        //     vertical-align: top;
-                        //     max-width: 12em;
-                        //     display: inline-block;
-                        //     border-radius: 3px;
-                        //     outline: 0;
-                        //     overflow: hidden;
-                        //     white-space: nowrap;
-                        // }
-                    }
-
-                    .punctuation {
-                        // text-align: center;
-                        // font-weight: 500;
-                        // line-height: normal;
-                        // font-size: 337.5%;
-                        white-space: nowrap;
-                    }
-                }
-
-            }
-        }
-
-        .greeting-menu-container {
-            font-weight: 500;
-            font-size: 337.5%;
-            text-align: center;
-            font-weight: 500;
-            line-height: normal;
-            transition: opacity 0.5s ease;
-            
             .greeting-menu-display {
+                font-size: 90%;
+                transition: opacity 0.5s ease;
                 text-align: center;
                 font-weight: 500;
                 line-height: normal;
                 box-sizing: inherit;
                 position: relative;
-                padding-left: 4px;
-                transition: opacity 0.5s ease;
 
                 .greeting-menu-wrapper {
-                    text-align: center;
                     cursor: pointer;
                     padding: 5px;
                     display: inline-flex;
@@ -126,11 +43,8 @@
                     align-items: center;
                     justify-content: center;
                     margin-top: 9px;
-                    padding-left: 14px;
-                    padding-right: 14px;
-                    transition: opacity 0.5s ease;
-                    // margin-left: 12px;
-                    
+                    margin-left: 12px;
+
                     .more-icon {
                         transition: opacity 0.5s ease;
                         height: 18px;
@@ -142,6 +56,10 @@
                         height: 18px;
                         fill: $app-text-color;
                         cursor: pointer;
+
+                        @include responsive(smallPhone) {
+                            height: 16px;
+                        }
 
                         &::before {
                             content: '\e808';
@@ -166,6 +84,11 @@
                         z-index: 0;
                         display: block;
                         border-radius: 50px;
+
+                        @include responsive(smallPhone) {
+                            height: 26px;
+                            width: 26px;
+                        }
                     }
 
                     &:hover {
@@ -177,11 +100,79 @@
                 }
             }
         }
+
+        .greeting-text-container {
+            transition: opacity 0.5s ease;
+            text-align: center;
+            font-weight: 400;
+            line-height: normal;
+            display: inline-flex;
+
+            .greeting-text-content {
+                text-align: center;
+                transition: opacity 0.5s ease;
+                font-size: 3.375rem;
+                display: inline;
+
+                @include responsive(smallPhone) {
+                    font-size: clamp(10px, 7vw, 26px);
+                }
+
+                .greeting-message {
+                    text-align: center;
+                    font-weight: 400;
+                    line-height: normal;
+                    transition: opacity 0.5s ease;
+                }
+
+                .greeting-name-container {
+                    // text-align: center;
+                    // font-weight: 500;
+                    // line-height: normal;
+                    // // font-size: 337.5%;
+                    // box-sizing: inherit;
+                    white-space: nowrap;
+
+                    .greeting-name-wrapper {
+                        position: relative;
+                        // text-align: center;
+                        // font-weight: 500;
+                        // line-height: normal;
+                        white-space: nowrap;
+
+
+                        .greeting-user-name {
+                            color: #fff;
+                            text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
+                            text-align: center;
+                            line-height: normal;
+                            // font-size: 3.375rem;
+                            vertical-align: top;
+                            max-width: 12em;
+                            display: inline-block;
+                            border-radius: 3px;
+                            outline: 0;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+
+                    .punctuation {
+                        // text-align: center;
+                        // font-weight: 500;
+                        // line-height: normal;
+                        // font-size: 337.5%;
+                        white-space: nowrap;
+                    }
+                }
+
+            }
+        }
     }
 
     &:hover {
         .greeting-display {
-            .greeting-menu-container {
+            .greeting-side-col {
                 .greeting-menu-display {
                     .greeting-menu-wrapper {
                         .more-icon {

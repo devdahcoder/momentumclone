@@ -29,6 +29,12 @@
   padding-right: 20px;
 }
 
+@media screen and (max-width: 450px) {
+  .weather-top-right .weather .metric-item {
+    padding-top: 16px;
+  }
+}
+
 .weather-top-right .weather .metric-item .location-metric-label-name-container {
   margin: 0;
   padding: 0 0 3px;

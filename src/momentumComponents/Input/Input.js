@@ -6,17 +6,17 @@ import {TodoContext} from "../../context/TodoContext"
 
 const Input = () => {
 
-  const {
+	const {
 		isEditing,
 		todoList, 
 		inputValue, 
 		handleTodoSubmit,
 		handleTodoInput,
-	  } = useContext(TodoContext);
+	} = useContext(TodoContext);
 
 	return (
 
-		<section style={{ display: todoList.length < 1 || isEditing  ? "block" : "none" }}>
+		<section className="main-todo-input-form-section" style={{ display: todoList.length < 1 || isEditing  ? "block" : "none" }}>
 			<form action="" onSubmit={ handleTodoSubmit }>
 				<div className="input-form-display">
                     <label htmlFor="">What is your main Focus today?</label>

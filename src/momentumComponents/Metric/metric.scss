@@ -14,7 +14,6 @@
     .icon-weather {
         color: #fff;
         text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-        user-select: none;
         text-align: right;
         cursor: pointer;
         font-size: 1.625rem;
@@ -23,13 +22,23 @@
         box-sizing: inherit;
         height: 13px;
         fill: #fff;
-        margin-right: 6px;
+        margin-right: 4px;
+        
+
+        img {
+            width: 2em;
+            // display: inline-block;
+            // font-weight: 400;
+            // font-variant: normal;
+            // text-align: center;
+            // text-decoration: inherit;
+            // text-transform: none;
+        }
     }
 
     .metric-stat-number {
         color: #fff;
         text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-        user-select: none;
         text-align: right;
         cursor: pointer;
         font-size: 1.625rem;
@@ -41,7 +50,6 @@
     .weather-degree {
         color: #fff;
         text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-        user-select: none;
         text-align: right;
         cursor: pointer;
         font-size: 1.625rem;
@@ -54,7 +62,6 @@
     .hide {
         color: #fff;
         text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-        user-select: none;
         text-align: right;
         cursor: pointer;
         font-weight: 400;
@@ -74,7 +81,6 @@
 .metric-label {
     color: #fff;
     text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-    user-select: none;
     text-align: right;
     cursor: pointer;
     box-sizing: inherit;
@@ -91,7 +97,6 @@
     .metric-label-name {
         color: #fff;
         text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-        user-select: none;
         text-align: right;
         cursor: pointer;
         overflow-wrap: break-word;

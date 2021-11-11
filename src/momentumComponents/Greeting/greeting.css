@@ -23,6 +23,82 @@
   align-items: center;
 }
 
+.greeting-section .greeting-display .greeting-side-col .greeting-menu-display {
+  font-size: 90%;
+  transition: opacity 0.5s ease;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: inherit;
+  position: relative;
+}
+
+.greeting-section .greeting-display .greeting-side-col .greeting-menu-display .greeting-menu-wrapper {
+  cursor: pointer;
+  padding: 5px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9px;
+  margin-left: 12px;
+}
+
+.greeting-section .greeting-display .greeting-side-col .greeting-menu-display .greeting-menu-wrapper .more-icon {
+  transition: opacity 0.5s ease;
+  height: 18px;
+  text-align: center;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  opacity: 0;
+  height: 18px;
+  fill: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  .greeting-section .greeting-display .greeting-side-col .greeting-menu-display .greeting-menu-wrapper .more-icon {
+    height: 16px;
+  }
+}
+
+.greeting-section .greeting-display .greeting-side-col .greeting-menu-display .greeting-menu-wrapper .more-icon::before {
+  content: '\e808';
+  width: 1em;
+  display: inline-block;
+  font-family: icons;
+  font-weight: 400;
+  font-variant: normal;
+  speak: none;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.greeting-section .greeting-display .greeting-side-col .greeting-menu-display .greeting-menu-wrapper::after {
+  content: '';
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  z-index: 0;
+  display: block;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 450px) {
+  .greeting-section .greeting-display .greeting-side-col .greeting-menu-display .greeting-menu-wrapper::after {
+    height: 26px;
+    width: 26px;
+  }
+}
+
+.greeting-section .greeting-display .greeting-side-col .greeting-menu-display .greeting-menu-wrapper:hover::after {
+  background: rgba(255, 255, 255, 0.2);
+  transition: opacity 0.5s ease;
+}
+
 .greeting-section .greeting-display .greeting-text-container {
   transition: opacity 0.5s ease;
   text-align: center;
@@ -34,8 +110,14 @@
 .greeting-section .greeting-display .greeting-text-container .greeting-text-content {
   text-align: center;
   transition: opacity 0.5s ease;
-  font-size: 337.5%;
+  font-size: 3.375rem;
   display: inline;
+}
+
+@media screen and (max-width: 450px) {
+  .greeting-section .greeting-display .greeting-text-container .greeting-text-content {
+    font-size: clamp(10px, 7vw, 26px);
+  }
 }
 
 .greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-message {
@@ -54,86 +136,25 @@
   white-space: nowrap;
 }
 
+.greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-name-container .greeting-name-wrapper .greeting-user-name {
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: normal;
+  vertical-align: top;
+  max-width: 12em;
+  display: inline-block;
+  border-radius: 3px;
+  outline: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .greeting-section .greeting-display .greeting-text-container .greeting-text-content .greeting-name-container .punctuation {
   white-space: nowrap;
 }
 
-.greeting-section .greeting-display .greeting-menu-container {
-  font-weight: 500;
-  font-size: 337.5%;
-  text-align: center;
-  font-weight: 500;
-  line-height: normal;
-  transition: opacity 0.5s ease;
-}
-
-.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display {
-  text-align: center;
-  font-weight: 500;
-  line-height: normal;
-  box-sizing: inherit;
-  position: relative;
-  padding-left: 4px;
-  transition: opacity 0.5s ease;
-}
-
-.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper {
-  text-align: center;
-  cursor: pointer;
-  padding: 5px;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 9px;
-  padding-left: 14px;
-  padding-right: 14px;
-  transition: opacity 0.5s ease;
-}
-
-.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper .more-icon {
-  transition: opacity 0.5s ease;
-  height: 18px;
-  text-align: center;
-  font-weight: 500;
-  line-height: normal;
-  cursor: pointer;
-  opacity: 0;
-  height: 18px;
-  fill: white;
-  cursor: pointer;
-}
-
-.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper .more-icon::before {
-  content: '\e808';
-  width: 1em;
-  display: inline-block;
-  font-family: icons;
-  font-weight: 400;
-  font-variant: normal;
-  speak: none;
-  text-align: center;
-  text-decoration: inherit;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-}
-
-.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper::after {
-  content: '';
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  z-index: 0;
-  display: block;
-  border-radius: 50px;
-}
-
-.greeting-section .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper:hover::after {
-  background: rgba(255, 255, 255, 0.2);
-  transition: opacity 0.5s ease;
-}
-
-.greeting-section:hover .greeting-display .greeting-menu-container .greeting-menu-display .greeting-menu-wrapper .more-icon {
+.greeting-section:hover .greeting-display .greeting-side-col .greeting-menu-display .greeting-menu-wrapper .more-icon {
   opacity: 1;
   transition: opacity 0.5s ease;
 }

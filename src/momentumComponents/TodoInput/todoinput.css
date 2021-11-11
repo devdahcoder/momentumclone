@@ -36,6 +36,12 @@
   content: " ";
 }
 
+@media screen and (max-width: 450px) {
+  .todo-input-container .todo-input-wrapper .todo-input-focus::before {
+    display: none;
+  }
+}
+
 .todo-input-container .todo-input-wrapper .todo-input-focus .todo-input-focus-wrapper {
   text-align: center;
   box-sizing: inherit;

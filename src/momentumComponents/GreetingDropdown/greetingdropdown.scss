@@ -32,8 +32,7 @@
 
     @include responsive(tablet) {
         left: auto;
-        // right: -7px;
-        right: 0px;
+        right: -7px;
     }
 
     .greeting-dropdown-list {
@@ -114,6 +113,7 @@
         top: -7px;
         border-bottom: 7px solid $app-background;
         left: 14px;
+        right: auto;
 
         @include responsive(tablet) {
             left: auto;

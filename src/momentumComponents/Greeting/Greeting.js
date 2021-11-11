@@ -19,13 +19,13 @@ const Greeting = () => {
 
       <div className="greeting-display">
 
-        <div className="side-col"></div>
+        <div className="greeting-side-col"></div>
 
         <div className="greeting-text-container">
 
           <span className="greeting-text-content">
 
-            <span className="greeting-message">{greeting}</span>
+            <span className="greeting-message">{greeting} </span>
 
             <span className="greeting-name-container">
 
@@ -46,7 +46,7 @@ const Greeting = () => {
 
         </div>
 
-        <div className="greeting-menu-container side-col">
+        <div className="greeting-side-col">
 
           <div className="greeting-menu-display more-dash">
 
