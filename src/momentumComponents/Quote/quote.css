@@ -5,6 +5,16 @@
   flex: 1 1 auto;
 }
 
+@media screen and (max-width: 900px) {
+  .footer-center-container {
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    order: 1;
+    justify-content: center;
+  }
+}
+
 .footer-center-container .footer-center-display {
   position: relative;
   transition: opacity 0.5s ease;

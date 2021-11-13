@@ -1,10 +1,20 @@
 @import "../../style/variable";
+@import "../../style/mixin";
 
 .footer-center-container {
     display: flex;
     align-items: flex-end;
     min-width: 0;
     flex: 1 1 auto;
+
+    @include responsive (tablet) {
+        width: 100%;
+        position: absolute;
+        bottom: 60px;
+        order: 1;
+        // flex: 1 1 auto;
+        justify-content: center;
+    }
 
 
     .footer-center-display {

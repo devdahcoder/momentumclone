@@ -87,7 +87,7 @@ const Footer = () => {
 
             </div>
 
-            {/* <Quote /> */}
+            <Quote />
 
             <div className="region footer-right-container">
 
