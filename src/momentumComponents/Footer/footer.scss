@@ -182,6 +182,10 @@ footer {
         flex: 0 0 188px;
         justify-content: flex-end;
 
+        @include responsive(phone) {
+            display: none
+        }
+
         .footer-todo-container {
             color: #fff;
             font-size: 100%;

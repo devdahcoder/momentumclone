@@ -176,6 +176,12 @@ footer .footer-right-container {
   justify-content: flex-end;
 }
 
+@media screen and (max-width: 600px) {
+  footer .footer-right-container {
+    display: none;
+  }
+}
+
 footer .footer-right-container .footer-todo-container {
   color: #fff;
   font-size: 100%;
