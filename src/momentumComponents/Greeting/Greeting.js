@@ -25,7 +25,7 @@ const Greeting = () => {
 
           <span className="greeting-text-content">
 
-            <span className="greeting-message">{greeting} </span>
+            <span className="greeting-message">{name ? greeting : "Please enter your name"} </span>
 
             <span className="greeting-name-container">
 

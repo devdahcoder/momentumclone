@@ -112,8 +112,8 @@
 
 .todo-list-item-container .todo-delete-container .todo-delete .icon-wrapper::after {
   content: "";
-  height: 42px;
-  width: 42px;
+  height: 29px;
+  width: 29px;
   position: absolute;
   z-index: 0;
   display: block;

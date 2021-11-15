@@ -4,18 +4,18 @@
     position: relative;
     display: none;
     .notification-app-wrapper {
-            visibility: visible;
-            // --app-container-transition: opacity 0.5s ease;
-            box-sizing: inherit;
-            position: relative;
-            // transition: var(--a-default);
-            z-index: 1;
-            overflow: visible;
-            display: block;
-            opacity: 1;
-            transform: none;
+        visibility: visible;
+        // --app-container-transition: opacity 0.5s ease;
+        box-sizing: inherit;
+        position: relative;
+        // transition: var(--a-default);
+        z-index: 1;
+        overflow: visible;
+        display: block;
+        opacity: 1;
+        transform: none;
 
-            // transform: translateY(5px);
+        // transform: translateY(5px);
 
         &::after {
             content: '';

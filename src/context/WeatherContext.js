@@ -33,12 +33,17 @@ const WeatherContextProvider = (props) => {
         const getWeather = store.get("weather");
 
         if (getWeather) {
+
             setWeather(getWeather);
+
         }
+        
     }, []);
 
     useEffect(() => {
+
         store.set("weather", weather);
+
     }, [weather])
 
     const getWeather = async (locationData) => {

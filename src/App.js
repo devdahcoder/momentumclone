@@ -19,13 +19,12 @@ function App() {
     const {backgroundImage} = useContext(BackgroundImageContext);
 
 
-    // const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
-    // useEffect(() => {
-    //   setIsLoading(false);
-
-    //   // setTimeout(() => setIsLoading(false), 1000)
-    // }, [])
+    useEffect(() => {
+      setIsLoading(false);
+      console.log("done loading");
+    }, [])
 
     return (
       <>

@@ -153,8 +153,8 @@
 
                 &::after {
                     content: "";
-                    height: $icon-wrapper-size;
-                    width: $icon-wrapper-size;
+                    height: $icon-size;
+                    width: $icon-size;
                     position: absolute;
                     z-index: 0;
                     display: block;
