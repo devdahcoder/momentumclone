@@ -127,6 +127,8 @@ const TodoContextProvider = (props) => {
 
                 setTodoList([...todoList, newTodo]);
 
+                setTodoDropdown(false);
+
             } else {
 
                 alert("cant happen");
