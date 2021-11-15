@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/momentumclone/static/css/main.150e4ce2.chunk.css",
+    "main.css": "/momentumclone/static/css/main.3ef968a6.chunk.css",
     "main.js": "/momentumclone/static/js/main.6a13a1c2.chunk.js",
     "main.js.map": "/momentumclone/static/js/main.6a13a1c2.chunk.js.map",
     "runtime-main.js": "/momentumclone/static/js/runtime-main.68ac6b06.js",
@@ -8,14 +8,14 @@
     "static/js/2.e1e7fe1b.chunk.js": "/momentumclone/static/js/2.e1e7fe1b.chunk.js",
     "static/js/2.e1e7fe1b.chunk.js.map": "/momentumclone/static/js/2.e1e7fe1b.chunk.js.map",
     "index.html": "/momentumclone/index.html",
-    "static/css/main.150e4ce2.chunk.css.map": "/momentumclone/static/css/main.150e4ce2.chunk.css.map",
+    "static/css/main.3ef968a6.chunk.css.map": "/momentumclone/static/css/main.3ef968a6.chunk.css.map",
     "static/js/2.e1e7fe1b.chunk.js.LICENSE.txt": "/momentumclone/static/js/2.e1e7fe1b.chunk.js.LICENSE.txt",
     "static/media/weatherforcast.css": "/momentumclone/static/media/pencil.fdc214d4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.68ac6b06.js",
     "static/js/2.e1e7fe1b.chunk.js",
-    "static/css/main.150e4ce2.chunk.css",
+    "static/css/main.3ef968a6.chunk.css",
     "static/js/main.6a13a1c2.chunk.js"
   ]
 }
