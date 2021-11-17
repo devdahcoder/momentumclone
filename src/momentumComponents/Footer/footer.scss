@@ -176,7 +176,6 @@ footer {
         color: #fff;
         font-size: 100%;
         text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-        user-select: none;
         display: flex;
         align-items: flex-end;
         flex: 0 0 188px;
@@ -187,18 +186,13 @@ footer {
         }
 
         .footer-todo-container {
-            color: #fff;
-            font-size: 100%;
-            user-select: none;
             position: relative;
-            --app-container-transition: opacity 0.5s ease;
             display: inline-block;
             transition: opacity 0.5s ease;
             text-shadow: none;
             text-align: right;
 
             .footer-todo-toggle {
-                user-select: none;
                 text-shadow: none;
                 text-align: right;
                 box-sizing: inherit;

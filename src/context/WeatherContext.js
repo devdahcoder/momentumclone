@@ -64,33 +64,74 @@ const WeatherContextProvider = (props) => {
         }
     }
 
-    //get user location and collect location key
-    const getUserLocation = () => {
-        navigator.geolocation.getCurrentPosition(
-            async (position) => {
-                try {
-                    const { latitude, longitude } = position.coords;
+    // get user location and collect location key
+    // const getUserLocation = () => {
+    //     navigator.geolocation.getCurrentPosition(
+    //         async (position) => {
+    //             try {
+    //                 const { latitude, longitude } = position.coords;
 
-                    let url = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
+    //                 let url = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
 
-                    const response = await fetch(url);
-                    const data = await response.json();
-                    getWeather(data);
-                    console.log(data);
-                    setLocationKey(data.Key);
-                } catch (error) {
-                    console.log(error);
-                }
-            },
-            () => {
-                console.log("your browser does not support it");
-            }
-        );
+    //                 const response = await fetch(url);
+    //                 const data = await response.json();
+    //                 getWeather(data);
+    //                 console.log(data);
+    //                 setLocationKey(data.Key);
+    //             } catch (error) {
+    //                 console.log(error);
+    //             }
+    //         },
+    //         () => {
+    //             console.log("your browser does not support it");
+    //         }
+    //     );
+    // }
+
+    const getUserLocationFromIp = async (IpData) => {
+
+        let url = `http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=${process.env.REACT_APP_WEATHER_API_KEY}=${IpData.ip}&details=true`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            getWeather(data);
+            // setLocationKey(data.Key);
+        }
+        catch (error) {
+            console.log(error);
+        }
     }
 
+    const getUserIp = async () => {
+
+        const url = "https://api.ipregistry.co/?key=tryout";
+
+        try {
+            const response = await fetch(url);
+            const IpData = await response.json();
+            // getWeather(data);
+            // setLocationKey(data.ip);
+            console.log(IpData);
+            getUserLocationFromIp(IpData);
+        }
+        catch (error) {
+            console.log(error);
+        }
+
+    }
+
+
     useEffect(() => {
-        getUserLocation();
-    }, []);
+        getUserIp();
+    }, [])
+
+
+    // useEffect(() => {
+
+    //     getUserLocation();
+
+    // }, []);
 
 
     const toggleWeatherDropdown = () => {
