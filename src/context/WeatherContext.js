@@ -123,7 +123,9 @@ const WeatherContextProvider = (props) => {
 
 
     useEffect(() => {
+
         getUserIp();
+        
     }, [])
 
 
@@ -145,7 +147,6 @@ const WeatherContextProvider = (props) => {
     const handleCurrentWeatherDropDown = (element, id) => {
         setDropDownCurrentWeather(element);
         setActiveLink(id);
-        console.log(id)
     };
 
     const toggleEditWeather = () => {
