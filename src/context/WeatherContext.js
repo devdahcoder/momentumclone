@@ -47,76 +47,113 @@ const WeatherContextProvider = (props) => {
     }, [weather])
 
     const getWeather = async (locationData) => {
-        let urlNow = `https://dataservice.accuweather.com/currentconditions/v1/${locationData.Key}?apikey=${process.env.REACT_APP_WEATHER_API_KEY}`
-        let urlDays = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationData.Key}?apikey=${process.env.REACT_APP_WEATHER_API_KEY}`
 
         try {
+
+            let urlNow = `https://dataservice.accuweather.com/currentconditions/v1/${locationData.Key}?apikey=${process.env.REACT_APP_WEATHER_API_KEY}`
+        
+            let urlDays = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationData.Key}?apikey=${process.env.REACT_APP_WEATHER_API_KEY}`
+
             const responseNow = await fetch(urlNow);
+
             const responseDays = await fetch(urlDays);
 
             const dataNow = await responseNow.json();
+
             const dataDays = await responseDays.json();
 
             setWeather({...weather, now: dataNow[0], days: dataDays.DailyForecasts, location: locationData,});
+        
         }
         catch (error) {
+
             console.log("Something went wrong", error);
+
         }
+
     }
 
-    // get user location and collect location key
-    // const getUserLocation = () => {
-    //     navigator.geolocation.getCurrentPosition(
-    //         async (position) => {
-    //             try {
-    //                 const { latitude, longitude } = position.coords;
+    const getUserLocation = () => {
 
-    //                 let url = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
+        navigator.geolocation.getCurrentPosition(
 
-    //                 const response = await fetch(url);
-    //                 const data = await response.json();
-    //                 getWeather(data);
-    //                 console.log(data);
-    //                 setLocationKey(data.Key);
-    //             } catch (error) {
-    //                 console.log(error);
-    //             }
-    //         },
-    //         () => {
-    //             console.log("your browser does not support it");
-    //         }
-    //     );
-    // }
+            async (position) => {
+
+                try {
+
+                    const { latitude, longitude } = position.coords;
+
+                    let url = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude}%2C${longitude}&language=en-us&details=true&toplevel=true`;
+
+                    const response = await fetch(url);
+
+                    const data = await response.json();
+
+                    getWeather(data);
+
+                    console.log(data);
+
+                    setLocationKey(data.Key);
+
+                } catch (error) {
+
+                    console.log(error);
+
+                }
+
+            },
+
+            () => {
+
+                console.log("your browser does not support it");
+
+            }
+
+        );
+        
+    }
 
     const getUserLocationFromIp = async (IpData) => {
 
-        let url = `http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=${process.env.REACT_APP_WEATHER_API_KEY}=${IpData.ip}&details=true`;
-
         try {
+
+            let url = `http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=${process.env.REACT_APP_WEATHER_API_KEY}=${IpData}&details=true`;
+
             const response = await fetch(url);
+
             const data = await response.json();
+
             getWeather(data);
-            // setLocationKey(data.Key);
+
+            console.log(data);
+
         }
         catch (error) {
+
             console.log(error);
+
         }
+
     }
 
     const getUserIp = async () => {
 
-        const url = "https://api.ipregistry.co/?key=tryout";
-
         try {
-            const response = await fetch(url);
+            const url = "https://ipgeolocation.abstractapi.com/v1/?api_key=fe77e964bf7b4b499f68833b15ecbcb7";
+
+            const response = await fetch( url )
+
             const IpData = await response.json();
-            // getWeather(data);
-            // setLocationKey(data.ip);
+
             console.log(IpData);
+
             getUserLocationFromIp(IpData);
+            
         }
         catch (error) {
+
             console.log(error);
+
         }
 
     }
@@ -124,16 +161,11 @@ const WeatherContextProvider = (props) => {
 
     useEffect(() => {
 
-        getUserIp();
+        // getUserIp();
+        getUserLocation();
         
-    }, [])
+    }, []);
 
-
-    // useEffect(() => {
-
-    //     getUserLocation();
-
-    // }, []);
 
 
     const toggleWeatherDropdown = () => {
@@ -172,7 +204,7 @@ const WeatherContextProvider = (props) => {
         }
     }
 
-    const debouncedChangeHandler = useCallback(debounce((text) => searchLocation(text), 300), []);
+    const debouncedChangeHandler = useCallback(debounce((text) => searchLocation(text), 1000), []);
 
     const handleEditLocationInput = (e) => {
         setEditLocationInput(e.target.value);
@@ -196,6 +228,7 @@ const WeatherContextProvider = (props) => {
         editLocationIsLoading,
         editLocationError,
         getWeather,
+        getUserIp,
     };
 
     return (
