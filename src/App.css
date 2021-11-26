@@ -88,6 +88,10 @@
   text-align: center;
 }
 
+.main-app .show-app-component {
+  opacity: 0;
+}
+
 .main-app .drop-overlay {
   z-index: 1000000;
   display: none;

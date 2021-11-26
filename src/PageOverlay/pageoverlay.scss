@@ -28,10 +28,14 @@
             }
         }
     }
+
+    .loading-logo-opacity {
+        opacity: 1;
+    }
     
 }
 
 .loading-overlay {
     //if page is loading overlay should be visible
-    z-index: 1;
+    z-index: 100;
 }

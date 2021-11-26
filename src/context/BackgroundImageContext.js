@@ -66,19 +66,24 @@ const BackgroundImageContextProvider = (props) => {
         
     }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        getBackgroundImage();
+    //     getBackgroundImage();
         
-    }, []);
+    // }, []);
 
-    const value = {backgroundImage, getBackgroundImage, backgroundImageError};
+    const value = {backgroundImage, getBackgroundImage, backgroundImageError, backgroundIsLoading};
 
     return (
+
         <BackgroundImageContext.Provider value={value}>
+
             {props.children}
+
         </BackgroundImageContext.Provider>
+
     )
+
 }
 
 export default BackgroundImageContextProvider

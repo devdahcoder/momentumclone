@@ -5,7 +5,7 @@ import "../../style/global.css";
 //imported components
 import TwentyFourHours from "../TwentyFourHours/TwentyFourHours";
 import TwelveHours from "../TwelveHours/TwelveHours";
-import TimeDropdownSelect from "../TimeDropdownSelect/TimeDropdownSelect"
+import TimeDropdownSelect from "../TimeDropDownSelect/TimeDropDownSelect"
 import TimeSwitchDropdown from "../TimeSwitchDropdown/TimeSwitchDropdown"
 
 //imported utils

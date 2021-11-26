@@ -27,8 +27,6 @@ const WeatherContextProvider = (props) => {
     const [editLocationError, setEditLocationError] = useState(null);
     const [locationKey, setLocationKey] = useState(null);
     
-    
-    
     useEffect(() => {
         const getWeather = store.get("weather");
 
@@ -139,7 +137,7 @@ const WeatherContextProvider = (props) => {
     const getUserIp = async () => {
 
         try {
-            const url = "https://ipgeolocation.abstractapi.com/v1/?api_key=fe77e964bf7b4b499f68833b15ecbcb7";
+            const url = `https://ipgeolocation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_IP_ADDRESS_API_KEY}`;
 
             const response = await fetch( url )
 
@@ -169,46 +167,73 @@ const WeatherContextProvider = (props) => {
 
 
     const toggleWeatherDropdown = () => {
+
         setDaysWeatherDropdown(!daysWeatherDropdown);
+
     }
 
     const toggleWeatherDailyMore = () => {
+
         setWeatherDailyMore(!weatherDailyMore);
+
     }
 
     const handleCurrentWeatherDropDown = (element, id) => {
+
         setDropDownCurrentWeather(element);
+
         setActiveLink(id);
+
     };
 
     const toggleEditWeather = () => {
+
         setEditWeather(!editWeather);
+
     }
 
     const searchLocation = async (locationInput) => {
+
         setEditLocationIsLoading(true);
+
         setEditLocationError(null);
 
         try {
+            
             let url = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${process.env.REACT_APP_WEATHER_API_KEY}&q=${locationInput}`;
+            
             // let url = `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${process.env.REACT_APP_WEATHER_API_KEY}=${locationInput}`;
+
             const response = await fetch(url);
+
             const data = await response.json();
+
             console.log(data);
+
             setEditLocation(data);
+
             setEditLocationIsLoading(false);
+
         } catch (error) {
+
             console.log(error);
+
             setEditLocationError(error);
+
             setEditLocationIsLoading(false);
+
         }
+
     }
 
     const debouncedChangeHandler = useCallback(debounce((text) => searchLocation(text), 1000), []);
 
     const handleEditLocationInput = (e) => {
+
         setEditLocationInput(e.target.value);
+
         debouncedChangeHandler(e.target.value);
+
     }
     
     const value = { 

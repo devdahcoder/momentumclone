@@ -43,11 +43,11 @@ const Footer = () => {
 
                 <div className="app-container app-dash photo-info-container show-hover">
                     
-                    <div className="photo-info-location">{`${backgroundImage && backgroundImage.location.city}, ${ backgroundImage && backgroundImage.location.country}`}</div>
+                    <div className="photo-info-location">{`${backgroundImage && backgroundImage?.location?.city}, ${ backgroundImage && backgroundImage?.location?.country}`}</div>
 
                     <div className="photo-source">
 
-                        <div data-url="https://unsplash.com/photos/qnjKufYqIIE" className="photo-source-link">{`${backgroundImage && backgroundImage.user.name}`}</div>
+                        <div data-url="https://unsplash.com/photos/qnjKufYqIIE" className="photo-source-link">{`${backgroundImage && backgroundImage?.user?.name}`}</div>
                         
                         <span className="photo-source-control control-heart-container">
                             

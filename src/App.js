@@ -13,32 +13,47 @@ import TodoContextProvider from "./context/TodoContext";
 import TimeContextProvider from "./context/TimeContext";
 import QuoteContextProvider from "./context/QuoteContext"
 import {BackgroundImageContext} from "./context/BackgroundImageContext";
+import BackgroundImageContextProvider from "./context/BackgroundImageContext";
 
 function App() {
 
-    const {backgroundImage} = useContext(BackgroundImageContext);
+    const { backgroundImage, backgroundIsLoading } = useContext(BackgroundImageContext);
 
 
-    const [isLoading, setIsLoading] = useState(true);
+    // const [isLoading, setIsLoading] = useState(true);
     
+    // useEffect(() => {
 
-    useEffect(() => {
-      setIsLoading(false);
-      console.log("done loading");
-    }, [])
+    //   setIsLoading(false);
+
+    //   console.log("done loading");
+
+    // }, [])
 
     return (
       <>
-        <Overlay />
+      
+        <BackgroundImageContextProvider>
+
+          <Overlay />
+
+        </BackgroundImageContextProvider>
+
         <div className="main-app">
+
           <div data-v-684a4388="" className="backgrounds">
+
             <div data-v-684a4388="" className="background">
-              <div data-v-684a4388="" data-test="background-item" className="background-item" style={{backgroundImage: backgroundImage ? `url(${backgroundImage.urls.full})` : ""}}></div>
+
+              <div data-v-684a4388="" data-test="background-item" className="background-item" style={{backgroundImage: backgroundImage ? `url(${backgroundImage?.urls?.full})` : ""}}></div>
+
             </div>
+
             <div data-v-684a4388="" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/img/download.png'})` }} className="background-overlay"></div>
+
           </div>
           
-          <div className="show-app">
+          <div className={`show-app ${backgroundIsLoading ? "show-app-component" : ""}`}>
 
             <div className="region full"></div>
 
@@ -46,21 +61,23 @@ function App() {
 
             <div className="center-above"></div>
 
-
             <TimeContextProvider>
+
               <TimeGreet />
+
             </TimeContextProvider>
-            
-            
 
             <TodoContextProvider>
+
               <TodoInput />
+
             </TodoContextProvider>
 
             <QuoteContextProvider>
-              <Footer />
-            </QuoteContextProvider>
 
+              <Footer />
+
+            </QuoteContextProvider>
             
           </div>
 
@@ -70,7 +87,9 @@ function App() {
         </div>
       
       </>
+
     );
+
 }
 
 export default App;
