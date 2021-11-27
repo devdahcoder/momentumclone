@@ -13,7 +13,7 @@ const WeatherDailyList = () => {
 
     return (
 
-        <section className="weather-row weather-forecast weather-forecast-daily-container active">
+        <section data-testid="weather-daily-list" className="weather-row weather-forecast weather-forecast-daily-container active">
 
             {weather.days.map((day, index) => {
 

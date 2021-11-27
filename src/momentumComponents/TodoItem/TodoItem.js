@@ -15,7 +15,8 @@ const TodoItem = ({ todo }) => {
   const {id, value, completed} = todo;
 
   return (
-    <div className="todo-list-item-container" >
+
+    <div data-testid="todo-item-container" className="todo-list-item-container" >
 
       <span className="side-col todo-checkbox-container">
 
@@ -55,6 +56,7 @@ const TodoItem = ({ todo }) => {
     </div>
     
   );
+  
 };
 
 export default TodoItem

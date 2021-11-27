@@ -53,7 +53,7 @@ const WeatherDailyItem = ({day, index}) => {
 
     return (
         
-        <div onClick={() => handleCurrentWeatherDropDown(day, index)} tabIndex={index} ref={elementRef} id={`${activeLink === index ? "selected" : ""}`} className="weather-forecast-item weather-forecast-day" data-day="Friday" data-test="forecast-day" title={day && day.Day.IconPhrase}>
+        <div data-testid="weather-daily-item" onClick={() => handleCurrentWeatherDropDown(day, index)} tabIndex={index} ref={elementRef} id={`${activeLink === index ? "selected" : ""}`} className="weather-forecast-item weather-forecast-day" data-day="Friday" data-test="forecast-day" title={day && day.Day.IconPhrase}>
 
             <div className="daily-weather-forecast-label" data-test="forecast-day-label">{DateToDay(day)}</div>
 

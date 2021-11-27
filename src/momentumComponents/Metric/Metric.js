@@ -22,7 +22,7 @@ const Metric = () => {
 
     return (
         
-        <div className="weather-metric-stat-container">
+        <div data-testid="weather-metric" className="weather-metric-stat-container">
 
             <span className="icon icon-weather" title={weather && weather.now && weather.now.WeatherText}>
                 

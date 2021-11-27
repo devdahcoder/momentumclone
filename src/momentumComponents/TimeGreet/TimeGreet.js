@@ -10,9 +10,10 @@ import BackgroundImageContextProvider from '../../context/BackgroundImageContext
 import GreetingContextProvider from '../../context/GreetingContext';
 
 const TimeGreet = () => {
+
     return (
 
-        <section className="time-greet-container">
+        <section data-testid="time-greet-container" className="time-greet-container">
 
             <div className="time-greet-display">
                 
@@ -33,6 +34,7 @@ const TimeGreet = () => {
         </section>
         
     )
+    
 }
 
 export default TimeGreet

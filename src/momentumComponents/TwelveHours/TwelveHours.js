@@ -5,7 +5,7 @@ const TwelveHours = ({getHour, getMinute}) => {
 
     return (
 
-        <div className="time">
+        <div data-testid="twelve-hours-time" className="time">
 
             {getHour}:{getMinute}
 

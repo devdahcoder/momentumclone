@@ -19,7 +19,7 @@ const EditLocation = () => {
 
     return (
 
-        <div className={`current-location-group ${editWeather ? "display-edit-location" : ""}`}>
+        <div data-testid="current-location-group" className={`current-location-group ${editWeather ? "display-edit-location" : ""}`}>
 
             <div className="input-wrapper">
 

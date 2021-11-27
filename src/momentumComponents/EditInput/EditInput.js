@@ -14,7 +14,7 @@ const EditInput = () => {
     } = useContext(TodoContext);
 
     return (
-        <section style={{ display: isEditing ? "block" : "none" }}>
+        <section data-testid="edit-input-container" style={{ display: isEditing ? "block" : "none" }}>
 
             <form action="" onSubmit={handleEditSubmit}>
 

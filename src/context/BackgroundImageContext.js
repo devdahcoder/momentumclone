@@ -11,7 +11,6 @@ const BackgroundImageContextProvider = (props) => {
     const [backgroundIsLoading, setBackgroundIsLoading] = useState(false);
     const [backgroundImageError, setBackgroundImageError] = useState({errorMessage: "", error: false});
 
-
     useEffect(() => {
 
         const getBackgroundImage = store.get("backgroundImage");

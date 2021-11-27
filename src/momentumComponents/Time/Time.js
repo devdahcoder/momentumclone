@@ -14,17 +14,26 @@ import {TimeContext} from "../../context/TimeContext"
 const Time = () => {
 
   const {
+
     time, 
+
     toggleDisplayDigitalTimeDropDown,
+
     toggle24DigitalTime,
+
     toggleDisplayOtherTimeDropDown,
+
     toggleDigitalTimeDropDown,
+
     toggleOtherTimeDropDown,
+
   } = useContext(TimeContext);
+
   const {getHour, getMinute, getTwentyFourHour} = time;
 
   return (
-    <div className="time-section-container">
+
+    <div data-testid="time-section-container" className="time-section-container">
 
       <div className="time-section-wrapper">
 
@@ -66,7 +75,7 @@ const Time = () => {
 
           <div className="more more-dash" style={{position: "relative"}}>
 
-            <div onClick={toggleDisplayDigitalTimeDropDown}  className="icon-wrapper dash-icon-wrapper more-toggle">
+            <div onClick={toggleDisplayDigitalTimeDropDown} onBlur={toggleDisplayDigitalTimeDropDown}  className="icon-wrapper dash-icon-wrapper more-toggle">
               
               <svg data-v-c8d4d4da="" style={{opacity: toggleDigitalTimeDropDown ? "1" : ""}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" className="more-icon time-icon"><path data-v-c8d4d4da="" d="M8 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM52 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM30 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"></path></svg>
             

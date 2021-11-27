@@ -10,7 +10,7 @@ const Quote = () => {
 
     return (
         
-        <div className="footer-center-container">
+        <div data-testid="footer-center-container" className="footer-center-container">
 
             <div className="footer-center-display">
 

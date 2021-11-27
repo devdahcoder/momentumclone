@@ -5,7 +5,7 @@ const Notification = () => {
 
     return (
 
-        <div className="notification-container">
+        <div data-testid="notification-container" className="notification-container">
 
             <div className="notification-app-wrapper nipple nipple-bottom-left">
 

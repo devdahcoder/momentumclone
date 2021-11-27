@@ -1,4 +1,4 @@
-import React, {useState, createContext, useEffect, useMemo, useCallback } from 'react'
+import React, {useState, createContext, useEffect, useCallback } from 'react'
 
 // imported packages
 import store from "store";
@@ -88,8 +88,6 @@ const WeatherContextProvider = (props) => {
                     const data = await response.json();
 
                     getWeather(data);
-
-                    console.log(data);
 
                     setLocationKey(data.Key);
 

@@ -11,7 +11,7 @@ const TimeFormatSwitch = () => {
 
     return (
 
-        <div className="time-format-checkbox-container">
+        <div data-testid="time-format-checkbox-container" className="time-format-checkbox-container">
 
             <input type="checkbox" name="check" id="" className="time-format-checkbox" { ...( toggle24DigitalTime ? { checked: true } : {checked: false} ) } />
         

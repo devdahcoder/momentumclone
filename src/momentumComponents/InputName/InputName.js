@@ -6,7 +6,7 @@ import {GreetingContext} from "../../context/GreetingContext";
 
 const InputName = () => {
 
-    const { inputName, setInputName, setName, isEditingName, setIsEditingName } = useContext(GreetingContext);
+    const { inputName, setInputName, setName, setIsEditingName } = useContext(GreetingContext);
 
     const handleName = (e) => {
 
@@ -40,19 +40,23 @@ const InputName = () => {
 
             setIsEditingName(false);
         }
+
     }
 
     
 
     return (
-        <span className="input-name-container">
+
+        <span data-testid="input-name-container" className="input-name-container">
 
             <input onKeyPress={handleTodoSubmit} onChange={handleName} value={inputName} spellCheck="false" data-test="name-input" className="name editing pulse" /> 
             
             <span className="name-hidden-span">{inputName}</span>
             
         </span>
+
     )
+
 }
 
 export default InputName

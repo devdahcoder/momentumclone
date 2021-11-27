@@ -7,18 +7,28 @@ import {TodoContext} from "../../context/TodoContext"
 const Input = () => {
 
 	const {
+
 		isEditing,
+
 		todoList, 
+
 		inputValue, 
+
 		handleTodoSubmit,
+
 		handleTodoInput,
+
 	} = useContext(TodoContext);
+
 
 	return (
 
-		<section className="main-todo-input-form-section" style={{ display: todoList.length < 1 || isEditing  ? "block" : "none" }}>
+		<section data-testid="todo-input-container" className="main-todo-input-form-section" style={{ display: todoList.length < 1 || isEditing  ? "block" : "none" }}>
+
 			<form action="" onSubmit={ handleTodoSubmit }>
+
 				<div className="input-form-display">
+
                     <label htmlFor="">What is your main Focus today?</label>
 
                     <input
@@ -38,6 +48,7 @@ const Input = () => {
 		</section>
 
 	);
+
 };
 
 export default Input

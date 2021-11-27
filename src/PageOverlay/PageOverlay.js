@@ -11,7 +11,7 @@ const PageOverlay = () => {
 
     return (
 
-        <div className={`overlay ${backgroundIsLoading ? "loading-overlay" : ""}`}>
+        <div data-testid="overlay" className={`overlay ${backgroundIsLoading ? "loading-overlay" : ""}`}>
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className={`loading-logo ${backgroundIsLoading ? "loading-logo-opacity" : ""}`} data-test="loading-logo" fill="#ccc">
 

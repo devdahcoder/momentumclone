@@ -10,8 +10,10 @@ import Date from "../Date/Date";
 import Weather from "../Weather/Weather";
 
 const DateWeather = () => {
+
     return (
-        <header className="date-weather-header">
+
+        <header data-testid="date-weather-header" className="date-weather-header">
             
             <DateContextProvider>
 
@@ -28,7 +30,9 @@ const DateWeather = () => {
             </WeatherContextProvider>
 
         </header>
+
     )
+    
 }
 
 export default DateWeather

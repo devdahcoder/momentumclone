@@ -10,13 +10,16 @@ import {TimeContext} from "../../context/TimeContext"
 const TimeSwitchDropdown = () => {
 
     const {
+
         toggleDigitalTimeDropDown, 
+
         toggle24DigitalTimeDropDown,
+
     } = useContext(TimeContext);
 
     return (
         
-        <div style={{visibility: toggleDigitalTimeDropDown ? "visible" : "hidden"}} className="right-dropdown-container more-dropdown dash-dropdown nipple nipple-top-left ">
+        <div data-testid="right-dropdown-container" style={{visibility: toggleDigitalTimeDropDown ? "visible" : "hidden"}} className="right-dropdown-container more-dropdown dash-dropdown nipple nipple-top-left ">
             
             <ul className="time-ul dropdown-list">
                 

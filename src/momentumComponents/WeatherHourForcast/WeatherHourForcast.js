@@ -35,7 +35,8 @@ const WeatherHourForcast = () => {
     }
 
     return (
-        <div style={{display: daysWeatherDropdown ? "block" : "none"}} className="app-wrapper nipple nipple-top-right">
+
+        <div data-testid="weatherHourForcast" style={{display: daysWeatherDropdown ? "block" : "none"}} className="app-wrapper nipple nipple-top-right">
 
             <div className="app weather-app ">
 

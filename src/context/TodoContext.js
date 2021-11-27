@@ -1,4 +1,5 @@
 import React, {useState, createContext, useEffect, useRef} from "react";
+
 //imported packages
 import {v4 as uuid} from "uuid";
 import store from "store"
@@ -140,12 +141,6 @@ const TodoContextProvider = (props) => {
         setInputValue("");
 
     }
-
-    const focusTodoInput = () => {
-        // focusInput.current.focus();
-        // console.log(focusInput.focus());
-    };
-
 
     const value = {
         todoList, 

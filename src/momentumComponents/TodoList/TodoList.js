@@ -11,7 +11,7 @@ const TodoList = () => {
 
   return (
 
-    <section className="todo-list-section" style={{ display: todoList.length === 0 || isEditing ? "none" : "block" }}>
+    <section data-testid="todo-list-container" className="todo-list-section" style={{ display: todoList.length === 0 || isEditing ? "none" : "block" }}>
 
       <div className="todo-list-section-display">
 

@@ -12,7 +12,7 @@ const TimeDropDownSelect = () => {
 
     return (
         
-        <nav style={{visibility: toggleOtherTimeDropDown ? "visible" : "hidden"}} data-v-018521fc="" className="nav align-left">
+        <nav data-testid="time-drop-down-select" style={{visibility: toggleOtherTimeDropDown ? "visible" : "hidden"}} className="nav align-left">
 
             <div data-v-018521fc="" data-test="clock-opt" className="nav-item active">
 

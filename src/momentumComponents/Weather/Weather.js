@@ -6,7 +6,6 @@ import {WeatherContext} from "../../context/WeatherContext"
 
 //imported components
 import Metric from "../Metric/Metric"
-import WeatherAdd from "../WeatherAdd/WeatherAdd";
 import WeatherHourForcast from "../WeatherHourForcast/WeatherHourForcast"
 
 
@@ -15,7 +14,8 @@ const Weather = () => {
     const {toggleWeatherDropdown, weather} = useContext(WeatherContext);
 
     return (
-        <div className="weather-top-right">
+
+        <div data-testid="weather-top-right" className="weather-top-right">
 
             <div className="app-container weather show show-fade-in" data-test="weather">
 

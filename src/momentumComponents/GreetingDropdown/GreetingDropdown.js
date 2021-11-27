@@ -10,7 +10,8 @@ const GreetingDropdown = () => {
 
 
     return (
-        <div style={{display: greetingDropdown ? "block" : "none"}} className="dropdown greeting-more-dropdown app dash-dropdown nipple nipple-top-left">
+
+        <div data-testid="greeting-more-dropdown" style={{display: greetingDropdown ? "block" : "none"}} className="dropdown greeting-more-dropdown app dash-dropdown nipple nipple-top-left">
             
             <ul data-test="dropdown-options" className="greeting-dropdown-list">
                 

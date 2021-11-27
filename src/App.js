@@ -11,7 +11,7 @@ import Footer from "./momentumComponents/Footer/Footer";
 // imported utils
 import TodoContextProvider from "./context/TodoContext";
 import TimeContextProvider from "./context/TimeContext";
-import QuoteContextProvider from "./context/QuoteContext"
+import QuoteContextProvider from "./context/QuoteContext";
 import {BackgroundImageContext} from "./context/BackgroundImageContext";
 import BackgroundImageContextProvider from "./context/BackgroundImageContext";
 
@@ -19,19 +19,18 @@ function App() {
 
     const { backgroundImage, backgroundIsLoading } = useContext(BackgroundImageContext);
 
-
-    // const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
     
-    // useEffect(() => {
+    useEffect(() => {
 
-    //   setIsLoading(false);
+      setIsLoading(false);
 
-    //   console.log("done loading");
+    }, [])
 
-    // }, [])
+    console.log(isLoading);
 
     return (
-      <>
+      <div data-testid="main-app">
       
         <BackgroundImageContextProvider>
 
@@ -41,15 +40,15 @@ function App() {
 
         <div className="main-app">
 
-          <div data-v-684a4388="" className="backgrounds">
+          <div className="backgrounds">
 
-            <div data-v-684a4388="" className="background">
+            <div className="background">
 
-              <div data-v-684a4388="" data-test="background-item" className="background-item" style={{backgroundImage: backgroundImage ? `url(${backgroundImage?.urls?.full})` : ""}}></div>
+              <div data-test="background-item" className="background-item" style={{backgroundImage: backgroundImage ? `url(${backgroundImage?.urls?.full})` : ""}}></div>
 
             </div>
 
-            <div data-v-684a4388="" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/img/download.png'})` }} className="background-overlay"></div>
+            <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/img/download.png'})` }} className="background-overlay"></div>
 
           </div>
           
@@ -86,7 +85,7 @@ function App() {
           </div> */}
         </div>
       
-      </>
+      </div>
 
     );
 
