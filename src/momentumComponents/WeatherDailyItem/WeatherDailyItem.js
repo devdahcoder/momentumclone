@@ -2,18 +2,19 @@ import React, {useRef, useEffect, useContext} from 'react';
 import "./weatherdailyitem.css";
 
 // imported utils
-import {WeatherContext} from "../../context/WeatherContext"
+import {WeatherContext} from "../../context/WeatherContext";
+import {GreetingContext} from "../../context/GreetingContext";
 
 const WeatherDailyItem = ({day, index}) => {
 
     const renderIcon = () => {
 
-        let weatherIcon = day?.Day?.Icon;
+        let weatherIcon = hour > 6 && hour < 18 ? day?.Day?.Icon : day?.Night?.Icon
 
         if (weatherIcon) {
 
             return <img src={process.env.PUBLIC_URL + "/img/"+ weatherIcon + ".png" } alt="weather-icon" />
-        
+
         }
 
     }
@@ -25,6 +26,8 @@ const WeatherDailyItem = ({day, index}) => {
         activeLink
 
     } = useContext(WeatherContext);
+
+    const { hour } = useContext(GreetingContext);
 
     const DateToDay = (day) => {
 

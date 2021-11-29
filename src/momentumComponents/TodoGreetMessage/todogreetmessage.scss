@@ -1,7 +1,12 @@
+@import "../../style/variable";
+
 .todo-greet-message-wrapper {
     text-align: center;
     box-sizing: inherit;
     position: relative;
+    opacity: 0;
+    transition: opacity 0.5s $a-curve;
+
     .todo-greet-focus-message {
         text-align: center;
         box-sizing: inherit;
@@ -15,4 +20,9 @@
             box-sizing: inherit;
         }
     }
+}
+
+.show-todo-greet-message {
+    opacity: 1;
+    transition: opacity 0.5s $a-curve;
 }

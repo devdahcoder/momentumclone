@@ -13,6 +13,7 @@ const GreetingContextProvider = (props) => {
     const [name, setName] = useState("");
     const [greeting, setGreeting] = useState("");
     const [greetingDropdown, setGreetingDropdown] = useState(false);
+    const [hour, setHour] = useState();
 
 
 
@@ -44,6 +45,8 @@ const GreetingContextProvider = (props) => {
         let currentTime = new Date();
         let hour = currentTime.getHours();
 
+        setHour(hour);
+
         if (hour < 12) {
             setGreeting("Good morning,");
         } else if (hour < 17) {
@@ -73,7 +76,8 @@ const GreetingContextProvider = (props) => {
         editName, 
         greeting,
         toggleGreetingDropdown,
-        greetingDropdown
+        greetingDropdown,
+        hour,
     };
 
 

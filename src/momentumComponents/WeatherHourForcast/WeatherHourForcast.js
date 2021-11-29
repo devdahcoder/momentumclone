@@ -7,7 +7,8 @@ import WeatherDailyList from "../WeatherDailyList/WeatherDailyList";
 import EditLocation from "../EditLocation/EditLocation";
 
 // imported utils
-import {WeatherContext} from "../../context/WeatherContext"
+import {WeatherContext} from "../../context/WeatherContext";
+import {GreetingContext} from "../../context/GreetingContext";
 
 const WeatherHourForcast = () => {
 
@@ -21,10 +22,11 @@ const WeatherHourForcast = () => {
         editWeather,
     } = useContext(WeatherContext);
 
+    const { hour } = useContext(GreetingContext);
 
     const renderIcon = () => {
 
-        let weatherIcon = dropDownCurrentWeather?.Day?.Icon
+        let weatherIcon = hour > 6 && hour < 18 ? dropDownCurrentWeather?.Day?.Icon : dropDownCurrentWeather?.Night?.Icon
 
         if (weatherIcon) {
 

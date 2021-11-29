@@ -1,8 +1,9 @@
-import React, {useState, createContext, useEffect, useRef} from "react";
+import React, {useState, createContext, useEffect, useRef, useCallback} from "react";
 
 //imported packages
 import {v4 as uuid} from "uuid";
-import store from "store"
+import store from "store";
+import debounce from "lodash.debounce";
 
 export const TodoContext = createContext();
 
@@ -14,6 +15,9 @@ const TodoContextProvider = (props) => {
     const [inputValue, setInputValue] = useState("");
     const [currentId, setCurrentId] = useState(null);
     const focusInput = useRef(null);
+    const [todoCompleteMessage] = useState(["Good job", "Awesome", "Keep it up", "You rock"]);
+    const [todoMessage, setTodoMessage] = useState("");
+    const [activeTodoMessage, setActiveTodoMessage] = useState(false);
 
     useEffect(() => {
 
@@ -33,6 +37,25 @@ const TodoContextProvider = (props) => {
 
     }, [todoList])
 
+    const closeRandomMessage = () => {
+        
+        setTodoMessage("");
+
+        setActiveTodoMessage(false);
+    
+    }
+
+    const debouncedCloseHandler = useCallback(debounce(() => closeRandomMessage(), 3000), []);
+
+    const getRandomMessage = () => {
+
+        setTodoMessage(todoCompleteMessage[Math.floor(Math.random() * todoCompleteMessage.length)]);
+
+        debouncedCloseHandler();
+
+    }
+
+    const debouncedChangeHandler = useCallback(debounce(() => getRandomMessage(), 1000), []);
 
     const toggleTodo = (id) => {
 
@@ -41,6 +64,11 @@ const TodoContextProvider = (props) => {
             if (todo.id === id) {
 
                 todo.completed = !todo.completed;
+
+                if (todo.completed) {
+                    debouncedChangeHandler();
+                    setActiveTodoMessage(true);
+                }
 
             }
 
@@ -161,6 +189,8 @@ const TodoContextProvider = (props) => {
         // newTodoInput,
         // handleNewTodoInput,
         toggleEditTodo,
+        todoMessage,
+        activeTodoMessage
         
     };
 

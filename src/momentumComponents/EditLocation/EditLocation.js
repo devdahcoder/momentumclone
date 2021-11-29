@@ -103,28 +103,6 @@ const EditLocation = () => {
 
                 }
 
-
-
-                {/* <ul className="location-dropdown-list" data-test="weather-location-results">
-
-                    {
-
-
-                        // editLocation && editLocation.map((location, index) => {
-                        //     return (
-                        //         <li data-id={location.LocalizedName} key={index} data-index={index} data-offset="undefined" class="hover">
-                        //             <span class="location-result">{location?.LocalizedName}, {location?.AdministrativeArea?.EnglishName}, {location?.Country?.LocalizedName}</span>
-                        //         </li>
-                        //     )
-                        // })
-
-
-                    }
-                    
-                </ul> */}
-
-                {/* <div className="not-found">No locations found.</div> */}
-
             </div>
 
         </div>

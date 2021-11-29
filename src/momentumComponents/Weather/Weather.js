@@ -3,6 +3,7 @@ import "./weather.css";
 
 // imported utils
 import {WeatherContext} from "../../context/WeatherContext"
+import GreetingContextProvider from "../../context/GreetingContext"
 
 //imported components
 import Metric from "../Metric/Metric"
@@ -33,7 +34,11 @@ const Weather = () => {
 
                 </div>
 
-                <WeatherHourForcast />
+                <GreetingContextProvider>
+
+                    <WeatherHourForcast />
+                    
+                </GreetingContextProvider>
 
             </div>
 

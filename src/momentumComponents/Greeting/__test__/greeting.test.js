@@ -13,3 +13,13 @@ test("should render in the document", () => {
     expect(greetingElement).toBeInTheDocument();
 
 })
+
+test("should be a punctuation", () => {
+    
+    const { getByTestId } = render(<GreetingContextProvider><Greeting /></GreetingContextProvider>);
+
+    const punctuationElement = getByTestId("punctuation");
+
+    expect(punctuationElement).toHaveTextContent(".");
+    
+})

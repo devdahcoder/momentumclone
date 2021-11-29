@@ -2,6 +2,8 @@
   text-align: center;
   box-sizing: inherit;
   position: relative;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .todo-greet-message-wrapper .todo-greet-focus-message {
@@ -16,5 +18,10 @@
   font-size: 1.125rem;
   line-height: 1.8;
   box-sizing: inherit;
+}
+
+.show-todo-greet-message {
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 /*# sourceMappingURL=todogreetmessage.css.map */
