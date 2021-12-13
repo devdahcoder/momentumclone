@@ -49,7 +49,7 @@ const InputName = () => {
 
         <span data-testid="input-name-container" className="input-name-container">
 
-            <input onKeyPress={handleTodoSubmit} onChange={handleName} value={inputName} spellCheck="false" data-test="name-input" className="name editing pulse" /> 
+            <input data-testid="input-name" onKeyPress={handleTodoSubmit} onChange={handleName} value={inputName} spellCheck="false" data-test="name-input" className="name editing pulse" /> 
             
             <span className="name-hidden-span">{inputName}</span>
             

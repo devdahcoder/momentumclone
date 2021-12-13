@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useContext} from 'react';
-import "./date.css"
+import "./date.css";
+
 
 // imported utils
 import {DateContext} from "../../context/DateContext"
@@ -12,17 +13,17 @@ const Date = () => {
 
     return (
 
-        <div data-testid="date-top-left" className="date-top-left">
+        <div data-testid="date-element" className="date-top-left">
 
-            <div className="app-container weather show show-fade-in" data-test="weather">
+            <div data-testid="show-fade" className="app-container weather show show-fade-in">
 
-                <div className="app-dash date-metric-item" title={date} data-test="app-dash">
+                <div data-testid="data-metric-item-test" className="app-dash date-metric-item" title={date}>
 
                     <div className="date-metric-stat">
 
                         <div>
 
-                            <span className="unit hide">{date}</span>
+                            <span data-testid="date-unit" className="unit hide">{date}</span>
 
                         </div>
 

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render in the document 1`] = `
+<div
+  class="date-top-left"
+  data-testid="date-element"
+>
+  <div
+    class="app-container weather show show-fade-in"
+    data-testid="show-fade"
+  >
+    <div
+      class="app-dash date-metric-item"
+      data-testid="data-metric-item-test"
+    >
+      <div
+        class="date-metric-stat"
+      >
+        <div>
+          <span
+            class="unit hide"
+            data-testid="date-unit"
+          />
+        </div>
+      </div>
+      <div
+        class="location metric-label data"
+        data-test="location"
+      >
+        <span
+          class="metric-label-name"
+        />
+      </div>
+      <span
+        class="metric-message"
+      />
+    </div>
+  </div>
+</div>
+`;

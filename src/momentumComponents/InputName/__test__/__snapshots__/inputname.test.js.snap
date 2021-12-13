@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render in the document 1`] = `
+<span
+  class="input-name-container"
+  data-testid="input-name-container"
+>
+  <input
+    class="name editing pulse"
+    data-test="name-input"
+    data-testid="input-name"
+    spellcheck="false"
+    value=""
+  />
+  <span
+    class="name-hidden-span"
+  />
+</span>
+`;
+
+exports[`should render name input 1`] = `
+<input
+  class="name editing pulse"
+  data-test="name-input"
+  data-testid="input-name"
+  spellcheck="false"
+  value="John"
+/>
+`;

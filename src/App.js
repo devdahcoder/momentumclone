@@ -19,15 +19,15 @@ function App() {
 
     const { backgroundImage, backgroundIsLoading } = useContext(BackgroundImageContext);
 
-    const [isLoading, setIsLoading] = useState(true);
+    // const [isLoading, setIsLoading] = useState(true);
     
-    useEffect(() => {
+    // useEffect(() => {
 
-      setIsLoading(false);
+    //   setIsLoading(false);
 
-    }, [])
+    // }, [])
 
-    console.log(isLoading);
+    // console.log(isLoading);
 
     return (
       <div data-testid="main-app">
