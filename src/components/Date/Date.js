@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useContext} from 'react';
-import "./date.css";
+import "./Date.css";
 
 
 // imported utils

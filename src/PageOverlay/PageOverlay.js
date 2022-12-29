@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./pageoverlay.css";
+import "./pageoverlay.scss";
 
 // imported utils
 import {BackgroundImageContext} from "../context/BackgroundImageContext";
