@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "./style/app.scss";
 
 // imported components
@@ -21,16 +21,6 @@ function App() {
 		BackgroundImageContext
 	);
 
-	// const [isLoading, setIsLoading] = useState(true);
-
-	// useEffect(() => {
-
-	//   setIsLoading(false);
-
-	// }, [])
-
-	// console.log(isLoading);
-
 	return (
 		<div data-testid="main-app" className="">
 			<BackgroundImageContextProvider>
@@ -40,10 +30,25 @@ function App() {
 			<div className="main-app opacity-100">
 				<div className="backgrounds">
 					<div className="background">
-						<div data-test="background-item" className="background-item" style={{backgroundImage: backgroundImage ? `url(${backgroundImage?.urls?.full})` : ""}}></div>
+						<div
+							data-test="background-item"
+							className="background-item"
+							style={{
+								backgroundImage: backgroundImage
+									? `url(${backgroundImage?.urls?.full})`
+									: "",
+							}}
+						></div>
 					</div>
 
-					<div style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/img/download.png'})` }} className="background-overlay"></div>
+					<div
+						style={{
+							backgroundImage: `url(${
+								process.env.PUBLIC_URL + "/images/download.png"
+							})`,
+						}}
+						className="background-overlay"
+					></div>
 				</div>
 
 				<div

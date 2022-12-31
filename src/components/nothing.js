@@ -1,58 +1,146 @@
-import React from 'react'
+import React from "react";
 
 const DateWeather = () => {
-    return (
-        <div>
-            <div class="top-row">
-                <div class="region top-left">
-                    <div id="quicklinks" class="app-container quicklinks links" data-test="undefined" style={{}}>
-                        <span class="app-dash toggle Links-toggle" data-test="links-app-dash" data-ob="links-app-dash">Links</span>
-                        <div class="app-wrapper app-placeholder nipple nipple-top-left">
-                        <div class="app links-app" style={{height:"70px", width:"260px"}}>
-                            <div class="app-placeholder-loading">
-                                <i class="loading-icon"></i>Loading...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="dashlinks" class="dashlinks">
-            </div>
-            <div data-v-5f7dbe7c="" id="search" data-test="search" class="app-container search">
-                <div data-v-5f7dbe7c="" class="app-dash">
-                    <form data-v-5f7dbe7c="" class="search-form">
-                        <span data-v-5f7dbe7c="" class="search-underline"></span>
-                        <i data-v-5f7dbe7c="" data-test="icon-search" class="dash-icon icon-search"></i>
-                        <div data-v-5f7dbe7c="" data-test="provider-toggle" class="more source" data-just-bound-click-outside-handler="false" data-click-outside-mouseup-handler-id="qh5qg" data-click-outside-mousedown-handler-id="vxn94h">
-                            <div data-v-5f7dbe7c="" tabindex="0" class="source-toggle">
-                                <div data-v-5f7dbe7c="" class="icons">
-                                    <img data-v-5f7dbe7c="" src="img/logo-google.svg" data-test="icon-google" tabindex="0" class="icon-google icon active" />
-                                    <img data-v-5f7dbe7c="" src="img/logo-bing.svg" data-test="icon-bing" tabindex="0" class="icon-bing icon" />
-                                    <img data-v-5f7dbe7c="" src="img/logo-duckduckgo-white.svg" data-test="icon-duckduckgo" tabindex="0" class="icon-duckduckgo icon" />
-                                </div>
-                                <img data-v-5f7dbe7c="" src="img/icon-down.svg" class="icon icon-dropdown" />
-                            </div>
-                        </div>
-                        <input data-v-5f7dbe7c="" id="search-input" search-url="https://www.google.com/search?q=" type="text" autocomplete="off" data-test="search-input" class="search-input" />
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="region top-center"></div>
-            <div class="region top-right">
-                <div id="weather" class="app-container weather" data-test="weather">
-                    <div class="app-dash metric-item" title="Mostly cloudy" data-test="app-dash">
-                        <div class="metric-stat">
-                            <span class="icon icon-weather" data-icon="H" title="Mostly cloudy"></span>
-                            <span class="metric-stat-number" data-test="temperature">32</span>
-                            <span class="weather-degree">°</span><span class="unit hide">c</span>
-                        </div>
-                        <div class="location metric-label data" data-test="location" title="Lagos, Nigeria">
-                            <span class="metric-label-name">Lagos</span>
-                        </div>
-                        <span class="metric-message"></span>
-                    </div>
+	return (
+		<div>
+			<div class="top-row">
+				<div class="region top-left">
+					<div
+						id="quicklinks"
+						class="app-container quicklinks links"
+						data-test="undefined"
+						style={{}}
+					>
+						<span
+							class="app-dash toggle Links-toggle"
+							data-test="links-app-dash"
+							data-ob="links-app-dash"
+						>
+							Links
+						</span>
+						<div class="app-wrapper app-placeholder nipple nipple-top-left">
+							<div
+								class="app links-app"
+								style={{ height: "70px", width: "260px" }}
+							>
+								<div class="app-placeholder-loading">
+									<i class="loading-icon"></i>Loading...
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="dashlinks" class="dashlinks"></div>
+					<div
+						data-v-5f7dbe7c=""
+						id="search"
+						data-test="search"
+						class="app-container search"
+					>
+						<div data-v-5f7dbe7c="" class="app-dash">
+							<form data-v-5f7dbe7c="" class="search-form">
+								<span
+									data-v-5f7dbe7c=""
+									class="search-underline"
+								></span>
+								<i
+									data-v-5f7dbe7c=""
+									data-test="icon-search"
+									class="dash-icon icon-search"
+								></i>
+								<div
+									data-v-5f7dbe7c=""
+									data-test="provider-toggle"
+									class="more source"
+									data-just-bound-click-outside-handler="false"
+									data-click-outside-mouseup-handler-id="qh5qg"
+									data-click-outside-mousedown-handler-id="vxn94h"
+								>
+									<div
+										data-v-5f7dbe7c=""
+										tabindex="0"
+										class="source-toggle"
+									>
+										<div data-v-5f7dbe7c="" class="icons">
+											<img
+												data-v-5f7dbe7c=""
+												src="img/logo-google.svg"
+												data-test="icon-google"
+												tabindex="0"
+												class="icon-google icon active"
+											/>
+											<img
+												data-v-5f7dbe7c=""
+												src="img/logo-bing.svg"
+												data-test="icon-bing"
+												tabindex="0"
+												class="icon-bing icon"
+											/>
+											<img
+												data-v-5f7dbe7c=""
+												src="img/logo-duckduckgo-white.svg"
+												data-test="icon-duckduckgo"
+												tabindex="0"
+												class="icon-duckduckgo icon"
+											/>
+										</div>
+										<img
+											data-v-5f7dbe7c=""
+											src="img/icon-down.svg"
+											class="icon icon-dropdown"
+										/>
+									</div>
+								</div>
+								<input
+									data-v-5f7dbe7c=""
+									id="search-input"
+									search-url="https://www.google.com/search?q="
+									type="text"
+									autocomplete="off"
+									data-test="search-input"
+									class="search-input"
+								/>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="region top-center"></div>
+				<div class="region top-right">
+					<div
+						id="weather"
+						class="app-container weather"
+						data-test="weather"
+					>
+						<div
+							class="app-dash metric-item"
+							title="Mostly cloudy"
+							data-test="app-dash"
+						>
+							<div class="metric-stat">
+								<span
+									class="icon icon-weather"
+									data-icon="H"
+									title="Mostly cloudy"
+								></span>
+								<span
+									class="metric-stat-number"
+									data-test="temperature"
+								>
+									32
+								</span>
+								<span class="weather-degree">°</span>
+								<span class="unit hide">c</span>
+							</div>
+							<div
+								class="location metric-label data"
+								data-test="location"
+								title="Lagos, Nigeria"
+							>
+								<span class="metric-label-name">Lagos</span>
+							</div>
+							<span class="metric-message"></span>
+						</div>
 
-                    {/* <div class="app-wrapper nipple nipple-top-right">
+						{/* <div class="app-wrapper nipple nipple-top-right">
                         <div class="app weather-app ">
 
                             <section class="weather-current">
@@ -185,22 +273,22 @@ const DateWeather = () => {
 
                             
                             <section class="weather-row weather-attribution">
-                                <a class="weather-attribution-link" href="https://www.accuweather.com/en/ng/apapa/942887/current-weather/942887?lang=en-us&amp;partner=momentum" target="_blank"><img class="weather-attribution-logo" src="../img/logo-accuweather.png" /> More weather →</a>
+                                <a class="weather-attribution-link" href="https://www.accuweather.com/en/ng/apapa/942887/current-weather/942887?lang=en-us&amp;partner=momentum" target="_blank"><img class="weather-attribution-logo" src="../images/logo-accuweather.png" /> More weather →</a>
                             </section>
 
                         </div>
                     </div> */}
-                </div>
-                {/* <div data-v-6ac648f0="" class="app-container add-widget needs-hover" data-just-bound-click-outside-handler="false" data-click-outside-mouseup-handler-id="ux6ej3" data-click-outside-mousedown-handler-id="cafuln">
+					</div>
+					{/* <div data-v-6ac648f0="" class="app-container add-widget needs-hover" data-just-bound-click-outside-handler="false" data-click-outside-mouseup-handler-id="ux6ej3" data-click-outside-mousedown-handler-id="cafuln">
                     <div data-v-6ac648f0="" data-ob="add-widget" class="app-dash app-dash-icon add-shadow sounds-toggle toggle">
                         <svg height="26" data-v-6ac648f0="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon"><path data-v-6ac648f0="" d="M256 0C114.833 0 0 114.833 0 256s114.833 256 256 256 256-114.853 256-256S397.167 0 256 0zm0 472.341c-119.275 0-216.341-97.046-216.341-216.341S136.725 39.659 256 39.659 472.341 136.705 472.341 256 375.295 472.341 256 472.341z"></path><path data-v-6ac648f0="" d="M355.148 234.386H275.83v-79.318c0-10.946-8.864-19.83-19.83-19.83s-19.83 8.884-19.83 19.83v79.318h-79.318c-10.966 0-19.83 8.884-19.83 19.83s8.864 19.83 19.83 19.83h79.318v79.318c0 10.946 8.864 19.83 19.83 19.83s19.83-8.884 19.83-19.83v-79.318h79.318c10.966 0 19.83-8.884 19.83-19.83s-8.864-19.83-19.83-19.83z"></path></svg> 
                         <span data-v-6ac648f0="" class="app-dash-icon-label">Add</span>
                     </div>
                 </div> */}
-            </div>
-        </div>
-        </div>
-    )
-}
+				</div>
+			</div>
+		</div>
+	);
+};
 
-export default DateWeather
+export default DateWeather;

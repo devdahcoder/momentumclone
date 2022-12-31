@@ -222,25 +222,26 @@ const WeatherContextProvider = (props) => {
 
     }
     
-    const value = { 
-        toggleWeatherDropdown, 
-        daysWeatherDropdown, 
-        weatherDailyMore,
-        toggleWeatherDailyMore,
-        dropDownCurrentWeather, 
-        handleCurrentWeatherDropDown,
-        weather,
-        activeLink,
-        toggleEditWeather,
-        editWeather,
-        handleEditLocationInput,
-        editLocationInput,
-        editLocation,
-        editLocationIsLoading,
-        editLocationError,
-        getWeather,
-        getUserIp,
-    };
+    const value = {
+		toggleWeatherDropdown,
+		daysWeatherDropdown,
+		weatherDailyMore,
+		toggleWeatherDailyMore,
+		dropDownCurrentWeather,
+		handleCurrentWeatherDropDown,
+		weather,
+		activeLink,
+		toggleEditWeather,
+		editWeather,
+		handleEditLocationInput,
+		editLocationInput,
+		editLocation,
+		editLocationIsLoading,
+		editLocationError,
+		getWeather,
+		getUserIp,
+		setDaysWeatherDropdown,
+	};
 
     return (
         <WeatherContext.Provider value={value}>

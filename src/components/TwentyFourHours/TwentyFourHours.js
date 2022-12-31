@@ -1,17 +1,12 @@
-import React from 'react';
-import "../../style/global.css";
+import React from "react";
+import "../../style/global.scss";
 
-const TwentyFourHours = ({getTwentyFourHour, getMinute}) => {
+const TwentyFourHours = ({ getTwentyFourHour, getMinute }) => {
+	return (
+		<div data-testid="twelve-four-hours-time" className="time">
+			{getTwentyFourHour}:{getMinute}
+		</div>
+	);
+};
 
-    return (
-
-        <div data-testid="twelve-four-hours-time" className="time">
-
-            {getTwentyFourHour}:{getMinute}
-
-        </div>
-        
-    )
-}
-
-export default TwentyFourHours
+export default TwentyFourHours;

@@ -14,7 +14,7 @@ const Metric = () => {
 
         if (weatherIcon) {
         
-            return <img src={process.env.PUBLIC_URL + "/img/"+ weatherIcon + ".png" } alt="weather-icon" />
+            return <img src={process.env.PUBLIC_URL + "/images/weather/"+ weatherIcon + ".png" } alt="weather-icon" />
         
         }
 

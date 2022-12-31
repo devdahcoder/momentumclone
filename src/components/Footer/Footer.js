@@ -15,7 +15,7 @@ const Footer = () => {
     return (
         <footer>
             
-            <div data-testid="footer" className="region footer-left-container" id="bottom-left">
+            <div data-testid="footer" className=" region footer-left-container" id="bottom-left">
 
                 <div id="settings" className="app-container settings-icon-container" data-justboundclickoutsidehandler="false" data-clickoutsidemouseuphandlerid="a7ezab" data-clickoutsidemousedownhandlerid="z7qp9f">
                     
